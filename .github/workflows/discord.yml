@@ -1,0 +1,69 @@
+name: CyberBrief → Discord
+
+on:
+  push:
+    paths:
+      - latest.json
+
+jobs:
+  post-to-discord:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Parse & post to Discord
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          python3 - <<'PYEOF'
+import json, urllib.request, os, textwrap
+
+WEBHOOK = os.environ["DISCORD_WEBHOOK"]
+
+with open("latest.json") as f:
+    data = json.load(f)
+
+ICONS = {
+    "CVE":         "🔴",
+    "Threat Intel":"🕵️",
+    "New Tool":    "🛠️",
+    "Research":    "🔬",
+    "Offensive":   "⚔️",
+}
+
+embeds = []
+for item in data["items"]:
+    icon = ICONS.get(item["category"], "📌")
+    embeds.append({
+        "title": f"{icon} [{item['category']}] {item['title'][:200]}",
+        "url": item["url"],
+        "description": (
+            f"**Summary:** {item['summary'][:400]}\n\n"
+            f"**Why it matters:** {item['why'][:300]}\n\n"
+            f"*Source: {item['source']}*"
+        ),
+        "color": {
+            "CVE": 0xE74C3C,
+            "Threat Intel": 0x9B59B6,
+            "New Tool": 0x3498DB,
+            "Research": 0x2ECC71,
+            "Offensive": 0xE67E22,
+        }.get(item["category"], 0x95A5A6),
+    })
+
+payload = {
+    "username": "CyberBrief",
+    "avatar_url": "https://img.icons8.com/color/96/cybersecurity.png",
+    "content": f"📡 **CyberBrief — {data['date']}**\nTop 5 cybersecurity items from the last 24 hours:",
+    "embeds": embeds[:10],
+}
+
+req = urllib.request.Request(
+    WEBHOOK,
+    data=json.dumps(payload).encode(),
+    headers={"Content-Type": "application/json"},
+    method="POST",
+)
+urllib.request.urlopen(req)
+print("Posted to Discord.")
+PYEOF
