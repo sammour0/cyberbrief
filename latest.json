@@ -1,45 +1,45 @@
 {
-  "date": "May 21, 2026",
+  "date": "May 22, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "NGINX Rift (CVE-2026-42945): 18-Year-Old Heap Overflow Enables Unauthenticated RCE",
-      "url": "https://thehackernews.com/2026/05/18-year-old-nginx-rewrite-module-flaw.html",
-      "summary": "Critical heap buffer overflow in NGINX's ngx_http_rewrite_module (CVSS 9.2) affecting all versions 0.6.27\u20131.30.0 \u2014 virtually every NGINX build since 2008. A size-calculation mismatch in rewrite processing lets an unauthenticated attacker overwrite the heap and achieve RCE via a single crafted HTTP request. A working PoC was published on GitHub by DepthFirst Disclosures; active exploitation confirmed within 3 days of disclosure.",
-      "why": "The affected version range covers millions of internet-facing servers. No authentication required; exploit is one HTTP request; public PoC already exists. Patch to NGINX 1.30.1+ immediately.",
-      "source": "The Hacker News / DepthFirst Disclosures / Akamai Research"
+      "title": "Windows Zero-Days YellowKey & GreenPlasma Drop With Public PoC \u2014 No Patch Yet",
+      "url": "https://www.bleepingcomputer.com/news/security/windows-bitlocker-zero-day-gives-access-to-protected-drives-poc-released/",
+      "summary": "Researcher 'Chaotic Eclipse' released PoC for two unpatched Windows flaws one day after May Patch Tuesday: YellowKey bypasses BitLocker via crafted USB/EFI files (Windows 11, Server 2022/2025), and GreenPlasma exploits CTFMON.exe to escalate any unprivileged account to SYSTEM (Windows 11, Server 2022/2026).",
+      "why": "With live PoC and no official fix until June Patch Tuesday, every Windows 11 and Server 2022+ system is exposed. YellowKey breaks disk encryption with physical access; GreenPlasma is a reliable LPE usable in ransomware chains.",
+      "source": "BleepingComputer"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-35616: Fortinet FortiClient EMS Pre-Auth API Bypass (CVSS 9.1) Actively Exploited",
-      "url": "https://watchtowr.com/resources/fortinet-forticlient-ems-zero-day-cve-2026-35616-active-exploitation-underway/",
-      "summary": "Improper access control (CWE-284) in FortiClient EMS 7.4.5\u20137.4.6 lets unauthenticated attackers bypass certificate authentication by spoofing HTTP headers that the Django backend trusts, combined with weak certificate chain validation (string matching only, no cryptographic verification). Attackers can forge certs, gain full authenticated API access, and execute arbitrary commands. CISA added to KEV with a federal remediation deadline.",
-      "why": "FortiClient EMS is the management plane for enterprise endpoint VPN clients \u2014 compromise grants control over all managed endpoints. Pre-auth means zero credentials needed, making this a prime ransomware and espionage entry point.",
-      "source": "watchTowr / CISA KEV / The Hacker News"
+      "title": "CVE-2026-42897 (CVSS 8.1): On-Prem Exchange Server Exploited via Crafted Email in OWA",
+      "url": "https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html",
+      "summary": "A cross-site scripting flaw in on-premises Microsoft Exchange Server (CVSS 8.1) is actively exploited in the wild. Attackers send a crafted email that, when opened in Outlook Web Access, executes arbitrary JavaScript in the victim's browser, enabling session hijacking and credential theft.",
+      "why": "On-prem Exchange remains widespread in enterprise and government environments. Active exploitation means this is being weaponized now \u2014 emergency patching or OWA access restriction is required immediately.",
+      "source": "The Hacker News"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 Operation Neusploit: Fancy Bear Weaponizes MS Office Zero-Day in <24 Hours, Deploys Cloud C2",
-      "url": "https://www.zscaler.com/blogs/security-research/apt28-leverages-cve-2026-21509-operation-neusploit",
-      "summary": "Russia's APT28 (Fancy Bear) weaponized MS Office CVE-2026-21509 \u2014 an OLE security restriction bypass \u2014 within 24 hours of disclosure, launching spear-phishing campaigns against EU military, NATO allies, Ukrainian agencies, and maritime/transport orgs across Poland, Slovenia, Turkey, Greece, UAE, and Ukraine. Multi-stage chain deploys NotDoor/MiniDoor Outlook VBA backdoors and a modified Covenant C2 implant ('CovenantGrunt'), abusing filen.io cloud storage as C2 infrastructure to blend with legitimate traffic.",
-      "why": "Sub-24-hour weaponization of a 1-day exploit shows the patch window is effectively zero against nation-state actors. Cloud storage C2 defeats network-level blocking and requires behavioral endpoint detection to catch.",
-      "source": "Zscaler ThreatLabz / Trellix Research / Security Affairs"
+      "title": "APT28 Weaponizes CVE-2026-21509 Within 24h, Targets 9 Eastern European Defense Ministries",
+      "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
+      "summary": "Trellix Research documented APT28 (Fancy Bear) exploiting a newly disclosed Microsoft Office 1-day within 24 hours of public disclosure. The group sent 29 spear-phishing emails across 9 Eastern European nations in a 72-hour blitz (Jan 28-30), targeting defense ministries via cloud-based C2 infrastructure designed to blend with legitimate cloud traffic.",
+      "why": "APT28's sub-24h weaponization window underscores the accelerating nation-state exploit pipeline. Cloud C2 blending makes detection via traditional network defenses significantly harder \u2014 threat hunters need behavioral rather than signature-based detection.",
+      "source": "Trellix Research"
     },
     {
       "category": "Research",
-      "title": "Mandiant M-Trends 2026: Attackers Hand Off Access in 22 Seconds; Dwell Time Rises to 14 Days",
-      "url": "https://www.helpnetsecurity.com/2026/03/24/mandiant-m-trends-2026-report/",
-      "summary": "Mandiant's M-Trends 2026 (500,000+ IR hours) finds threat actors are handing off compromised access to secondary operators in as little as 22 seconds via automated credential broker markets. Median dwell time rose to 14 days. Exploits are #1 initial access vector for the sixth consecutive year (32%); voice phishing surged to #2 at 11% of investigations. 714 new malware families tracked in 2025, up from 632, with the total catalog now exceeding 6,000 families. Adversaries increasingly target backup infrastructure to eliminate recovery options and force ransom payment.",
-      "why": "The 22-second hand-off stat breaks traditional SOC response models \u2014 hours-long MTTR is now categorically insufficient. Targeting backups directly forces organizations to pay or rebuild entirely, making pre-breach backup isolation critical.",
-      "source": "Mandiant / Google Cloud (M-Trends 2026)"
+      "title": "Google Disrupts First Confirmed AI-Generated Zero-Day Exploit \u2014 2FA Bypass Planned for Mass Attack",
+      "url": "https://www.cnbc.com/2026/05/11/google-thwarts-effort-hacker-group-use-ai-mass-exploitation-event.html",
+      "summary": "Google's Threat Intelligence Group (GTIG) confirmed the first documented case of threat actors using AI (OpenClaw) to autonomously discover and weaponize a zero-day \u2014 a 2FA bypass in a popular open-source web admin tool. A Python-based exploit was developed and staged for mass exploitation before Google's proactive countermeasures disrupted the operation.",
+      "why": "AI has crossed the threshold from assisting humans to independently discovering and weaponizing zero-days. This signals a fundamental shift: defenders must now anticipate exploitation windows measured in hours from vulnerability existence, not weeks from public disclosure.",
+      "source": "Google GTIG / CNBC"
     },
     {
-      "category": "CVE",
-      "title": "CVE-2026-44338: PraisonAI AI Agent Framework Auth Bypass Exploited Within 4 Hours of Disclosure",
-      "url": "https://thehackernews.com/2026/05/praisonai-cve-2026-44338-auth-bypass.html",
-      "summary": "PraisonAI versions 2.5.6\u20134.6.33 shipped its legacy Flask API server with authentication disabled by default, exposing /agents and /chat endpoints to any unauthenticated caller. Attackers can enumerate configured AI agent workflows and trigger arbitrary agent executions without credentials. First malicious scanner probing this CVE appeared 3 hours 44 minutes after the advisory was published on May 11, 2026. A related critical RCE flaw (CVE-2026-40287) is also documented. Fixed in PraisonAI 4.6.34.",
-      "why": "AI agent frameworks are an emerging, under-scrutinized attack surface. Agents configured with broad system access (file I/O, code execution, API calls) mean unauthenticated /chat access can translate to full RCE. The 4-hour exploitation onset signals attackers are actively hunting AI infrastructure.",
-      "source": "The Hacker News / Sysdig / SecurityWeek"
+      "category": "Threat Intel",
+      "title": "GitHub Confirms Supply Chain Breach: 3,800 Repos Compromised via Malicious Nx Console VSCode Extension",
+      "url": "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/",
+      "summary": "GitHub confirmed attackers breached ~3,800 repositories by trojanizing the Nx Console VSCode extension via the upstream TanStack npm supply chain attack. The TeamPCP group is attributed; any developer with auto-update enabled and the extension installed is potentially affected, risking exposure of secrets, tokens, and API keys committed to repos.",
+      "why": "A cascading supply chain attack (npm \u2192 VSCode extension \u2192 GitHub repos) affecting thousands of developers at once. Any org using Nx/TanStack tooling must immediately audit committed secrets and rotate credentials \u2014 this is an active exfiltration campaign.",
+      "source": "BleepingComputer"
     }
   ]
 }
