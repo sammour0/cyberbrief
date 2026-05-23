@@ -1,45 +1,45 @@
 {
-  "date": "May 22, 2026",
+  "date": "May 23, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "Windows Zero-Days YellowKey & GreenPlasma Drop With Public PoC \u2014 No Patch Yet",
-      "url": "https://www.bleepingcomputer.com/news/security/windows-bitlocker-zero-day-gives-access-to-protected-drives-poc-released/",
-      "summary": "Researcher 'Chaotic Eclipse' released PoC for two unpatched Windows flaws one day after May Patch Tuesday: YellowKey bypasses BitLocker via crafted USB/EFI files (Windows 11, Server 2022/2025), and GreenPlasma exploits CTFMON.exe to escalate any unprivileged account to SYSTEM (Windows 11, Server 2022/2026).",
-      "why": "With live PoC and no official fix until June Patch Tuesday, every Windows 11 and Server 2022+ system is exposed. YellowKey breaks disk encryption with physical access; GreenPlasma is a reliable LPE usable in ransomware chains.",
-      "source": "BleepingComputer"
-    },
-    {
-      "category": "CVE",
-      "title": "CVE-2026-42897 (CVSS 8.1): On-Prem Exchange Server Exploited via Crafted Email in OWA",
-      "url": "https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html",
-      "summary": "A cross-site scripting flaw in on-premises Microsoft Exchange Server (CVSS 8.1) is actively exploited in the wild. Attackers send a crafted email that, when opened in Outlook Web Access, executes arbitrary JavaScript in the victim's browser, enabling session hijacking and credential theft.",
-      "why": "On-prem Exchange remains widespread in enterprise and government environments. Active exploitation means this is being weaponized now \u2014 emergency patching or OWA access restriction is required immediately.",
+      "title": "CVE-2026-35616: FortiClient EMS Pre-Auth API Bypass (CVSS 9.1) Actively Exploited",
+      "url": "https://thehackernews.com/2026/04/fortinet-patches-actively-exploited-cve.html",
+      "summary": "Fortinet patched CVE-2026-35616, a pre-authentication API access bypass in FortiClient EMS that allows unauthenticated remote attackers to escalate privileges to SYSTEM level. The flaw carries a CVSS score of 9.1 and has been confirmed under active exploitation in the wild.",
+      "why": "No credentials required to exploit \u2014 any internet-exposed FortiClient EMS instance is a direct path to full system compromise. FortiClient EMS is widely deployed for endpoint management in enterprise networks, making this a high-priority patch.",
       "source": "The Hacker News"
     },
     {
+      "category": "CVE",
+      "title": "CVE-2026-2441: Chrome Zero-Day RCE Actively Exploited in the Wild",
+      "url": "https://orca.security/resources/blog/cve-2026-2441-chrome-chromium-zero-day-vulnerability/",
+      "summary": "Google patched CVE-2026-2441, a critical zero-day in Chrome that allows remote attackers to execute arbitrary code within the browser's sandbox. The vulnerability is being actively exploited in the wild with public reports of targeted attacks prior to the patch being available.",
+      "why": "Chrome's multi-billion user base makes any actively exploited zero-day extremely high impact. Sandbox RCE as an initial foothold is a key stage in browser-based attack chains; unpatched endpoints are vulnerable to drive-by compromise via malicious sites.",
+      "source": "Orca Security"
+    },
+    {
       "category": "Threat Intel",
-      "title": "APT28 Weaponizes CVE-2026-21509 Within 24h, Targets 9 Eastern European Defense Ministries",
+      "title": "APT28 (Fancy Bear) Weaponizes Microsoft Office CVE-2026-21509 Within 24 Hours, Targets European Military",
       "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Trellix Research documented APT28 (Fancy Bear) exploiting a newly disclosed Microsoft Office 1-day within 24 hours of public disclosure. The group sent 29 spear-phishing emails across 9 Eastern European nations in a 72-hour blitz (Jan 28-30), targeting defense ministries via cloud-based C2 infrastructure designed to blend with legitimate cloud traffic.",
-      "why": "APT28's sub-24h weaponization window underscores the accelerating nation-state exploit pipeline. Cloud C2 blending makes detection via traditional network defenses significantly harder \u2014 threat hunters need behavioral rather than signature-based detection.",
+      "summary": "Trellix researchers uncovered a stealthy multi-stage APT28 campaign that weaponized a newly disclosed Microsoft Office vulnerability (CVE-2026-21509) within 24 hours of public disclosure. The operation targets European military and government entities and uses cloud-based C2 infrastructure to blend into legitimate traffic.",
+      "why": "A 24-hour weaponization window by a Tier-1 Russian nation-state actor against NATO-aligned targets illustrates that the effective patch window is now measured in hours, not days. Cloud C2 abuse significantly complicates network-level detection for defenders.",
       "source": "Trellix Research"
     },
     {
       "category": "Research",
-      "title": "Google Disrupts First Confirmed AI-Generated Zero-Day Exploit \u2014 2FA Bypass Planned for Mass Attack",
-      "url": "https://www.cnbc.com/2026/05/11/google-thwarts-effort-hacker-group-use-ai-mass-exploitation-event.html",
-      "summary": "Google's Threat Intelligence Group (GTIG) confirmed the first documented case of threat actors using AI (OpenClaw) to autonomously discover and weaponize a zero-day \u2014 a 2FA bypass in a popular open-source web admin tool. A Python-based exploit was developed and staged for mass exploitation before Google's proactive countermeasures disrupted the operation.",
-      "why": "AI has crossed the threshold from assisting humans to independently discovering and weaponizing zero-days. This signals a fundamental shift: defenders must now anticipate exploitation windows measured in hours from vulnerability existence, not weeks from public disclosure.",
-      "source": "Google GTIG / CNBC"
+      "title": "Mandiant M-Trends 2026: PROMPTFLUX & PROMPTSTEAL Malware Query Live LLMs Mid-Execution to Evade Detection",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026",
+      "summary": "Mandiant's M-Trends 2026 report documents two novel malware families \u2014 PROMPTFLUX and PROMPTSTEAL \u2014 that query large language models mid-execution to dynamically generate evasion code, bypassing static and behavioral detection. The report also tracked 714 new malware families in 2025, up from 632 in 2024, bringing the total tracked to over 6,000.",
+      "why": "Malware that adapts its evasion logic in real time by calling out to LLMs represents a fundamentally new detection challenge. Signature-based and many behavior-based controls are rendered ineffective against payloads that rewrite themselves on each execution.",
+      "source": "Mandiant / Google Cloud"
     },
     {
       "category": "Threat Intel",
-      "title": "GitHub Confirms Supply Chain Breach: 3,800 Repos Compromised via Malicious Nx Console VSCode Extension",
-      "url": "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/",
-      "summary": "GitHub confirmed attackers breached ~3,800 repositories by trojanizing the Nx Console VSCode extension via the upstream TanStack npm supply chain attack. The TeamPCP group is attributed; any developer with auto-update enabled and the extension installed is potentially affected, risking exposure of secrets, tokens, and API keys committed to repos.",
-      "why": "A cascading supply chain attack (npm \u2192 VSCode extension \u2192 GitHub repos) affecting thousands of developers at once. Any org using Nx/TanStack tooling must immediately audit committed secrets and rotate credentials \u2014 this is an active exfiltration campaign.",
-      "source": "BleepingComputer"
+      "title": "CrowdStrike 2026 Global Threat Report: eCrime Breakout Time Drops to 29 Minutes, AI Adversaries Up 89%",
+      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
+      "summary": "CrowdStrike's 2026 Global Threat Report reveals the average eCrime breakout time has fallen to 29 minutes \u2014 65% faster than 2024 \u2014 with the fastest observed breakout at just 27 seconds. AI-enabled adversary activity increased 89% year-over-year. Russia-nexus FANCY BEAR deployed LAMEHUG, an LLM-enabled malware used to automate reconnaissance and document exfiltration.",
+      "why": "Sub-30-minute lateral movement makes manual incident response functionally obsolete. The 89% rise in AI-enabled attacks combined with nation-state actors deploying LLM-powered malware signals that AI-assisted offense has crossed from theory into mainstream adversary tradecraft.",
+      "source": "CrowdStrike"
     }
   ]
 }
