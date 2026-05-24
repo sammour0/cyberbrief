@@ -1,45 +1,45 @@
 {
-  "date": "May 23, 2026",
+  "date": "May 24, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-35616: FortiClient EMS Pre-Auth API Bypass (CVSS 9.1) Actively Exploited",
-      "url": "https://thehackernews.com/2026/04/fortinet-patches-actively-exploited-cve.html",
-      "summary": "Fortinet patched CVE-2026-35616, a pre-authentication API access bypass in FortiClient EMS that allows unauthenticated remote attackers to escalate privileges to SYSTEM level. The flaw carries a CVSS score of 9.1 and has been confirmed under active exploitation in the wild.",
-      "why": "No credentials required to exploit \u2014 any internet-exposed FortiClient EMS instance is a direct path to full system compromise. FortiClient EMS is widely deployed for endpoint management in enterprise networks, making this a high-priority patch.",
+      "title": "NGINX CVE-2026-42945 (CVSS 9.2) Actively Exploited in the Wild",
+      "url": "https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html",
+      "summary": "A heap buffer overflow in ngx_http_rewrite_module affects NGINX Plus and Open versions 0.6.27 through 1.30.0. Unauthenticated attackers can crash worker processes or achieve remote code execution via crafted HTTP requests. Active exploitation began within days of public disclosure.",
+      "why": "NGINX powers roughly one-third of all web servers globally. A CVSS 9.2 unauthenticated RCE with active in-the-wild exploitation means mass exposure \u2014 patch or mitigate immediately.",
       "source": "The Hacker News"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-2441: Chrome Zero-Day RCE Actively Exploited in the Wild",
-      "url": "https://orca.security/resources/blog/cve-2026-2441-chrome-chromium-zero-day-vulnerability/",
-      "summary": "Google patched CVE-2026-2441, a critical zero-day in Chrome that allows remote attackers to execute arbitrary code within the browser's sandbox. The vulnerability is being actively exploited in the wild with public reports of targeted attacks prior to the patch being available.",
-      "why": "Chrome's multi-billion user base makes any actively exploited zero-day extremely high impact. Sandbox RCE as an initial foothold is a key stage in browser-based attack chains; unpatched endpoints are vulnerable to drive-by compromise via malicious sites.",
-      "source": "Orca Security"
+      "title": "CVE-2026-31431 'Copy Fail' \u2014 Linux LPE to Root Hits Millions of Cloud Workloads",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/01/cve-2026-31431-copy-fail-vulnerability-enables-linux-root-privilege-escalation/",
+      "summary": "Microsoft Defender identified a high-severity local privilege escalation flaw in the Linux kernel affecting Red Hat, SUSE, Ubuntu, and AWS Linux. The bug allows any low-privilege user to escalate to root, impacting a significant share of Kubernetes clusters and cloud VMs. CISA has added it to the Known Exploited Vulnerabilities catalog.",
+      "why": "Cloud-native environments running any of the major Linux distributions are at risk. LPE-to-root in containerized or multi-tenant environments can lead to full cluster compromise.",
+      "source": "Microsoft Security Blog / CISA KEV"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 (Fancy Bear) Weaponizes Microsoft Office CVE-2026-21509 Within 24 Hours, Targets European Military",
-      "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Trellix researchers uncovered a stealthy multi-stage APT28 campaign that weaponized a newly disclosed Microsoft Office vulnerability (CVE-2026-21509) within 24 hours of public disclosure. The operation targets European military and government entities and uses cloud-based C2 infrastructure to blend into legitimate traffic.",
-      "why": "A 24-hour weaponization window by a Tier-1 Russian nation-state actor against NATO-aligned targets illustrates that the effective patch window is now measured in hours, not days. Cloud C2 abuse significantly complicates network-level detection for defenders.",
-      "source": "Trellix Research"
+      "title": "APT28 (Pawn Storm) Deploys PRISMEX Malware Suite Against NATO Defense Supply Chain",
+      "url": "https://www.trendmicro.com/en_us/research/26/c/pawn-storm-targets-govt-infra.html",
+      "summary": "Trend Micro reports that Russian-linked Pawn Storm (APT28/Fancy Bear) is targeting the defense supply chain of Ukraine and its NATO allies \u2014 Czech Republic, Poland, Romania, Slovakia, Slovenia, and Turkey \u2014 using a new multi-stage malware suite dubbed PRISMEX. The campaign also leveraged a confirmed Windows zero-day (CVE-2026-21513).",
+      "why": "Nation-state offensive campaign with zero-day use against critical NATO-aligned defense infrastructure. PRISMEX's modular design suggests ongoing evolution and long-term persistence objectives.",
+      "source": "Trend Micro Research"
+    },
+    {
+      "category": "Threat Intel",
+      "title": "APT41 Weaponizes Google Calendar as Covert C2 Channel via ToughProgress Malware",
+      "url": "https://www.resecurity.com/blog/article/apt-41-threat-intelligence-report-and-malware-analysis",
+      "summary": "Resecurity analysts have documented APT41's ToughProgress malware communicating with operators by creating and modifying Google Calendar events as a command-and-control mechanism. This Living-off-Trusted-Sites (LoTS) technique abuses legitimate Google infrastructure to blend C2 traffic with normal enterprise web traffic, bypassing traditional network detection.",
+      "why": "Abusing trusted SaaS platforms for C2 is a growing blind spot \u2014 most security tools whitelist Google services. This technique undermines perimeter-based detection and is likely to be adopted by other APT groups.",
+      "source": "Resecurity"
     },
     {
       "category": "Research",
-      "title": "Mandiant M-Trends 2026: PROMPTFLUX & PROMPTSTEAL Malware Query Live LLMs Mid-Execution to Evade Detection",
+      "title": "Mandiant M-Trends 2026: Attackers Hand Off Access in 22 Seconds, 714 New Malware Families Tracked",
       "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026",
-      "summary": "Mandiant's M-Trends 2026 report documents two novel malware families \u2014 PROMPTFLUX and PROMPTSTEAL \u2014 that query large language models mid-execution to dynamically generate evasion code, bypassing static and behavioral detection. The report also tracked 714 new malware families in 2025, up from 632 in 2024, bringing the total tracked to over 6,000.",
-      "why": "Malware that adapts its evasion logic in real time by calling out to LLMs represents a fundamentally new detection challenge. Signature-based and many behavior-based controls are rendered ineffective against payloads that rewrite themselves on each execution.",
+      "summary": "Based on 500,000+ hours of frontline incident response in 2025, Mandiant's M-Trends 2026 report reveals attackers are drastically accelerating internal pivoting \u2014 handing off compromised access between tools and operators in as little as 22 seconds. GTIG tracked 714 new malware families, up from 632 in 2024, including PROMPTFLUX and PROMPTSTEAL which query LLMs mid-execution to evade behavioral detection.",
+      "why": "The 22-second handoff stat underscores that dwell-time-based detection is increasingly obsolete. LLM-querying malware is a novel evasion class that traditional sandboxes and signature engines are not designed to catch.",
       "source": "Mandiant / Google Cloud"
-    },
-    {
-      "category": "Threat Intel",
-      "title": "CrowdStrike 2026 Global Threat Report: eCrime Breakout Time Drops to 29 Minutes, AI Adversaries Up 89%",
-      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
-      "summary": "CrowdStrike's 2026 Global Threat Report reveals the average eCrime breakout time has fallen to 29 minutes \u2014 65% faster than 2024 \u2014 with the fastest observed breakout at just 27 seconds. AI-enabled adversary activity increased 89% year-over-year. Russia-nexus FANCY BEAR deployed LAMEHUG, an LLM-enabled malware used to automate reconnaissance and document exfiltration.",
-      "why": "Sub-30-minute lateral movement makes manual incident response functionally obsolete. The 89% rise in AI-enabled attacks combined with nation-state actors deploying LLM-powered malware signals that AI-assisted offense has crossed from theory into mainstream adversary tradecraft.",
-      "source": "CrowdStrike"
     }
   ]
 }
