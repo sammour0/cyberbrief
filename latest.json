@@ -1,44 +1,44 @@
 {
-  "date": "May 24, 2026",
+  "date": "May 25, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "NGINX CVE-2026-42945 (CVSS 9.2) Actively Exploited in the Wild",
-      "url": "https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html",
-      "summary": "A heap buffer overflow in ngx_http_rewrite_module affects NGINX Plus and Open versions 0.6.27 through 1.30.0. Unauthenticated attackers can crash worker processes or achieve remote code execution via crafted HTTP requests. Active exploitation began within days of public disclosure.",
-      "why": "NGINX powers roughly one-third of all web servers globally. A CVSS 9.2 unauthenticated RCE with active in-the-wild exploitation means mass exposure \u2014 patch or mitigate immediately.",
-      "source": "The Hacker News"
+      "title": "CVE-2026-42897: Microsoft Exchange OWA XSS Zero-Day Actively Exploited (CVSS 8.1)",
+      "url": "https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html",
+      "summary": "A cross-site scripting flaw in Microsoft Exchange Server's Outlook Web Access (OWA) allows attackers to execute arbitrary JavaScript in a victim's browser by sending a specially crafted email. Affects Exchange Server 2016, 2019, and Subscription Edition (Exchange Online is safe). CISA added it to the KEV catalog on May 15, 2026.",
+      "why": "On-premises Exchange remains widespread in enterprise and government environments. No interaction beyond opening a malicious email in OWA is required to trigger the XSS, making phishing-to-session-hijack chains trivially weaponizable. Patch via Exchange Emergency Mitigation Service immediately.",
+      "source": "The Hacker News / Microsoft"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-31431 'Copy Fail' \u2014 Linux LPE to Root Hits Millions of Cloud Workloads",
-      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/01/cve-2026-31431-copy-fail-vulnerability-enables-linux-root-privilege-escalation/",
-      "summary": "Microsoft Defender identified a high-severity local privilege escalation flaw in the Linux kernel affecting Red Hat, SUSE, Ubuntu, and AWS Linux. The bug allows any low-privilege user to escalate to root, impacting a significant share of Kubernetes clusters and cloud VMs. CISA has added it to the Known Exploited Vulnerabilities catalog.",
-      "why": "Cloud-native environments running any of the major Linux distributions are at risk. LPE-to-root in containerized or multi-tenant environments can lead to full cluster compromise.",
-      "source": "Microsoft Security Blog / CISA KEV"
+      "title": "CVE-2026-31431 'Copy Fail': Linux Kernel Root Privilege Escalation Added to CISA KEV",
+      "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
+      "summary": "A logic bug in the Linux kernel's algif_aead (AF_ALG) cryptographic socket interface lets any unprivileged local user gain root with a 732-byte Python exploit \u2014 no race condition, no version-specific offsets, no forensic residue. Works reliably across Ubuntu, Amazon Linux 2023, RHEL, and SUSE on kernels from 2017 onward. CVSS 7.8, CISA KEV added May 1, 2026.",
+      "why": "The exploit is universal across major distros and cloud VM images, and the public PoC is trivially deployable. Any attacker who reaches a shell (via web app RCE, misconfigured container escape, or initial access) immediately has root. Critical for cloud workloads and shared hosting environments.",
+      "source": "CISA / The Hacker News / Microsoft Security Blog"
+    },
+    {
+      "category": "Offensive",
+      "title": "Megalodon: TeamPCP Poisons 5,561 GitHub Repos with Malicious CI/CD Workflows in 6 Hours",
+      "url": "https://thehackernews.com/2026/05/megalodon-github-attack-targets-5561.html",
+      "summary": "Threat group TeamPCP pushed 5,718 malicious commits across 5,561 public GitHub repositories on May 18, 2026, injecting GitHub Actions workflows with base64-encoded payloads that exfiltrate CI secrets, cloud credentials, SSH keys, and OIDC tokens to a C2 at 216.126.225.129:8443. Over 33% of affected repo owners had credentials already stolen by infostealers. Two payload variants: SysDiag (mass backdoor) and Optimize-Build (dormant, API-triggered).",
+      "why": "This is one of the largest single-wave GitHub supply chain attacks on record. Downstream consumers of affected repos may be silently building attacker-controlled code. Audit CI/CD workflow changes from May 18 UTC and rotate all secrets immediately if your repo was among the 5,561 affected.",
+      "source": "The Hacker News / StepSecurity / Hudson Rock"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 (Pawn Storm) Deploys PRISMEX Malware Suite Against NATO Defense Supply Chain",
-      "url": "https://www.trendmicro.com/en_us/research/26/c/pawn-storm-targets-govt-infra.html",
-      "summary": "Trend Micro reports that Russian-linked Pawn Storm (APT28/Fancy Bear) is targeting the defense supply chain of Ukraine and its NATO allies \u2014 Czech Republic, Poland, Romania, Slovakia, Slovenia, and Turkey \u2014 using a new multi-stage malware suite dubbed PRISMEX. The campaign also leveraged a confirmed Windows zero-day (CVE-2026-21513).",
-      "why": "Nation-state offensive campaign with zero-day use against critical NATO-aligned defense infrastructure. PRISMEX's modular design suggests ongoing evolution and long-term persistence objectives.",
-      "source": "Trend Micro Research"
-    },
-    {
-      "category": "Threat Intel",
-      "title": "APT41 Weaponizes Google Calendar as Covert C2 Channel via ToughProgress Malware",
-      "url": "https://www.resecurity.com/blog/article/apt-41-threat-intelligence-report-and-malware-analysis",
-      "summary": "Resecurity analysts have documented APT41's ToughProgress malware communicating with operators by creating and modifying Google Calendar events as a command-and-control mechanism. This Living-off-Trusted-Sites (LoTS) technique abuses legitimate Google infrastructure to blend C2 traffic with normal enterprise web traffic, bypassing traditional network detection.",
-      "why": "Abusing trusted SaaS platforms for C2 is a growing blind spot \u2014 most security tools whitelist Google services. This technique undermines perimeter-based detection and is likely to be adopted by other APT groups.",
-      "source": "Resecurity"
+      "title": "China-Linked Webworm APT Deploys EchoCreep & GraphWorm Backdoors via Discord and MS Graph API",
+      "url": "https://thehackernews.com/2026/05/webworm-deploys-echocreep-and-graphworm.html",
+      "summary": "Chinese APT group Webworm is targeting European government agencies with two new custom backdoors. EchoCreep uses Discord channels for C2 (file upload/download, remote command execution via cmd.exe) and has sent 433 C2 messages to 50+ unique targets since March 2024. GraphWorm uses Microsoft Graph API and OneDrive endpoints exclusively for C2, creating per-victim directories for staged file exfiltration \u2014 blending malicious traffic into legitimate Microsoft cloud activity.",
+      "why": "Abusing legitimate SaaS platforms (Discord, OneDrive) for C2 renders traditional network-layer detection nearly blind. Security teams relying on blocklists or anomaly detection on known-bad IPs will miss this entirely. Behavioral detections on process lineage and unusual Graph API call volumes are required.",
+      "source": "The Hacker News / ESET Research / Dark Reading"
     },
     {
       "category": "Research",
-      "title": "Mandiant M-Trends 2026: Attackers Hand Off Access in 22 Seconds, 714 New Malware Families Tracked",
+      "title": "Mandiant M-Trends 2026: Attackers Hand Off Network Access in 22 Seconds, Dwell Time Rises to 14 Days",
       "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026",
-      "summary": "Based on 500,000+ hours of frontline incident response in 2025, Mandiant's M-Trends 2026 report reveals attackers are drastically accelerating internal pivoting \u2014 handing off compromised access between tools and operators in as little as 22 seconds. GTIG tracked 714 new malware families, up from 632 in 2024, including PROMPTFLUX and PROMPTSTEAL which query LLMs mid-execution to evade behavioral detection.",
-      "why": "The 22-second handoff stat underscores that dwell-time-based detection is increasingly obsolete. LLM-querying malware is a novel evasion class that traditional sandboxes and signature engines are not designed to catch.",
+      "summary": "Based on 500,000+ hours of frontline IR in 2025, Mandiant's M-Trends 2026 reveals the median time for attackers to hand off compromised access to a secondary threat group has collapsed from 8+ hours (2022) to just 22 seconds. Global median dwell time rose to 14 days, driven by espionage campaigns (122-day median for North Korean IT worker ops). Exploits remain the #1 initial access vector (32%) for the sixth consecutive year; voice phishing jumped to #2 at 11%.",
+      "why": "The 22-second handoff stat fundamentally breaks the assumption that catching initial access within minutes is sufficient. Defender response windows must now be measured in seconds, not hours. The 'recovery denial' ransomware trend \u2014 deliberately targeting backups \u2014 also underscores that IR readiness and offline backup verification are now table stakes.",
       "source": "Mandiant / Google Cloud"
     }
   ]
