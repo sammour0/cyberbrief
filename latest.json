@@ -1,44 +1,44 @@
 {
-  "date": "May 25, 2026",
+  "date": "May 26, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-42897: Microsoft Exchange OWA XSS Zero-Day Actively Exploited (CVSS 8.1)",
-      "url": "https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html",
-      "summary": "A cross-site scripting flaw in Microsoft Exchange Server's Outlook Web Access (OWA) allows attackers to execute arbitrary JavaScript in a victim's browser by sending a specially crafted email. Affects Exchange Server 2016, 2019, and Subscription Edition (Exchange Online is safe). CISA added it to the KEV catalog on May 15, 2026.",
-      "why": "On-premises Exchange remains widespread in enterprise and government environments. No interaction beyond opening a malicious email in OWA is required to trigger the XSS, making phishing-to-session-hijack chains trivially weaponizable. Patch via Exchange Emergency Mitigation Service immediately.",
-      "source": "The Hacker News / Microsoft"
+      "title": "CVE-2026-31431: CISA Adds Actively Exploited Linux Root Access Bug to KEV",
+      "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
+      "summary": "CISA added CVE-2026-31431, a local privilege escalation flaw in the Linux kernel (CVSS 7.8), to its Known Exploited Vulnerabilities catalog. The bug allows an unprivileged local user to gain root access; patches land in Linux kernel versions 6.18.22, 6.19.12, and 7.0.",
+      "why": "Active exploitation of a Linux kernel root bug puts millions of servers, cloud VMs, and containers at immediate risk\u2014any low-privileged attacker or malware already on a system can escalate to full root control.",
+      "source": "The Hacker News / CISA"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-31431 'Copy Fail': Linux Kernel Root Privilege Escalation Added to CISA KEV",
-      "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
-      "summary": "A logic bug in the Linux kernel's algif_aead (AF_ALG) cryptographic socket interface lets any unprivileged local user gain root with a 732-byte Python exploit \u2014 no race condition, no version-specific offsets, no forensic residue. Works reliably across Ubuntu, Amazon Linux 2023, RHEL, and SUSE on kernels from 2017 onward. CVSS 7.8, CISA KEV added May 1, 2026.",
-      "why": "The exploit is universal across major distros and cloud VM images, and the public PoC is trivially deployable. Any attacker who reaches a shell (via web app RCE, misconfigured container escape, or initial access) immediately has root. Critical for cloud workloads and shared hosting environments.",
-      "source": "CISA / The Hacker News / Microsoft Security Blog"
-    },
-    {
-      "category": "Offensive",
-      "title": "Megalodon: TeamPCP Poisons 5,561 GitHub Repos with Malicious CI/CD Workflows in 6 Hours",
-      "url": "https://thehackernews.com/2026/05/megalodon-github-attack-targets-5561.html",
-      "summary": "Threat group TeamPCP pushed 5,718 malicious commits across 5,561 public GitHub repositories on May 18, 2026, injecting GitHub Actions workflows with base64-encoded payloads that exfiltrate CI secrets, cloud credentials, SSH keys, and OIDC tokens to a C2 at 216.126.225.129:8443. Over 33% of affected repo owners had credentials already stolen by infostealers. Two payload variants: SysDiag (mass backdoor) and Optimize-Build (dormant, API-triggered).",
-      "why": "This is one of the largest single-wave GitHub supply chain attacks on record. Downstream consumers of affected repos may be silently building attacker-controlled code. Audit CI/CD workflow changes from May 18 UTC and rotate all secrets immediately if your repo was among the 5,561 affected.",
-      "source": "The Hacker News / StepSecurity / Hudson Rock"
+      "title": "Microsoft Warns of Two Actively Exploited Defender Zero-Days (CVE-2026-41091 & CVE-2026-45498) \u2014 CISA Deadline June 3",
+      "url": "https://thehackernews.com/2026/05/microsoft-warns-of-two-actively.html",
+      "summary": "Microsoft disclosed two actively exploited privilege escalation flaws in Microsoft Defender\u2014CVE-2026-41091 and CVE-2026-45498\u2014both added to CISA's KEV catalog with a federal remediation deadline of June 3, 2026. A third Defender zero-day remains unpatched and in the wild.",
+      "why": "Defender is installed on hundreds of millions of Windows systems; SYSTEM-level escalation lets adversaries disable endpoint protections, persist stealthily, and pivot laterally before defenders can respond.",
+      "source": "The Hacker News / Microsoft"
     },
     {
       "category": "Threat Intel",
-      "title": "China-Linked Webworm APT Deploys EchoCreep & GraphWorm Backdoors via Discord and MS Graph API",
-      "url": "https://thehackernews.com/2026/05/webworm-deploys-echocreep-and-graphworm.html",
-      "summary": "Chinese APT group Webworm is targeting European government agencies with two new custom backdoors. EchoCreep uses Discord channels for C2 (file upload/download, remote command execution via cmd.exe) and has sent 433 C2 messages to 50+ unique targets since March 2024. GraphWorm uses Microsoft Graph API and OneDrive endpoints exclusively for C2, creating per-victim directories for staged file exfiltration \u2014 blending malicious traffic into legitimate Microsoft cloud activity.",
-      "why": "Abusing legitimate SaaS platforms (Discord, OneDrive) for C2 renders traditional network-layer detection nearly blind. Security teams relying on blocklists or anomaly detection on known-bad IPs will miss this entirely. Behavioral detections on process lineage and unusual Graph API call volumes are required.",
-      "source": "The Hacker News / ESET Research / Dark Reading"
+      "title": "APT28 Weaponizes CVE-2026-21509 Within 24 Hours, Hits 9 Eastern European Nations via Cloud C2",
+      "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
+      "summary": "Russia's APT28 (Fancy Bear) exploited a newly disclosed Microsoft Office vulnerability (CVE-2026-21509) within 24 hours of its public revelation, running a concentrated 72-hour spear-phishing campaign (Jan 28\u201330, 2026) against military and government entities across nine Eastern European nations. The group routed C2 traffic through legitimate cloud services to evade detection.",
+      "why": "APT28's sub-24-hour exploitation timeline demonstrates nation-state actors can convert disclosures into active weapons faster than most patch cycles allow\u2014and cloud-hosted C2 infrastructure makes blocking or attributing the campaign significantly harder.",
+      "source": "Trellix Research"
     },
     {
       "category": "Research",
-      "title": "Mandiant M-Trends 2026: Attackers Hand Off Network Access in 22 Seconds, Dwell Time Rises to 14 Days",
-      "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026",
-      "summary": "Based on 500,000+ hours of frontline IR in 2025, Mandiant's M-Trends 2026 reveals the median time for attackers to hand off compromised access to a secondary threat group has collapsed from 8+ hours (2022) to just 22 seconds. Global median dwell time rose to 14 days, driven by espionage campaigns (122-day median for North Korean IT worker ops). Exploits remain the #1 initial access vector (32%) for the sixth consecutive year; voice phishing jumped to #2 at 11%.",
-      "why": "The 22-second handoff stat fundamentally breaks the assumption that catching initial access within minutes is sufficient. Defender response windows must now be measured in seconds, not hours. The 'recovery denial' ransomware trend \u2014 deliberately targeting backups \u2014 also underscores that IR readiness and offline backup verification are now table stakes.",
+      "title": "CrowdStrike 2026 Global Threat Report: eCrime Breakout Time Drops 65% to Just 29 Minutes",
+      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
+      "summary": "CrowdStrike's 2026 Global Threat Report reveals the average eCrime breakout time\u2014initial access to lateral movement\u2014fell to 29 minutes in 2025, a 65% speed increase over 2024. Adversaries are integrating AI tools for evasion, exploiting trusted relationships, and targeting security blind spots; 28.3% of CVEs were exploited within 24 hours of disclosure.",
+      "why": "A 29-minute lateral movement window leaves almost no time for human-led incident response\u2014organizations without automated detection and containment will be unable to stop spread before significant damage is done.",
+      "source": "CrowdStrike"
+    },
+    {
+      "category": "Research",
+      "title": "Mandiant M-Trends 2026: Dwell Time Rises to 14 Days as Attackers Systematically Destroy Backup Infrastructure",
+      "url": "https://cloud.google.com/security/resources/m-trends",
+      "summary": "Mandiant's M-Trends 2026, based on 500,000+ hours of incident response across 2025, shows global median dwell time climbed to 14 days. A defining trend is threat actors deliberately targeting backup systems and identity services to deny recovery, with credential stealers rising to 9% of observed malware families (up from 5% in 2024).",
+      "why": "Systematically destroying backups breaks the traditional incident response playbook\u2014organizations must adopt immutable, air-gapped backups and assume identity infrastructure will be compromised during any serious breach.",
       "source": "Mandiant / Google Cloud"
     }
   ]
