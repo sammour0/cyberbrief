@@ -1,45 +1,45 @@
 {
-  "date": "May 26, 2026",
+  "date": "May 27, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-31431: CISA Adds Actively Exploited Linux Root Access Bug to KEV",
-      "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
-      "summary": "CISA added CVE-2026-31431, a local privilege escalation flaw in the Linux kernel (CVSS 7.8), to its Known Exploited Vulnerabilities catalog. The bug allows an unprivileged local user to gain root access; patches land in Linux kernel versions 6.18.22, 6.19.12, and 7.0.",
-      "why": "Active exploitation of a Linux kernel root bug puts millions of servers, cloud VMs, and containers at immediate risk\u2014any low-privileged attacker or malware already on a system can escalate to full root control.",
-      "source": "The Hacker News / CISA"
+      "title": "CVE-2026-34926: Trend Micro Apex One Path Traversal Actively Exploited, CISA KEV Added",
+      "url": "https://www.helpnetsecurity.com/2026/05/26/actively-exploited-trend-micro-apex-one-flaw-cve-2026-34926/",
+      "summary": "A relative directory path traversal vulnerability in Trend Micro Apex One is being exploited in zero-day attacks in the wild. CISA added CVE-2026-34926 to its Known Exploited Vulnerabilities catalog and mandated federal civilian agencies patch by June 4, 2026.",
+      "why": "Active zero-day exploitation with a federal patch deadline under 10 days away. Apex One is widely deployed in enterprise and government environments, making this a high-value target for initial access.",
+      "source": "Help Net Security / CISA KEV"
     },
     {
       "category": "CVE",
-      "title": "Microsoft Warns of Two Actively Exploited Defender Zero-Days (CVE-2026-41091 & CVE-2026-45498) \u2014 CISA Deadline June 3",
-      "url": "https://thehackernews.com/2026/05/microsoft-warns-of-two-actively.html",
-      "summary": "Microsoft disclosed two actively exploited privilege escalation flaws in Microsoft Defender\u2014CVE-2026-41091 and CVE-2026-45498\u2014both added to CISA's KEV catalog with a federal remediation deadline of June 3, 2026. A third Defender zero-day remains unpatched and in the wild.",
-      "why": "Defender is installed on hundreds of millions of Windows systems; SYSTEM-level escalation lets adversaries disable endpoint protections, persist stealthily, and pivot laterally before defenders can respond.",
+      "title": "CVE-2026-42897 (CVSS 8.1): Microsoft Exchange Server RCE Triggered by Crafted Email",
+      "url": "https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html",
+      "summary": "Microsoft disclosed an actively exploited vulnerability in on-premise Exchange Server with a CVSS score of 8.1. The flaw can be triggered by delivering a specially crafted email to a target mailbox, requiring no authentication or user interaction beyond receipt.",
+      "why": "Email-borne RCE with zero interaction is a critical threat vector. On-prem Exchange remains prevalent across enterprise and government networks, and active exploitation means patch windows are effectively closed.",
       "source": "The Hacker News / Microsoft"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 Weaponizes CVE-2026-21509 Within 24 Hours, Hits 9 Eastern European Nations via Cloud C2",
+      "title": "APT28 Exploits CVE-2026-21509 Within 24 Hours to Target European Military & Government",
       "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Russia's APT28 (Fancy Bear) exploited a newly disclosed Microsoft Office vulnerability (CVE-2026-21509) within 24 hours of its public revelation, running a concentrated 72-hour spear-phishing campaign (Jan 28\u201330, 2026) against military and government entities across nine Eastern European nations. The group routed C2 traffic through legitimate cloud services to evade detection.",
-      "why": "APT28's sub-24-hour exploitation timeline demonstrates nation-state actors can convert disclosures into active weapons faster than most patch cycles allow\u2014and cloud-hosted C2 infrastructure makes blocking or attributing the campaign significantly harder.",
+      "summary": "Russia-linked APT28 (Fancy Bear) weaponized a newly disclosed Microsoft Office vulnerability (CVE-2026-21509) within 24 hours of public disclosure in a stealthy multi-stage espionage campaign targeting European military and government entities, routing C2 traffic through cloud infrastructure to evade detection.",
+      "why": "A sub-24-hour exploitation window confirms APT28's elite operational tempo. Cloud-based C2 complicates blocking via traditional network controls and highlights the risk of 1-day exploitation at nation-state speed.",
       "source": "Trellix Research"
     },
     {
       "category": "Research",
-      "title": "CrowdStrike 2026 Global Threat Report: eCrime Breakout Time Drops 65% to Just 29 Minutes",
-      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
-      "summary": "CrowdStrike's 2026 Global Threat Report reveals the average eCrime breakout time\u2014initial access to lateral movement\u2014fell to 29 minutes in 2025, a 65% speed increase over 2024. Adversaries are integrating AI tools for evasion, exploiting trusted relationships, and targeting security blind spots; 28.3% of CVEs were exploited within 24 hours of disclosure.",
-      "why": "A 29-minute lateral movement window leaves almost no time for human-led incident response\u2014organizations without automated detection and containment will be unable to stop spread before significant damage is done.",
-      "source": "CrowdStrike"
+      "title": "Mandiant M-Trends 2026: eCrime Breakout Time Drops to 29 Minutes, 65% Faster Than 2024",
+      "url": "https://cloud.google.com/security/resources/m-trends",
+      "summary": "Mandiant's M-Trends 2026 report, synthesized from 500,000+ hours of incident response engagements across 2025, reveals the average eCrime breakout time collapsed to just 29 minutes. Global median dwell time rose to 14 days, and threat actors increasingly target backup infrastructure and identity services to deny recovery and force ransom payments.",
+      "why": "A 29-minute breakout window means most organizations cannot detect, triage, and contain an intrusion before lateral movement begins \u2014 fundamentally undermining perimeter and alert-based defense strategies.",
+      "source": "Mandiant / Google Cloud"
     },
     {
-      "category": "Research",
-      "title": "Mandiant M-Trends 2026: Dwell Time Rises to 14 Days as Attackers Systematically Destroy Backup Infrastructure",
-      "url": "https://cloud.google.com/security/resources/m-trends",
-      "summary": "Mandiant's M-Trends 2026, based on 500,000+ hours of incident response across 2025, shows global median dwell time climbed to 14 days. A defining trend is threat actors deliberately targeting backup systems and identity services to deny recovery, with credential stealers rising to 9% of observed malware families (up from 5% in 2024).",
-      "why": "Systematically destroying backups breaks the traditional incident response playbook\u2014organizations must adopt immutable, air-gapped backups and assume identity infrastructure will be compromised during any serious breach.",
-      "source": "Mandiant / Google Cloud"
+      "category": "Threat Intel",
+      "title": "CrowdStrike 2026 Global Threat Report: Cloud Intrusions Surge 136%, AI Attacks Now Mainstream",
+      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
+      "summary": "CrowdStrike's 2026 Global Threat Report documents a 136% surge in cloud environment intrusions year-over-year, mainstream adoption of generative AI by threat actors for phishing content and malware development, and a dramatic rise in vishing attacks as adversaries bypass MFA and endpoint controls through voice-based social engineering.",
+      "why": "The cloud intrusion spike signals a fundamental attacker pivot from endpoints to cloud identity and control planes. The vishing trend directly undermines MFA \u2014 the most common enterprise defense against credential-based attacks.",
+      "source": "CrowdStrike"
     }
   ]
 }
