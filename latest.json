@@ -1,45 +1,45 @@
 {
-  "date": "May 28, 2026",
+  "date": "May 29, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CISA Adds Actively Exploited Trend Micro Apex One CVE-2026-34926 to KEV \u2014 Federal Deadline June 4",
+      "title": "CVE-2026-34926: Trend Micro Apex One RCE Actively Exploited \u2014 CISA Sets June 4 Federal Patch Deadline",
       "url": "https://www.helpnetsecurity.com/2026/05/26/actively-exploited-trend-micro-apex-one-flaw-cve-2026-34926/",
-      "summary": "CISA added CVE-2026-34926, an actively exploited flaw in Trend Micro Apex One endpoint protection software, to its Known Exploited Vulnerabilities catalog. US federal civilian agencies have been ordered to apply patches by June 4, 2026. The vulnerability is being actively weaponized in the wild against enterprise targets.",
-      "why": "Apex One is ubiquitous in enterprise and government environments. With active exploitation confirmed and a hard federal deadline, unpatched organizations face immediate risk of endpoint compromise \u2014 particularly dangerous given Apex One's privileged access to every managed host.",
+      "summary": "A critical remote code execution vulnerability in Trend Micro Apex One has been added to CISA's Known Exploited Vulnerabilities catalog after confirmed in-the-wild exploitation. Federal civilian agencies have until June 4, 2026 to apply the vendor-supplied patch.",
+      "why": "Active exploitation with a binding federal remediation deadline makes this urgent for any org running Apex One. The KEV listing signals real adversary use, not just proof-of-concept research.",
       "source": "Help Net Security / CISA KEV"
     },
     {
       "category": "CVE",
-      "title": "CISA Flags CVE-2026-31431: Linux Kernel Local Privilege Escalation Bug Actively Exploited in the Wild",
+      "title": "CVE-2026-31431: Linux Kernel 'Copy Fail' Root Priv-Esc Added to CISA KEV \u2014 Public 732-Byte Python PoC",
       "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
-      "summary": "CISA added CVE-2026-31431 to its KEV catalog \u2014 a local privilege escalation vulnerability (CVSS 7.8) in the Linux kernel dubbed 'Copy Fail' that allows an unprivileged local user to gain full root access. The flaw is actively exploited and affects a broad range of Linux distributions used across cloud, server, and embedded environments.",
-      "why": "Linux underpins critical cloud infrastructure, containers, and servers worldwide. A reliable LPE-to-root exploit that is already being weaponized in the wild makes post-compromise scenarios significantly worse \u2014 any foothold becomes a full system takeover.",
+      "summary": "CISA added CVE-2026-31431 to its KEV catalog \u2014 a logic bug in the Linux kernel's authentication cryptographic template (CVSS 7.8) that lets any unprivileged local user gain root via a 732-byte Python exploit. The PoC is publicly available and exploitation is confirmed in the wild.",
+      "why": "A working public exploit for root on Linux is a high-signal event. Any multi-tenant Linux environment, container host, or shared server is at risk until the kernel is patched or the workaround applied.",
       "source": "The Hacker News / CISA"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 (Fancy Bear) Weaponizes CVE-2026-21509 Within 24 Hours, Uses Cloud Services as C2 to Evade Detection",
+      "title": "APT28 (Fancy Bear) Weaponizes CVE-2026-21509 Within 24 Hours, Deploys Cloud C2 Against European Military & Gov Targets",
       "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Trellix researchers documented a sophisticated APT28 (Fancy Bear / Russia GRU) espionage campaign targeting European military and government entities. The group operationalized a newly disclosed Microsoft Office vulnerability (CVE-2026-21509) within 24 hours of public disclosure and routed command-and-control traffic through legitimate cloud services to blend in with normal traffic and bypass perimeter defenses.",
-      "why": "Sub-24-hour exploit operationalization by a nation-state actor, combined with cloud-based C2 evasion, shows the window between patch release and mass exploitation is now essentially zero. Traditional patch cycles and network-based IOC detection are insufficient against this tempo.",
+      "summary": "Trellix Research tracked a multi-stage APT28 espionage campaign targeting military and government entities across Poland, Slovenia, Turkey, Greece, the UAE, and Ukraine. The group weaponized Microsoft Office vulnerability CVE-2026-21509 within 24 hours of public disclosure and leveraged cloud infrastructure for command-and-control to blend with legitimate traffic.",
+      "why": "24-hour weaponization of a new Office CVE combined with cloud C2 demonstrates elite offensive cadence. Defense teams need to enforce Office macro/link policies and monitor cloud egress for anomalous C2 patterns now.",
       "source": "Trellix Research"
     },
     {
       "category": "Research",
-      "title": "CrowdStrike 2026 Global Threat Report: Average eCrime Breakout Time Drops to 29 Minutes \u2014 Fastest Ever 27 Seconds",
-      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
-      "summary": "CrowdStrike's 2026 Global Threat Report reveals the average eCrime lateral movement breakout time has fallen to just 29 minutes \u2014 a 65% acceleration from 2024's 45-minute average \u2014 with the fastest observed instance recorded at 27 seconds. The report attributes the speed increase to AI-assisted tooling, pre-built automation frameworks, and adversaries demonstrating advanced tradecraft in exploiting identity and cloud blind spots.",
-      "why": "A 29-minute average breakout window makes manual threat response functionally impossible. Organizations without automated detection-to-containment pipelines will almost always suffer full lateral compromise after initial access. This redefines the minimum viable SOC response capability.",
-      "source": "CrowdStrike"
+      "title": "Mandiant M-Trends 2026: Attackers Hand Off Stolen Access in 22 Seconds; New AI-Evasive Malware Families PROMPTFLUX & PROMPTSTEAL Identified",
+      "url": "https://www.helpnetsecurity.com/2026/03/24/mandiant-m-trends-2026-report/",
+      "summary": "Mandiant's M-Trends 2026 report \u2014 compiled from 450,000 hours of incident response \u2014 reveals attackers are now handing off compromised access to secondary operators in as little as 22 seconds. The report also documents two novel malware families, PROMPTFLUX and PROMPTSTEAL, that query LLMs mid-execution to dynamically generate evasion logic, defeating static signature and behavioral detection.",
+      "why": "22-second handoff shatters the assumption that defenders have minutes to isolate an alert. PROMPTFLUX/PROMPTSTEAL represent a new class of AI-native malware that renders traditional detection models insufficient without LLM-aware behavioral analysis.",
+      "source": "Mandiant / Google Cloud"
     },
     {
       "category": "Research",
-      "title": "Mandiant M-Trends 2026: 28% of CVEs Now Exploited Within 24 Hours of Disclosure; Attackers Systematically Destroying Backups",
-      "url": "https://cloud.google.com/security/resources/m-trends",
-      "summary": "Mandiant's M-Trends 2026 report, based on 500,000+ hours of incident response, reveals that 28.3% of all CVEs are exploited within 24 hours of public disclosure \u2014 making the concept of 'patch windows' largely obsolete. Global median dwell time rose to 14 days. A critical new trend: threat actors are now systematically targeting backup infrastructure and identity services to deny victim organizations the ability to recover, shifting ransomware from disruption to destruction.",
-      "why": "When more than one-in-four vulnerabilities are exploited the same day they are disclosed, and attackers are proactively eliminating recovery options, the entire defensive playbook must shift toward pre-breach resilience, identity hardening, and immutable offline backups \u2014 reactive patching alone is no longer tenable.",
-      "source": "Mandiant / Google Cloud"
+      "title": "CrowdStrike 2026 Global Threat Report: eCrime Breakout Now 29 Minutes; GenAI Weaponized at 90+ Organizations",
+      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
+      "summary": "CrowdStrike's annual threat report documents a 65% speed increase in eCrime breakout times \u2014 now averaging 29 minutes, with the fastest observed at 27 seconds. Adversaries also injected malicious prompts into legitimate GenAI tools at over 90 organizations to automate credential theft and cryptocurrency exfiltration, and AI-enabled adversary activity increased 89% year-over-year.",
+      "why": "Sub-30-minute breakout fundamentally challenges detection-and-response workflows calibrated for hour-scale dwell times. Organizations without automated containment playbooks are structurally behind the threat curve.",
+      "source": "CrowdStrike"
     }
   ]
 }
