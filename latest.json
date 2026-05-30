@@ -1,45 +1,45 @@
 {
-  "date": "May 29, 2026",
+  "date": "May 30, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-34926: Trend Micro Apex One RCE Actively Exploited \u2014 CISA Sets June 4 Federal Patch Deadline",
-      "url": "https://www.helpnetsecurity.com/2026/05/26/actively-exploited-trend-micro-apex-one-flaw-cve-2026-34926/",
-      "summary": "A critical remote code execution vulnerability in Trend Micro Apex One has been added to CISA's Known Exploited Vulnerabilities catalog after confirmed in-the-wild exploitation. Federal civilian agencies have until June 4, 2026 to apply the vendor-supplied patch.",
-      "why": "Active exploitation with a binding federal remediation deadline makes this urgent for any org running Apex One. The KEV listing signals real adversary use, not just proof-of-concept research.",
-      "source": "Help Net Security / CISA KEV"
+      "title": "CVE-2026-35616: Fortinet FortiClient EMS Zero-Day (CVSS 9.8) Actively Exploited, Delivers EKZ Infostealer",
+      "url": "https://securityaffairs.com/192817/malware/cve-2026-35616-forticlient-ems-flaw-actively-exploited-in-malware-attacks.html",
+      "summary": "A critical unauthenticated RCE zero-day (CVSS 9.8) in Fortinet FortiClient EMS 7.4.5\u20137.4.6 is being actively exploited in the wild. Attackers are distributing fake Fortinet patch notices that deliver a credential-stealing malware called EKZ Infostealer. watchTowr's sensors first detected exploitation on March 31, 2026, three days before Fortinet published its advisory. An emergency hotfix is available for FortiClient EMS 7.4.5 and 7.4.6.",
+      "why": "CVSS 9.8 unauthenticated RCE in a widely-deployed enterprise endpoint management platform, with active credential-theft campaigns already underway and a zero-day exploitation window of three days before the vendor patch.",
+      "source": "Security Affairs / watchTowr"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-31431: Linux Kernel 'Copy Fail' Root Priv-Esc Added to CISA KEV \u2014 Public 732-Byte Python PoC",
-      "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
-      "summary": "CISA added CVE-2026-31431 to its KEV catalog \u2014 a logic bug in the Linux kernel's authentication cryptographic template (CVSS 7.8) that lets any unprivileged local user gain root via a 732-byte Python exploit. The PoC is publicly available and exploitation is confirmed in the wild.",
-      "why": "A working public exploit for root on Linux is a high-signal event. Any multi-tenant Linux environment, container host, or shared server is at risk until the kernel is patched or the workaround applied.",
-      "source": "The Hacker News / CISA"
+      "title": "CVE-2026-2441: Chrome CSS Engine Use-After-Free Zero-Day (CVSS 8.8) Exploited in the Wild",
+      "url": "https://thehackernews.com/2026/02/new-chrome-zero-day-cve-2026-2441-under.html",
+      "summary": "Google confirmed a high-severity use-after-free vulnerability (CVSS 8.8) in Chrome's CSS rendering engine was exploited in the wild before a patch was released. Attackers can trigger arbitrary code execution inside the browser sandbox by serving specially crafted HTML/CSS. The flaw was discovered by researcher Shaheen Fazim on February 11, 2026. Patched versions: Chrome 145.0.7632.75/.76 (Windows/macOS) and 144.0.7559.75 (Linux).",
+      "why": "Zero-day browser RCE requiring no authentication \u2014 a victim only needs to visit a malicious page. Sandbox escape chaining makes this a realistic path to full system compromise at scale.",
+      "source": "The Hacker News / Google / NVD"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 (Fancy Bear) Weaponizes CVE-2026-21509 Within 24 Hours, Deploys Cloud C2 Against European Military & Gov Targets",
-      "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Trellix Research tracked a multi-stage APT28 espionage campaign targeting military and government entities across Poland, Slovenia, Turkey, Greece, the UAE, and Ukraine. The group weaponized Microsoft Office vulnerability CVE-2026-21509 within 24 hours of public disclosure and leveraged cloud infrastructure for command-and-control to blend with legitimate traffic.",
-      "why": "24-hour weaponization of a new Office CVE combined with cloud C2 demonstrates elite offensive cadence. Defense teams need to enforce Office macro/link policies and monitor cloud egress for anomalous C2 patterns now.",
-      "source": "Trellix Research"
+      "title": "Operation Neusploit: APT28 (Fancy Bear) Weaponizes Microsoft Office CVE-2026-21509 Against Eastern European Defense Ministries",
+      "url": "https://www.zscaler.com/blogs/security-research/apt28-leverages-cve-2026-21509-operation-neusploit",
+      "summary": "Russian state-sponsored APT28 weaponized a Microsoft Office security-feature-bypass flaw (CVE-2026-21509, CVSS 7.8) within 72 hours of its public disclosure. In a Jan 28\u201330, 2026 spear-phishing blitz, 29 emails targeted defense ministries (40%), logistics operators (35%), and diplomatic entities (25%) across nine Eastern European nations including Ukraine, Slovakia, and Romania. Payloads included MiniDoor (email exfiltration RAT), PixyNetLoader, and a Covenant Grunt implant using filen.io cloud storage as C2 to blend with normal traffic.",
+      "why": "APT28 weaponizing a critical Office flaw within 72 hours of disclosure against NATO-aligned defense and diplomatic targets demonstrates the group's continued aggressive operational tempo in the European theater.",
+      "source": "Zscaler ThreatLabz / Trellix / The Hacker News"
+    },
+    {
+      "category": "Threat Intel",
+      "title": "Iranian APT Screening Serpens Deploys 6 New RAT Variants Against US, Israel, UAE Using AppDomainManager Hijacking",
+      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
+      "summary": "Palo Alto Networks Unit 42 tracked Iranian-nexus threat actor Screening Serpens (aka Smoke Sandstorm / UNC1549) deploying six new RAT variants across two previously undocumented malware families \u2014 MiniUpdate and MiniJunk V2 \u2014 in campaigns running February through April 2026. The group uses fake job recruitment lures targeting technical professionals in the U.S., Israel, and UAE. A key new evasion technique is AppDomainManager hijacking, which manipulates .NET application initialization to disable security mechanisms before the app fully loads.",
+      "why": "Six novel RAT variants and a sophisticated .NET evasion technique (AppDomainManager hijacking) from a state-backed Iranian group actively targeting Western defense and technology sectors during an active regional conflict.",
+      "source": "Palo Alto Networks Unit 42"
     },
     {
       "category": "Research",
-      "title": "Mandiant M-Trends 2026: Attackers Hand Off Stolen Access in 22 Seconds; New AI-Evasive Malware Families PROMPTFLUX & PROMPTSTEAL Identified",
-      "url": "https://www.helpnetsecurity.com/2026/03/24/mandiant-m-trends-2026-report/",
-      "summary": "Mandiant's M-Trends 2026 report \u2014 compiled from 450,000 hours of incident response \u2014 reveals attackers are now handing off compromised access to secondary operators in as little as 22 seconds. The report also documents two novel malware families, PROMPTFLUX and PROMPTSTEAL, that query LLMs mid-execution to dynamically generate evasion logic, defeating static signature and behavioral detection.",
-      "why": "22-second handoff shatters the assumption that defenders have minutes to isolate an alert. PROMPTFLUX/PROMPTSTEAL represent a new class of AI-native malware that renders traditional detection models insufficient without LLM-aware behavioral analysis.",
-      "source": "Mandiant / Google Cloud"
-    },
-    {
-      "category": "Research",
-      "title": "CrowdStrike 2026 Global Threat Report: eCrime Breakout Now 29 Minutes; GenAI Weaponized at 90+ Organizations",
-      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
-      "summary": "CrowdStrike's annual threat report documents a 65% speed increase in eCrime breakout times \u2014 now averaging 29 minutes, with the fastest observed at 27 seconds. Adversaries also injected malicious prompts into legitimate GenAI tools at over 90 organizations to automate credential theft and cryptocurrency exfiltration, and AI-enabled adversary activity increased 89% year-over-year.",
-      "why": "Sub-30-minute breakout fundamentally challenges detection-and-response workflows calibrated for hour-scale dwell times. Organizations without automated containment playbooks are structurally behind the threat curve.",
-      "source": "CrowdStrike"
+      "title": "The AI Hacking Boom: 70 Open-Source AI Offensive Security Tools Now Available, Enabling Fully Autonomous Attack Pipelines",
+      "url": "https://hadrian.io/blog/the-ai-offensive-security-boom-seventy-tools-in-eighteen-months",
+      "summary": "Hadrian's research team cataloged 70 open-source AI-powered penetration testing tools as of March 2026 \u2014 fewer than five existed before GPT-4's release in April 2023. The tools span autonomous end-to-end attack agents, AI-driven exploit generation, LLM-based binary reverse engineering, and recon platforms. Unlike human pentesters who work sequentially, these agents run attack playbooks in parallel across an entire attack surface simultaneously with no human in the loop. A real-world example: a November 2025 AI-orchestrated espionage campaign attributed to a Chinese state group autonomously handled recon, exploitation, lateral movement, and data exfiltration across 30 organizations.",
+      "why": "The democratization of fully autonomous offensive tooling \u2014 65+ new AI attack frameworks in 18 months \u2014 fundamentally shifts the threat landscape, lowering attacker skill requirements while dramatically increasing speed and scale of compromise.",
+      "source": "Hadrian Security Research"
     }
   ]
 }
