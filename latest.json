@@ -1,45 +1,45 @@
 {
-  "date": "May 31, 2026",
+  "date": "June 01, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "Microsoft Defender Zero-Days CVE-2026-41091 & CVE-2026-45498 Chained in Live Attacks",
-      "url": "https://thehackernews.com/2026/05/microsoft-warns-of-two-actively.html",
-      "summary": "Two actively exploited Defender flaws are being chained: CVE-2026-45498 (CVSS 4.0) disables Defender via DoS, then CVE-2026-41091 (CVSS 7.8) escalates the crippled host to SYSTEM via improper link resolution in the Malware Protection Engine. CISA set a federal patching deadline of June 3, 2026; fixed in Defender Antimalware Platform 4.18.26040.7.",
-      "why": "Blinding your EDR before privilege escalation is a lethal combination. The attack chain is already in the wild and every unpatched Windows endpoint running Defender is at risk \u2014 federal agencies have under 72 hours to patch.",
-      "source": "The Hacker News / BleepingComputer / CISA KEV"
+      "title": "CVE-2026-34926: Actively Exploited Trend Micro Apex One Flaw Added to CISA KEV",
+      "url": "https://www.helpnetsecurity.com/2026/05/26/actively-exploited-trend-micro-apex-one-flaw-cve-2026-34926/",
+      "summary": "A critical vulnerability in Trend Micro Apex One security agents is being actively exploited in the wild. CISA has added CVE-2026-34926 to its Known Exploited Vulnerabilities catalog, ordering US federal civilian agencies to apply patches by June 4, 2026.",
+      "why": "Apex One is widely deployed in enterprise environments. Active exploitation with a federal patch deadline means attackers already have working tooling \u2014 organizations should treat this as an emergency patch.",
+      "source": "Help Net Security / CISA KEV"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-31431 'Copy Fail' \u2014 Linux Kernel LPE Earns CISA KEV with Working Public Exploit",
-      "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
-      "summary": "A 9-year-old logic flaw in the Linux kernel's AF_ALG cryptographic interface (algif_aead module) lets any unprivileged local user gain root via a controlled 4-byte kernel page-cache overwrite. CVSS 7.8. Affects Ubuntu, RHEL, Amazon Linux, and virtually every mainstream distro since 2017. A reliable working exploit was public at the time of CISA KEV addition. Patches: kernels 6.18.22, 6.19.12, 7.0.",
-      "why": "A reliable, publicly available root exploit against nearly every enterprise Linux distro is as severe as local-privilege bugs get. Cloud workloads and containers sharing a host kernel are particularly exposed.",
-      "source": "CISA KEV / The Hacker News / SafeBreach / Microsoft Security Blog"
-    },
-    {
-      "category": "CVE",
-      "title": "CVE-2026-34926: Trend Micro Apex One Directory Traversal Turns AV Update Channel Into Malware Distributor",
-      "url": "https://thehackernews.com/2026/05/cisa-adds-exploited-langflow-and-trend-micro.html",
-      "summary": "A directory traversal flaw (CWE-23) in Trend Micro Apex One on-premise servers allows an authenticated admin to modify a core server table and inject malicious code, which is then silently pushed to all managed endpoints through the trusted Apex One update mechanism. CISA added it to KEV on May 21, 2026 after Trend Micro confirmed at least one in-the-wild exploitation attempt. Fix: SP1 Critical Patch Build 18012.",
-      "why": "Security products are the highest-value supply-chain target in any enterprise. Compromising the Apex One server converts the AV update pipeline into a stealthy malware delivery network across every protected endpoint in the organisation.",
-      "source": "CISA KEV / The Hacker News / Help Net Security / Trend Micro"
+      "title": "CVE-2026-33032: CVSS 9.8 nginx-ui Flaw Enables Unauthenticated Full Server Takeover via MCP Endpoint",
+      "url": "https://thehackernews.com/2026/04/critical-nginx-ui-vulnerability-cve.html",
+      "summary": "A critical unauthenticated vulnerability in nginx-ui is exploitable via its MCP endpoint to achieve complete Nginx server takeover. Scored CVSS 9.8, the flaw has been confirmed actively exploited across 2,600+ exposed instances worldwide.",
+      "why": "nginx-ui is a popular web-based Nginx management panel. An unauthenticated CVSS 9.8 RCE with over 2,600 exposed instances and live exploitation makes this extremely high-priority \u2014 any internet-facing nginx-ui installation is at immediate risk.",
+      "source": "The Hacker News"
     },
     {
       "category": "Threat Intel",
-      "title": "Iranian APT Screening Serpens Deploys MiniUpdate & MiniJunk V2 RATs via Fake Airline Job Portals",
-      "url": "https://thehackernews.com/2026/05/iranian-hackers-deploy-minifast-and.html",
-      "summary": "Palo Alto Unit42 tracked Iran-linked Screening Serpens (active since 2022) targeting the US, Israel, and UAE between February and April 2026 with two new RAT families: MiniUpdate and MiniJunk V2. Infection chains begin with spear phishing via fake airline hiring portals delivering malware-laden ZIPs, using DLL sideloading and AppDomainManager hijacking. C2 traffic is routed through three-to-five Azure-hosted domains unique per target.",
-      "why": "The use of legitimate Azure cloud infrastructure for C2 makes network-level blocking extremely difficult. Aerospace, defence manufacturing, telecom, and tech sectors are squarely in the crosshairs alongside US and Israeli government targets amid ongoing regional conflict.",
-      "source": "Palo Alto Unit42"
-    },
-    {
-      "category": "Threat Intel",
-      "title": "APT28 Operation Neusploit: Fancy Bear Weaponizes CVE-2026-21509 in 3 Days, Targets European Military & Government",
+      "title": "APT28 Weaponizes Microsoft Office Zero-Day CVE-2026-21509 Within 24 Hours Against Eastern European Defense Ministries",
       "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Russia's GRU-linked APT28 (Fancy Bear) weaponized Microsoft Office security-bypass CVE-2026-21509 only three days after public disclosure, launching spear-phishing attacks against defence ministries, maritime operators, and diplomatic entities across Poland, Slovakia, Romania, Ukraine, Turkey, Greece, and the UAE. The multi-stage chain delivers the BEARDSHELL backdoor via cloud-hosted LNK files, DLL sideloading, and in-memory execution. CERT-UA officially attributed the campaign to UAC-0001.",
-      "why": "A 3-day exploit-to-weaponisation window by a nation-state actor underscores the vanishing patch window for high-profile Office flaws. Nation-state targeting of NATO-aligned defence ministries signals continued escalation of Russian cyber operations in the European theatre.",
-      "source": "Trellix / Zscaler ThreatLabz / CERT-UA"
+      "summary": "Russia's APT28 (Fancy Bear) exploited Microsoft Office CVE-2026-21509 within 24 hours of its public disclosure in a focused 72-hour spear-phishing blitz targeting nine Eastern European nations. At least 29 emails hit defense ministries (40%), transportation/logistics (35%), and diplomatic entities (25%), delivering cloud-hosted C2 implants.",
+      "why": "APT28's near-zero time-to-exploit of a fresh Microsoft Office CVE targeting NATO-aligned defense entities signals active state-level espionage with exceptional speed. Organizations in these sectors should assume targeted phishing and audit email gateways immediately.",
+      "source": "Trellix Research"
+    },
+    {
+      "category": "Threat Intel",
+      "title": "Iranian APT 'Screening Serpens' Unleashes 6 New RAT Variants Against US, Israel, and UAE Since February 2026",
+      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
+      "summary": "Palo Alto Unit 42 is tracking Iranian state-sponsored group Screening Serpens, which dramatically escalated operations after a regional conflict began in February 2026. Between February and April 2026, six new remote access Trojan variants were identified in attacks against targets in the US, Israel, UAE, and two additional Middle Eastern countries.",
+      "why": "Rapidly evolving novel malware tooling from a state-sponsored actor across high-profile geopolitical targets reflects intensifying Iranian cyber operations. Defenders in government, defense, and energy sectors in these regions should immediately review the published IOCs.",
+      "source": "Palo Alto Unit 42"
+    },
+    {
+      "category": "Research",
+      "title": "Mandiant M-Trends 2026: Time-to-Exploit Has Gone Negative \u2014 28.3% of CVEs Weaponized Within 24 Hours of Disclosure",
+      "url": "https://cloud.google.com/security/resources/m-trends",
+      "summary": "Mandiant's M-Trends 2026 report, drawn from 500,000+ hours of frontline incident response, reveals exploits are now routinely arriving before or within hours of patches. 28.3% of CVEs were exploited within 24 hours of public disclosure. Threat actors are also shifting focus to backup infrastructure and identity services to maximize ransom leverage, with global median dwell time rising to 14 days.",
+      "why": "This data fundamentally breaks the traditional 30-day patch window paradigm. With nearly a third of CVEs weaponized within a single day of disclosure, organizations must adopt threat-informed prioritization, pre-patch mitigations, and assume-breach postures rather than relying on patch timelines alone.",
+      "source": "Mandiant / Google Cloud"
     }
   ]
 }
