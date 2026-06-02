@@ -1,45 +1,45 @@
 {
-  "date": "June 01, 2026",
+  "date": "June 02, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-34926: Actively Exploited Trend Micro Apex One Flaw Added to CISA KEV",
-      "url": "https://www.helpnetsecurity.com/2026/05/26/actively-exploited-trend-micro-apex-one-flaw-cve-2026-34926/",
-      "summary": "A critical vulnerability in Trend Micro Apex One security agents is being actively exploited in the wild. CISA has added CVE-2026-34926 to its Known Exploited Vulnerabilities catalog, ordering US federal civilian agencies to apply patches by June 4, 2026.",
-      "why": "Apex One is widely deployed in enterprise environments. Active exploitation with a federal patch deadline means attackers already have working tooling \u2014 organizations should treat this as an emergency patch.",
-      "source": "Help Net Security / CISA KEV"
+      "title": "CVE-2026-35616: Fortinet FortiClient EMS Pre-Auth API Bypass Actively Exploited (CVSS 9.1)",
+      "url": "https://thehackernews.com/2026/04/fortinet-patches-actively-exploited-cve.html",
+      "summary": "Fortinet patched a critical pre-authentication API access bypass in FortiClient EMS (CVSS 9.1) that allows unauthenticated attackers to escalate privileges. Active exploitation confirmed in the wild. CISA added it to the Known Exploited Vulnerabilities catalog on April 6, 2026, with a federal patch deadline of April 9.",
+      "why": "Pre-auth CVSS 9.1 flaw actively exploited \u2014 Fortinet products are a top ransomware initial-access vector. The federal patch window has closed, making non-patched enterprise deployments high-value targets right now.",
+      "source": "The Hacker News / Fortinet PSIRT"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-33032: CVSS 9.8 nginx-ui Flaw Enables Unauthenticated Full Server Takeover via MCP Endpoint",
-      "url": "https://thehackernews.com/2026/04/critical-nginx-ui-vulnerability-cve.html",
-      "summary": "A critical unauthenticated vulnerability in nginx-ui is exploitable via its MCP endpoint to achieve complete Nginx server takeover. Scored CVSS 9.8, the flaw has been confirmed actively exploited across 2,600+ exposed instances worldwide.",
-      "why": "nginx-ui is a popular web-based Nginx management panel. An unauthenticated CVSS 9.8 RCE with over 2,600 exposed instances and live exploitation makes this extremely high-priority \u2014 any internet-facing nginx-ui installation is at immediate risk.",
-      "source": "The Hacker News"
+      "title": "CVE-2026-0257: PAN-OS GlobalProtect Authentication Bypass Under Active Exploitation, CISA KEV Added",
+      "url": "https://thehackernews.com/2026/05/pan-os-globalprotect-authentication.html",
+      "summary": "An authentication bypass in Palo Alto Networks PAN-OS GlobalProtect portal and gateway allows unauthorized VPN tunnel establishment. Rapid7 confirmed active exploitation across multiple customers beginning May 17, 2026. CISA added it to KEV with a June 1 federal patch deadline.",
+      "why": "GlobalProtect is one of the most widely deployed enterprise VPN solutions. An auth bypass here hands attackers direct network access \u2014 the June 1 federal deadline has passed, making unpatched orgs sitting targets.",
+      "source": "The Hacker News / Rapid7 / CISA KEV"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 Weaponizes Microsoft Office Zero-Day CVE-2026-21509 Within 24 Hours Against Eastern European Defense Ministries",
+      "title": "Iranian APT 'Screening Serpens' Deploys 6 New RAT Variants Across 5 Countries Amid Regional Conflict",
+      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
+      "summary": "Palo Alto Unit 42 is tracking an Iranian APT group dubbed Screening Serpens that deployed two novel malware families \u2014 MiniUpdate and MiniJunk V2 \u2014 across targets in up to five countries. Six distinct RAT variants were identified since February 2026, with campaign tempo escalating after the start of regional conflict.",
+      "why": "Geopolitically-motivated espionage with novel, freshly-built RAT families means low AV detection rates. Escalating ops tied to active regional conflict signals sustained targeting of government, defense, and critical infrastructure sectors.",
+      "source": "Palo Alto Networks Unit 42"
+    },
+    {
+      "category": "Threat Intel",
+      "title": "APT28 Weaponizes CVE-2026-21509 Within 24 Hours, Targeting 9 Eastern European Defense and Diplomatic Entities",
       "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Russia's APT28 (Fancy Bear) exploited Microsoft Office CVE-2026-21509 within 24 hours of its public disclosure in a focused 72-hour spear-phishing blitz targeting nine Eastern European nations. At least 29 emails hit defense ministries (40%), transportation/logistics (35%), and diplomatic entities (25%), delivering cloud-hosted C2 implants.",
-      "why": "APT28's near-zero time-to-exploit of a fresh Microsoft Office CVE targeting NATO-aligned defense entities signals active state-level espionage with exceptional speed. Organizations in these sectors should assume targeted phishing and audit email gateways immediately.",
+      "summary": "Russian state-sponsored APT28 (Fancy Bear) launched a concentrated 72-hour spear-phishing campaign (Jan 28\u201330, 2026) exploiting CVE-2026-21509 within 24 hours of public disclosure. Targets spanned defense ministries (40%), transportation/logistics (35%), and diplomatic entities (25%) across nine Eastern European nations. Cloud-based C2 infrastructure used for stealth.",
+      "why": "A 24-hour weaponization window against NATO-adjacent targets highlights that patch SLAs measured in days are too slow. Cloud-based C2 abuses trusted services to bypass perimeter defenses \u2014 a tradecraft trend defenders must account for.",
       "source": "Trellix Research"
     },
     {
-      "category": "Threat Intel",
-      "title": "Iranian APT 'Screening Serpens' Unleashes 6 New RAT Variants Against US, Israel, and UAE Since February 2026",
-      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Palo Alto Unit 42 is tracking Iranian state-sponsored group Screening Serpens, which dramatically escalated operations after a regional conflict began in February 2026. Between February and April 2026, six new remote access Trojan variants were identified in attacks against targets in the US, Israel, UAE, and two additional Middle Eastern countries.",
-      "why": "Rapidly evolving novel malware tooling from a state-sponsored actor across high-profile geopolitical targets reflects intensifying Iranian cyber operations. Defenders in government, defense, and energy sectors in these regions should immediately review the published IOCs.",
-      "source": "Palo Alto Unit 42"
-    },
-    {
       "category": "Research",
-      "title": "Mandiant M-Trends 2026: Time-to-Exploit Has Gone Negative \u2014 28.3% of CVEs Weaponized Within 24 Hours of Disclosure",
-      "url": "https://cloud.google.com/security/resources/m-trends",
-      "summary": "Mandiant's M-Trends 2026 report, drawn from 500,000+ hours of frontline incident response, reveals exploits are now routinely arriving before or within hours of patches. 28.3% of CVEs were exploited within 24 hours of public disclosure. Threat actors are also shifting focus to backup infrastructure and identity services to maximize ransom leverage, with global median dwell time rising to 14 days.",
-      "why": "This data fundamentally breaks the traditional 30-day patch window paradigm. With nearly a third of CVEs weaponized within a single day of disclosure, organizations must adopt threat-informed prioritization, pre-patch mitigations, and assume-breach postures rather than relying on patch timelines alone.",
-      "source": "Mandiant / Google Cloud"
+      "title": "Mandiant M-Trends 2026: Attackers Hand Off Access in 22 Seconds; LLM-Querying Malware (PROMPTFLUX) Emerges",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/",
+      "summary": "Mandiant's M-Trends 2026 report, drawn from 450,000 hours of incident response, reveals attackers are internally handing off compromised access in as little as 22 seconds. New malware families PROMPTFLUX and PROMPTSTEAL query live LLMs mid-execution to dynamically generate evasion commands. Vulnerability exploitation leads initial access at 32% of all intrusions.",
+      "why": "22-second lateral movement hand-offs make human-speed SOC response insufficient \u2014 automated detection and response are now mandatory. LLM-querying malware is a new evasion class that signature and heuristic tools cannot reliably catch.",
+      "source": "Mandiant / Google Cloud Threat Intelligence"
     }
   ]
 }
