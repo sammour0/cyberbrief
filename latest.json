@@ -1,45 +1,45 @@
 {
-  "date": "June 02, 2026",
+  "date": "June 03, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-35616: Fortinet FortiClient EMS Pre-Auth API Bypass Actively Exploited (CVSS 9.1)",
-      "url": "https://thehackernews.com/2026/04/fortinet-patches-actively-exploited-cve.html",
-      "summary": "Fortinet patched a critical pre-authentication API access bypass in FortiClient EMS (CVSS 9.1) that allows unauthenticated attackers to escalate privileges. Active exploitation confirmed in the wild. CISA added it to the Known Exploited Vulnerabilities catalog on April 6, 2026, with a federal patch deadline of April 9.",
-      "why": "Pre-auth CVSS 9.1 flaw actively exploited \u2014 Fortinet products are a top ransomware initial-access vector. The federal patch window has closed, making non-patched enterprise deployments high-value targets right now.",
-      "source": "The Hacker News / Fortinet PSIRT"
+      "title": "CVE-2026-35616: Fortinet FortiClient EMS Pre-Auth RCE (CVSS 9.1) Actively Exploited \u2014 EKZ Infostealer Deployed",
+      "url": "https://www.bleepingcomputer.com/news/security/new-fortinet-forticlient-ems-flaw-cve-2026-35616-exploited-in-attacks/",
+      "summary": "A critical pre-authentication API bypass (CVSS 9.1) in Fortinet FortiClient EMS 7.4.5\u20137.4.6 allows unauthenticated attackers to execute arbitrary commands without any credentials. Threat actors are actively exploiting it to deploy the EKZ Infostealer \u2014 disguised as a legitimate Fortinet patch \u2014 to steal Chrome and Firefox credentials including bypassing Chrome's encrypted password storage.",
+      "why": "CISA added this to its KEV catalog (April 6, 2026) with an emergency federal remediation deadline. The zero-click pre-auth exploitation path combined with an active credential-theft campaign targeting enterprise endpoints makes this critical for any organization running FortiClient EMS.",
+      "source": "BleepingComputer / Arctic Wolf"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-0257: PAN-OS GlobalProtect Authentication Bypass Under Active Exploitation, CISA KEV Added",
-      "url": "https://thehackernews.com/2026/05/pan-os-globalprotect-authentication.html",
-      "summary": "An authentication bypass in Palo Alto Networks PAN-OS GlobalProtect portal and gateway allows unauthorized VPN tunnel establishment. Rapid7 confirmed active exploitation across multiple customers beginning May 17, 2026. CISA added it to KEV with a June 1 federal patch deadline.",
-      "why": "GlobalProtect is one of the most widely deployed enterprise VPN solutions. An auth bypass here hands attackers direct network access \u2014 the June 1 federal deadline has passed, making unpatched orgs sitting targets.",
-      "source": "The Hacker News / Rapid7 / CISA KEV"
+      "title": "CVE-2025-48595: Android Framework Zero-Day (CVSS 8.4) Actively Exploited \u2014 Patched June 2, 2026",
+      "url": "https://www.bleepingcomputer.com/news/security/google-fixes-one-actively-exploited-android-zero-day-124-flaws/",
+      "summary": "Google's June 2026 Android security bulletin (124 CVEs) patches an actively exploited zero-day in the Android Framework \u2014 CVE-2025-48595 (CVSS 8.4). The integer overflow flaw enables local privilege escalation with no user interaction across Android 14, 15, 16, and 16-QRP2. Google attributes exploitation to likely commercial spyware or nation-state actors targeting high-value individuals.",
+      "why": "No-interaction-required privilege escalation with confirmed in-the-wild exploitation is a hallmark of targeted spyware (e.g., Pegasus-style operations). All Android 14+ devices remain vulnerable until updated to the June 5 2026 patch level.",
+      "source": "BleepingComputer / Help Net Security"
     },
     {
       "category": "Threat Intel",
-      "title": "Iranian APT 'Screening Serpens' Deploys 6 New RAT Variants Across 5 Countries Amid Regional Conflict",
-      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Palo Alto Unit 42 is tracking an Iranian APT group dubbed Screening Serpens that deployed two novel malware families \u2014 MiniUpdate and MiniJunk V2 \u2014 across targets in up to five countries. Six distinct RAT variants were identified since February 2026, with campaign tempo escalating after the start of regional conflict.",
-      "why": "Geopolitically-motivated espionage with novel, freshly-built RAT families means low AV detection rates. Escalating ops tied to active regional conflict signals sustained targeting of government, defense, and critical infrastructure sectors.",
-      "source": "Palo Alto Networks Unit 42"
+      "title": "APT28 Operation Neusploit: MS Office CVE-2026-21509 Weaponized Within 24 Hours of Disclosure",
+      "url": "https://thehackernews.com/2026/02/apt28-uses-microsoft-office-cve-2026.html",
+      "summary": "Russian state-sponsored APT28 (Fancy Bear) exploited a newly disclosed Microsoft Office OLE bypass (CVE-2026-21509) within 24 hours of its January 26 disclosure, targeting European military, government, and maritime organizations across Poland, Ukraine, Greece, UAE, and Slovenia. The multi-stage chain deploys an Outlook VBA backdoor (NotDoor) and a modified Covenant C2 implant, routing all traffic through the legitimate cloud storage service filen.io to blend with normal activity.",
+      "why": "APT28's 24-hour weaponization window and cloud-C2 blending technique eliminate traditional IOC-based detection. Any unpatched Office installation across government, defense, or maritime sectors is an active target for ongoing espionage.",
+      "source": "The Hacker News / Trellix / Zscaler ThreatLabz"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 Weaponizes CVE-2026-21509 Within 24 Hours, Targeting 9 Eastern European Defense and Diplomatic Entities",
-      "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Russian state-sponsored APT28 (Fancy Bear) launched a concentrated 72-hour spear-phishing campaign (Jan 28\u201330, 2026) exploiting CVE-2026-21509 within 24 hours of public disclosure. Targets spanned defense ministries (40%), transportation/logistics (35%), and diplomatic entities (25%) across nine Eastern European nations. Cloud-based C2 infrastructure used for stealth.",
-      "why": "A 24-hour weaponization window against NATO-adjacent targets highlights that patch SLAs measured in days are too slow. Cloud-based C2 abuses trusted services to bypass perimeter defenses \u2014 a tradecraft trend defenders must account for.",
-      "source": "Trellix Research"
+      "title": "Miasma Supply Chain Attack: 30+ Red Hat @redhat-cloud-services npm Packages Backdoored on June 1, 2026",
+      "url": "https://www.wiz.io/blog/miasma-supply-chain-attack-targeting-redhat-npm-packages",
+      "summary": "Attackers compromised a Red Hat employee's GitHub account on June 1, 2026, injecting malicious GitHub Actions workflows into three RedHatInsights repositories to backdoor 30+ packages in the @redhat-cloud-services npm scope (~80,000 weekly downloads). The Miasma payload executes automatically on every npm install \u2014 before application code runs \u2014 and sweeps AWS, GCP, Azure, Kubernetes, HashiCorp Vault, GitHub Actions, npm, and CircleCI secrets.",
+      "why": "Executes at install time making it invisible to most app-layer security tools. Targets CI/CD pipeline secrets enabling full lateral movement across multi-cloud infrastructure. Any pipeline running npm install against these packages on June 1\u20132 should be treated as fully compromised and all cloud tokens rotated immediately.",
+      "source": "Wiz / StepSecurity / Snyk"
     },
     {
       "category": "Research",
-      "title": "Mandiant M-Trends 2026: Attackers Hand Off Access in 22 Seconds; LLM-Querying Malware (PROMPTFLUX) Emerges",
-      "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/",
-      "summary": "Mandiant's M-Trends 2026 report, drawn from 450,000 hours of incident response, reveals attackers are internally handing off compromised access in as little as 22 seconds. New malware families PROMPTFLUX and PROMPTSTEAL query live LLMs mid-execution to dynamically generate evasion commands. Vulnerability exploitation leads initial access at 32% of all intrusions.",
-      "why": "22-second lateral movement hand-offs make human-speed SOC response insufficient \u2014 automated detection and response are now mandatory. LLM-querying malware is a new evasion class that signature and heuristic tools cannot reliably catch.",
-      "source": "Mandiant / Google Cloud Threat Intelligence"
+      "title": "CrowdStrike 2026 Global Threat Report: AI Slashes eCrime Breakout Time to 29 Minutes, Attacks Surge 89%",
+      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
+      "summary": "CrowdStrike's 2026 Global Threat Report reveals AI-enabled attacks surged 89% YoY. Average eCrime lateral movement breakout time collapsed to 29 minutes (fastest ever recorded: 27 seconds; data exfiltration began 4 minutes after initial access in one case). Russia-nexus FANCY BEAR deployed LLM-enabled malware (LAMEHUG) for automated reconnaissance; DPRK FAMOUS CHOLLIMA used AI-generated personas for insider threat operations. Adversaries are also prompt-injecting GenAI tools at 90+ organizations.",
+      "why": "A 29-minute breakout window eliminates human-speed SOC response for most organizations. With AI now acting as a force multiplier from eCrime to nation-state, defenders must automate detection and containment \u2014 traditional 1-hour SLAs for triage are functionally obsolete.",
+      "source": "CrowdStrike"
     }
   ]
 }
