@@ -1,45 +1,45 @@
 {
-  "date": "June 05, 2026",
+  "date": "June 06, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CISA Adds Actively Exploited Linux Root Access Bug CVE-2026-31431 to KEV",
-      "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
-      "summary": "CVE-2026-31431 (CVSS 7.8) is a local privilege escalation flaw in the Linux kernel that allows an unprivileged local user to obtain root access. CISA has added it to the Known Exploited Vulnerabilities catalog confirming active exploitation in the wild.",
-      "why": "Root-level LPE with confirmed active exploitation across Linux servers and cloud workloads makes this urgent patching priority for any Linux-based infrastructure.",
-      "source": "The Hacker News / CISA KEV"
+      "title": "CVE-2026-35616: Fortinet FortiClient EMS Auth Bypass (CVSS 9.1) Actively Exploited",
+      "url": "https://thehackernews.com/2026/04/fortinet-patches-actively-exploited-cve.html",
+      "summary": "Fortinet released emergency patches for CVE-2026-35616, a CVSS 9.1 improper access control flaw in FortiClient EMS that allows unauthenticated attackers to bypass authentication via the management API and escalate privileges. Exploitation in the wild was confirmed at time of disclosure.",
+      "why": "An unauthenticated auth bypass in endpoint management software grants attackers control over every managed endpoint across an enterprise. Patch immediately \u2014 exploitation is already active.",
+      "source": "The Hacker News"
     },
     {
       "category": "CVE",
-      "title": "Fortinet Patches Actively Exploited CVE-2026-35616 in FortiClient EMS (CVSS 9.1)",
-      "url": "https://thehackernews.com/2026/04/fortinet-patches-actively-exploited-cve.html",
-      "summary": "Fortinet released emergency patches for CVE-2026-35616, a CVSS 9.1 improper access control vulnerability in FortiClient EMS. Attackers can bypass authentication through the API and escalate privileges. Active exploitation confirmed in the wild.",
-      "why": "CVSS 9.1 with in-the-wild exploitation in widely deployed enterprise endpoint management software \u2014 unpatched instances give attackers full administrative control over managed endpoints.",
-      "source": "The Hacker News / Fortinet PSIRT"
+      "title": "CISA Adds CVE-2026-31431 Linux Kernel LPE to Known Exploited Vulnerabilities Catalog",
+      "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
+      "summary": "CISA added CVE-2026-31431 (CVSS 7.8) to its KEV catalog \u2014 a local privilege escalation flaw in the Linux kernel that allows an unprivileged local user to obtain full root access. Federal agencies face a mandatory remediation deadline.",
+      "why": "Linux underpins the vast majority of cloud and server infrastructure. A reliable LPE-to-root primitive is a critical post-exploitation stepping stone; container escapes and cloud lateral movement both become trivial with root on the host.",
+      "source": "The Hacker News / CISA"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 Weaponizes Microsoft Office CVE-2026-21509 Within 24 Hours to Target European Military",
+      "title": "APT28 Weaponizes Microsoft Office Zero-Day CVE-2026-21509 Within 24 Hours Against NATO-Adjacent Governments",
       "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Russian state-sponsored APT28 (Fancy Bear) exploited a newly disclosed Microsoft Office 1-day vulnerability (CVE-2026-21509) within 24 hours of its public disclosure. The multi-stage campaign deploys stealthy malware with cloud-based C2 infrastructure against European military and government entities.",
-      "why": "Russian APT exploiting 1-days within 24 hours of disclosure against NATO military targets signals dangerous acceleration in operational tempo and significant intelligence collection risk.",
+      "summary": "Trellix Research documented APT28 (Fancy Bear) converting CVE-2026-21509, a Microsoft Office zero-day, into a weaponized spear-phishing payload within 24 hours of public disclosure. A concentrated 72-hour campaign (Jan 28\u201330 2026) targeted defense ministries, logistics operators, and diplomatic entities across nine Eastern European nations using cloud-hosted C2 infrastructure.",
+      "why": "Sub-24-hour zero-day weaponization by a nation-state against NATO-adjacent defense entities signals a dangerous acceleration in offensive timelines \u2014 defenders can no longer rely on a patch window before exploitation begins.",
       "source": "Trellix Research"
     },
     {
       "category": "Threat Intel",
-      "title": "Iran's APT 'Screening Serpens' Deploys 6 New RAT Variants Targeting US, Israel, and UAE",
+      "title": "Iran-Linked APT Screening Serpens Deploys 6 New RAT Variants Across 5 Countries Amid Regional Escalation",
       "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Palo Alto Unit 42 tracks Iranian APT group Screening Serpens, which has dramatically intensified operations since February 2026, developing and deploying six new remote access Trojan variants in under three months. Targets span entities in the US, Israel, UAE, and two additional Middle Eastern countries.",
-      "why": "Six new RAT variants in three months indicates rapid Iranian cyber capability development tied directly to regional conflict escalation \u2014 high-value espionage and disruption risk for Middle East and US defense sectors.",
+      "summary": "Palo Alto Networks Unit 42 tracked Iran-nexus threat actor Screening Serpens rapidly expanding operations after February 2026 regional conflict escalation, deploying six new remote access trojan variants split across two new malware families \u2014 MiniUpdate and MiniJunk V2 \u2014 against targets in five countries.",
+      "why": "A sudden proliferation of distinct custom malware families in under two months indicates the actor has expanded tooling resources and operational tempo significantly. Defenders in the Middle East and allied regions must update detections for these new families immediately.",
       "source": "Palo Alto Networks Unit 42"
     },
     {
       "category": "Research",
-      "title": "Mandiant M-Trends 2026: Attackers Hand Off Access in 22 Seconds, Median Dwell Time Rises to 14 Days",
-      "url": "https://cloud.google.com/security/resources/m-trends",
-      "summary": "Mandiant's M-Trends 2026 report, based on 500,000+ hours of IR engagements, finds attackers are handing off compromised access internally in as little as 22 seconds. Exploits remain the #1 initial access vector for the sixth consecutive year. Threat actors are increasingly targeting backup infrastructure and identity services to force ransom payments and deny recovery.",
-      "why": "Authoritative annual benchmark from Mandiant's global IR team \u2014 the 22-second internal handoff and systematic backup destruction are paradigm shifts that demand updated IR playbooks and recovery architecture.",
-      "source": "Mandiant / Google Cloud"
+      "title": "CrowdStrike 2026 Global Threat Report: AI-Enabled Attacks Up 89%, Fastest Breakout Time Now 27 Seconds",
+      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
+      "summary": "CrowdStrike's 2026 Global Threat Report reveals AI-enabled cyberattacks surged 89% year-over-year. Average adversary breakout time fell to 29 minutes with the fastest recorded lateral movement at just 27 seconds. Adversaries are also actively abusing GenAI tools \u2014 injecting malicious prompts into enterprise AI systems at 90+ organizations.",
+      "why": "A 27-second breakout time eliminates any meaningful human-in-the-loop incident response window. Organizations must shift to automated, real-time containment and assume AI systems themselves are a new attack surface requiring prompt-injection defenses.",
+      "source": "CrowdStrike"
     }
   ]
 }
