@@ -1,45 +1,45 @@
 {
-  "date": "June 06, 2026",
+  "date": "June 07, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-35616: Fortinet FortiClient EMS Auth Bypass (CVSS 9.1) Actively Exploited",
+      "title": "CVE-2026-35616: Fortinet FortiClient EMS Pre-Auth RCE Actively Exploited (CVSS 9.8)",
       "url": "https://thehackernews.com/2026/04/fortinet-patches-actively-exploited-cve.html",
-      "summary": "Fortinet released emergency patches for CVE-2026-35616, a CVSS 9.1 improper access control flaw in FortiClient EMS that allows unauthenticated attackers to bypass authentication via the management API and escalate privileges. Exploitation in the wild was confirmed at time of disclosure.",
-      "why": "An unauthenticated auth bypass in endpoint management software grants attackers control over every managed endpoint across an enterprise. Patch immediately \u2014 exploitation is already active.",
-      "source": "The Hacker News"
+      "summary": "A critical improper access control flaw in Fortinet FortiClient EMS versions 7.4.5\u20137.4.6 allows unauthenticated attackers to execute arbitrary code via crafted API requests. CISA added it to the KEV catalog on April 6, 2026, with a 3-day remediation deadline for federal agencies. Exploitation in the wild was first logged by watchTowr honeypots on March 31, 2026.",
+      "why": "Pre-auth RCE in widely-deployed enterprise endpoint management software with confirmed in-the-wild exploitation before a patch existed. Emergency hotfix is available but full fix targets version 7.4.7.",
+      "source": "The Hacker News / CISA KEV"
     },
     {
       "category": "CVE",
-      "title": "CISA Adds CVE-2026-31431 Linux Kernel LPE to Known Exploited Vulnerabilities Catalog",
-      "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
-      "summary": "CISA added CVE-2026-31431 (CVSS 7.8) to its KEV catalog \u2014 a local privilege escalation flaw in the Linux kernel that allows an unprivileged local user to obtain full root access. Federal agencies face a mandatory remediation deadline.",
-      "why": "Linux underpins the vast majority of cloud and server infrastructure. A reliable LPE-to-root primitive is a critical post-exploitation stepping stone; container escapes and cloud lateral movement both become trivial with root on the host.",
-      "source": "The Hacker News / CISA"
+      "title": "CVE-2026-5281: Chrome Zero-Day Use-After-Free in WebGPU (Dawn) Under Active Exploitation",
+      "url": "https://thehackernews.com/2026/04/new-chrome-zero-day-cve-2026-5281-under.html",
+      "summary": "A high-severity use-after-free vulnerability in Dawn, Chrome's cross-platform WebGPU implementation, was patched and simultaneously added to CISA's KEV catalog on April 1, 2026. The flaw allows remote code execution via a malicious web page, requiring no user interaction beyond visiting a site.",
+      "why": "Zero-day in the world's most-used browser exploitable via any webpage visit. Immediate CISA KEV listing confirms in-the-wild exploitation. All Chrome users on unpatched versions remain exposed.",
+      "source": "The Hacker News / CISA KEV"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 Weaponizes Microsoft Office Zero-Day CVE-2026-21509 Within 24 Hours Against NATO-Adjacent Governments",
+      "title": "Iran-Linked APT 'Screening Serpens' Deploys 6 New RAT Variants Targeting US, Israel, and UAE",
+      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
+      "summary": "Palo Alto Unit 42 is tracking Iranian APT 'Screening Serpens,' which sharply escalated espionage operations following the February 2026 regional conflict. Between February and April 2026, the group deployed six previously-undocumented remote access Trojan variants against entities in the US, Israel, UAE, and two other Middle Eastern countries.",
+      "why": "Nation-state campaign using novel, rapidly-diversified malware families across five countries tied to an active geopolitical flashpoint. High malware variant turnover makes IOC-based blocking largely ineffective.",
+      "source": "Palo Alto Unit 42"
+    },
+    {
+      "category": "Threat Intel",
+      "title": "APT28 Weaponizes Microsoft Office CVE-2026-21509 Within 24 Hours, Routes C2 Through Cloud Services",
       "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Trellix Research documented APT28 (Fancy Bear) converting CVE-2026-21509, a Microsoft Office zero-day, into a weaponized spear-phishing payload within 24 hours of public disclosure. A concentrated 72-hour campaign (Jan 28\u201330 2026) targeted defense ministries, logistics operators, and diplomatic entities across nine Eastern European nations using cloud-hosted C2 infrastructure.",
-      "why": "Sub-24-hour zero-day weaponization by a nation-state against NATO-adjacent defense entities signals a dangerous acceleration in offensive timelines \u2014 defenders can no longer rely on a patch window before exploitation begins.",
+      "summary": "Trellix researchers uncovered a multi-stage APT28 (Russian GRU) espionage campaign targeting European military and government organizations. The group weaponized the newly disclosed Microsoft Office OLE bypass (CVE-2026-21509) within 24 hours of public disclosure, and tunneled all C2 traffic through legitimate cloud platforms to evade network detection.",
+      "why": "Illustrates the 'negative exploit window' phenomenon\u2014state actors operationalize 1-days before most defenders finish reading the advisory. Cloud-based C2 blends into enterprise traffic and defeats traditional network IOC detection.",
       "source": "Trellix Research"
     },
     {
-      "category": "Threat Intel",
-      "title": "Iran-Linked APT Screening Serpens Deploys 6 New RAT Variants Across 5 Countries Amid Regional Escalation",
-      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Palo Alto Networks Unit 42 tracked Iran-nexus threat actor Screening Serpens rapidly expanding operations after February 2026 regional conflict escalation, deploying six new remote access trojan variants split across two new malware families \u2014 MiniUpdate and MiniJunk V2 \u2014 against targets in five countries.",
-      "why": "A sudden proliferation of distinct custom malware families in under two months indicates the actor has expanded tooling resources and operational tempo significantly. Defenders in the Middle East and allied regions must update detections for these new families immediately.",
-      "source": "Palo Alto Networks Unit 42"
-    },
-    {
       "category": "Research",
-      "title": "CrowdStrike 2026 Global Threat Report: AI-Enabled Attacks Up 89%, Fastest Breakout Time Now 27 Seconds",
-      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
-      "summary": "CrowdStrike's 2026 Global Threat Report reveals AI-enabled cyberattacks surged 89% year-over-year. Average adversary breakout time fell to 29 minutes with the fastest recorded lateral movement at just 27 seconds. Adversaries are also actively abusing GenAI tools \u2014 injecting malicious prompts into enterprise AI systems at 90+ organizations.",
-      "why": "A 27-second breakout time eliminates any meaningful human-in-the-loop incident response window. Organizations must shift to automated, real-time containment and assume AI systems themselves are a new attack surface requiring prompt-injection defenses.",
-      "source": "CrowdStrike"
+      "title": "Mandiant M-Trends 2026: Mean Time-to-Exploit Hits -7 Days; Attacker Handoff Collapses to 22 Seconds",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026",
+      "summary": "Mandiant's M-Trends 2026 report, drawn from 500,000+ hours of incident response, reveals the mean time-to-exploit has reached -7 days\u2014meaning exploitation now routinely precedes patch availability. Internal attacker handoff time dropped from 8+ hours (2022) to just 22 seconds (2025). Voice phishing surged to 11% of intrusions (overtaking email phishing at 6%), and the BRICKSTORM implant achieved ~400-day dwell times by surviving standard network remediation.",
+      "why": "A -7 day exploit window structurally invalidates patch-as-primary-defense strategies. The 22-second handoff means detection at initial access is the only reliable intervention point before lateral movement is underway.",
+      "source": "Mandiant / Google Cloud Threat Intelligence"
     }
   ]
 }
