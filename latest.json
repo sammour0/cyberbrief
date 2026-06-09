@@ -1,45 +1,45 @@
 {
-  "date": "June 08, 2026",
+  "date": "June 09, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "Cisco Patches Sixth SD-WAN Zero-Day of 2026 \u2014 CVE-2026-20245 (CVSS 7.8) Actively Exploited",
-      "url": "https://www.securityweek.com/cisco-patches-another-sd-wan-zero-day-the-sixth-exploited-in-2026/",
-      "summary": "Cisco disclosed CVE-2026-20245, a command injection vulnerability in Cisco Catalyst SD-WAN Manager. An attacker with netadmin privileges can upload a crafted file and execute arbitrary commands as root. This marks the sixth Cisco SD-WAN zero-day to be actively exploited in 2026, pointing to sustained, targeted attacker interest in SD-WAN infrastructure.",
-      "why": "Six actively exploited SD-WAN zero-days in a single year from one vendor signals systematic pre-positioned access to enterprise network infrastructure. Any org running Cisco Catalyst SD-WAN should treat this as an emergency patch given the established exploitation pattern.",
-      "source": "SecurityWeek"
+      "title": "CVE-2026-23111: Linux Kernel nf_tables Use-After-Free \u2014 Working Exploit Published June 8",
+      "url": "https://blog.exodusintel.com/2026/06/08/off-by-exploiting-a-use-after-free-in-the-linux-kernel/",
+      "summary": "A single inverted '!' operator in Linux kernel nf_tables allows an unprivileged local user to escalate to root and escape containers. Patched Feb 5 2026, but Exodus Intelligence published a full working exploit on June 8, with an independent PoC already out from FuzzingLabs since April. Affects Debian Bookworm/Trixie and Ubuntu 22.04/24.04 LTS.",
+      "why": "Container escape + local privilege escalation with a public working exploit is critical for any containerized workload on unpatched kernels. Runtime security controls and kernel versions need immediate review \u2014 any unpatched Debian/Ubuntu host is one rogue process away from full root.",
+      "source": "Exodus Intelligence"
     },
     {
       "category": "CVE",
-      "title": "CISA Adds Magento RCE Flaw CVE-2026-45247 (CVSS 9.8) to KEV Catalog \u2014 Unauthenticated Code Execution",
-      "url": "https://thehackernews.com/2026/06/cisa-adds-exploited-magento-rce-flaw.html",
-      "summary": "CISA added CVE-2026-45247 to its Known Exploited Vulnerabilities catalog on June 3, 2026. The flaw is a deserialization of untrusted data vulnerability in the Mirasvit Full Page Cache Warmer extension for Magento, allowing unauthenticated attackers to execute arbitrary PHP code on affected e-commerce servers. Patches are available in version 1.11.12+.",
-      "why": "Unauthenticated RCE against e-commerce platforms with confirmed active exploitation. Attackers targeting Magento stores can achieve full server compromise, steal payment data, and inject payment skimmers. Any merchant running the affected extension must patch immediately.",
-      "source": "CISA / The Hacker News"
+      "title": "CVE-2026-20182: Cisco Catalyst SD-WAN CVSS 10.0 Auth Bypass \u2014 Sixth SD-WAN Zero-Day of 2026",
+      "url": "https://thehackernews.com/2026/05/cisco-catalyst-sd-wan-controller-auth.html",
+      "summary": "A perfect-CVSS-10.0 authentication bypass in Cisco Catalyst SD-WAN Controller and Manager lets an unauthenticated remote attacker gain admin privileges by abusing the vdaemon service over DTLS (UDP 12346), then injecting SSH keys into vmanage-admin. CISA added it to KEV; Cisco confirmed active limited exploitation in May 2026.",
+      "why": "Full network fabric takeover is the blast radius: an attacker with admin on SD-WAN Manager controls routing policy for every branch. This is the sixth SD-WAN zero-day exploited in 2026 \u2014 a pattern suggesting targeted, sustained campaign against SD-WAN management planes.",
+      "source": "Cisco PSIRT / The Hacker News / CISA KEV"
+    },
+    {
+      "category": "CVE",
+      "title": "CVE-2025-48595: Android Framework Zero-Click Bug (CVSS 8.4) Actively Exploited \u2014 June 2026 Patch Released",
+      "url": "https://www.helpnetsecurity.com/2026/06/02/android-vulnerability-exploited-cve-2025-48595/",
+      "summary": "Google's June 2026 Android Security Bulletin patches 124 flaws; the most urgent is CVE-2025-48595, a high-severity Android Framework vulnerability (CVSS 8.4) requiring zero user interaction, confirmed under active exploitation by sophisticated threat actors. All devices below June 2026 patch level are exposed.",
+      "why": "Zero-interaction exploitation means compromise is possible without a single tap \u2014 no phishing click needed. Enterprise MDM policies should force-push the June patch immediately, especially for devices handling sensitive comms or credentials.",
+      "source": "Google Android Security / Help Net Security"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 Weaponizes Microsoft Office CVE-2026-21509 Within 24 Hours of Disclosure, Uses Cloud C2",
-      "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Trellix researchers uncovered a multi-stage espionage campaign by Russia's APT28 (Fancy Bear) that weaponized Microsoft Office vulnerability CVE-2026-21509 within 24 hours of its public disclosure. The campaign targets European military and government entities, using legitimate cloud services for command-and-control infrastructure to blend with normal traffic and evade detection.",
-      "why": "Demonstrates nation-state actors operating inside the patch window \u2014 exploiting a disclosed vuln before defenders can respond. Cloud C2 abuse is a mature evasion tactic that defeats perimeter-based detection. European defense and government orgs should review IOCs and hunt for lateral movement immediately.",
-      "source": "Trellix Research"
-    },
-    {
-      "category": "Threat Intel",
-      "title": "Unit 42 Tracks Iranian APT 'Screening Serpens' Deploying Six New RAT Variants Across 5 Countries",
+      "title": "Unit 42: Iranian APT 'Screening Serpens' Deploys 6 New RAT Variants Using .NET AppDomainManager Hijacking",
       "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Palo Alto Networks Unit 42 is tracking Iranian threat actor 'Screening Serpens,' which intensified operations following a regional conflict in February 2026. Between February and April 2026, the group deployed six new RAT variants split across two malware families \u2014 MiniUpdate and MiniJunk V2 \u2014 against targets across up to five countries. The rapid malware iteration indicates a well-resourced development pipeline adapting to detection.",
-      "why": "Six distinct RAT variants in three months is an unusually fast development cadence, suggesting the actor is actively evading detection signatures. Organizations in the Middle East, Europe, and government/defense sectors should update threat feeds with the new MiniUpdate and MiniJunk V2 indicators.",
+      "summary": "Palo Alto Networks Unit 42 tracked Iranian state-sponsored APT 'Screening Serpens' deploying two new malware families \u2014 MiniUpdate and MiniJunk V2 \u2014 across US, Israeli, and UAE aerospace, defense, and telecom targets since the Feb 28 2026 regional conflict. The group weaponizes AppDomainManager hijacking to force .NET applications to disable their own security controls at initialization.",
+      "why": "AppDomainManager hijacking is a living-off-the-land .NET technique that bypasses EDR detections tuned for Office macro attacks. High-tempo ops (6 new RAT variants in 10 weeks) signals strong resourcing. Aerospace, defense manufacturing, and telecom are the stated target sectors.",
       "source": "Palo Alto Networks Unit 42"
     },
     {
       "category": "Research",
-      "title": "Mandiant M-Trends 2026: Attackers Hand Off Network Access in 22 Seconds, AI-Enabled Malware PROMPTFLUX Evades Defenses",
-      "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026",
-      "summary": "Mandiant's M-Trends 2026 report, drawn from 500,000+ hours of frontline IR investigations, documents that attackers now hand off compromised network access to secondary threat actors in just 22 seconds (down from 8+ hours in 2022). New malware families PROMPTFLUX and PROMPTSTEAL query LLMs mid-execution to dynamically evade detection, while the QUIETVAULT credential stealer scans for local AI tools. Exploits remain the leading initial access vector for the sixth consecutive year.",
-      "why": "A 22-second hand-off window collapses traditional detection-and-response timelines entirely. AI-native malware that consults LLMs for evasion represents a qualitative shift defenders have not encountered at scale before. Every SOC and IR team should recalibrate their playbooks against these findings.",
-      "source": "Mandiant / Google Cloud"
+      "title": "Verizon DBIR 2026: Vulnerability Exploitation Dethrones Credential Theft as #1 Breach Vector for First Time in 19 Years",
+      "url": "https://www.verizon.com/business/resources/reports/dbir/",
+      "summary": "The 2026 Verizon DBIR (31,000 incidents, 22,000+ confirmed breaches \u2014 nearly double last year) finds unpatched vulnerability exploitation now drives 31% of breaches, overtaking credential abuse (13%) as the leading initial access vector for the first time in the report's 19-year history. Confirmed breaches almost doubled year-over-year.",
+      "why": "This structural shift means organizations over-indexed on MFA and identity controls are now more exposed than those with disciplined patch management. The 19-year historical baseline makes this statistically robust \u2014 security investment priorities should shift accordingly.",
+      "source": "Verizon / SecurityWeek"
     }
   ]
 }
