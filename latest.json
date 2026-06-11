@@ -1,45 +1,45 @@
 {
-  "date": "June 10, 2026",
+  "date": "June 11, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "Critical Check Point VPN Zero-Day CVE-2026-50751 Actively Exploited by Qilin Ransomware",
-      "url": "https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/",
-      "summary": "Check Point disclosed CVE-2026-50751 on June 8, 2026 \u2014 a critical authentication bypass in Remote Access VPN, Mobile Access, and Spark Firewall products. Rapid7 confirmed active exploitation in the wild, with attackers retrieving ELF payloads from attacker-controlled servers post-exploitation. The campaign has been attributed to the Qilin ransomware operation.",
-      "why": "A critical VPN auth-bypass actively weaponised by a ransomware group means any unpatched Check Point gateway is a direct path to full network compromise. Patch immediately and audit VPN logs from June 7 onward.",
-      "source": "Rapid7"
+      "title": "Chrome V8 Zero-Day CVE-2026-11645 (CVSS 8.8) Actively Exploited \u2014 5th Chrome 0-Day of 2026",
+      "url": "https://thehackernews.com/2026/06/chrome-v8-zero-day-cve-2026-11645.html",
+      "summary": "Out-of-bounds memory access in Chrome's V8 JavaScript/WebAssembly engine allows a remote attacker to execute arbitrary code via a crafted HTML page. Google patched it in Chrome 149.0.7827.102/103 on June 8, 2026 \u2014 the fifth Chrome zero-day exploited in the wild this year. CISA added it to the KEV catalog and a $55,000 bug bounty was awarded to the reporting researcher.",
+      "why": "Actively exploited in the wild with no public details on threat actors to prevent further abuse. Affects all Chromium-based browsers. Immediate update to Chrome 149+ is critical for all users and enterprises.",
+      "source": "The Hacker News / Google Security"
     },
     {
       "category": "CVE",
-      "title": "Google Chrome Zero-Day CVE-2026-5281 (Dawn WebGPU Use-After-Free) Enables RCE via Malicious Web Page",
-      "url": "https://thehackernews.com/2026/04/new-chrome-zero-day-cve-2026-5281-under.html",
-      "summary": "A use-after-free flaw in Dawn, Chrome's open-source WebGPU implementation, allows remote code execution when a user visits a crafted HTML page. The bug affects all Chromium-based browsers. Google confirmed active in-the-wild exploitation and shipped an emergency patch.",
-      "why": "Browser RCE zero-days are top-tier attack primitives. Since the entire Chromium ecosystem is affected, the exposed attack surface spans billions of endpoints \u2014 update Chrome, Edge, and Brave now.",
-      "source": "The Hacker News"
+      "title": "Check Point VPN Auth Bypass CVE-2026-50751 (CVSS 9.3) Exploited by Qilin Ransomware Affiliate",
+      "url": "https://www.bleepingcomputer.com/news/security/check-point-links-vpn-zero-day-attacks-to-qilin-ransomware-gang/",
+      "summary": "Critical authentication bypass in Check Point Security Gateway's deprecated IKEv1 VPN protocol allows attackers to establish VPN sessions without valid credentials by exploiting a logic flaw in certificate validation. Exploitation observed since May 7, 2026 with escalation in early June. Check Point confirmed a Qilin ransomware affiliate used this zero-day to breach dozens of organizations globally before a hotfix was released.",
+      "why": "CVSS 9.3 with confirmed ransomware exploitation. Any org running Check Point VPN with IKEv1 enabled is at immediate risk of credential-free network access. Emergency hotfix is available \u2014 apply without waiting for a regular patch cycle.",
+      "source": "BleepingComputer / Check Point / Rapid7"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 Weaponizes Microsoft Office 1-Day CVE-2026-21509 Within 24 Hours in 9-Country European Military Campaign",
-      "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Russia's Fancy Bear (APT28) ran a concentrated 72-hour spear-phishing campaign January 28-30, 2026, sending 29 distinct emails across nine Eastern European nations targeting military and government entities. The group exploited a newly disclosed Microsoft Office vulnerability (CVE-2026-21509) within 24 hours of its public release and routed C2 traffic through cloud infrastructure to blend in.",
-      "why": "APT28 turning around a 1-day exploit within 24 hours against NATO-adjacent militaries signals a dramatic acceleration in Russian offensive cyber tempo. Defenders must treat patch SLAs for Office vulns as hours, not weeks.",
-      "source": "Trellix Research"
+      "title": "APT28 'Operation Neusploit': Weaponizes MS Office CVE-2026-21509 Within 24 Hours to Hit European Military and Maritime Targets",
+      "url": "https://thehackernews.com/2026/02/apt28-uses-microsoft-office-cve-2026.html",
+      "summary": "Russian state-sponsored APT28 (Fancy Bear / FROZENLAKE) exploited Microsoft Office OLE security bypass CVE-2026-21509 within 24 hours of its public disclosure, launching spear-phishing campaigns against maritime and transport organizations across Poland, Slovenia, Turkey, Greece, UAE, and Ukraine. The multi-stage infection chain deploys a novel Outlook VBA backdoor (NotDoor) and a modified Covenant C2 implant, with all C2 traffic routed through legitimate cloud infrastructure.",
+      "why": "Demonstrates adversary 1-day weaponization speed at nation-state scale \u2014 24 hours from patch release to live exploitation. Novel cloud-hosted C2 and Outlook backdoor represent new evasion tradecraft targeting NATO-adjacent infrastructure.",
+      "source": "Trellix / The Hacker News / Zscaler ThreatLabz"
     },
     {
       "category": "Threat Intel",
-      "title": "Iranian APT Screening Serpens Deploys 6 Novel RAT Variants Across 5 Countries Since February 2026",
+      "title": "Iranian APT Screening Serpens Deploys MiniUpdate and MiniJunk V2 RATs via Azure C2 in Conflict-Driven Espionage Surge",
       "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Palo Alto Unit 42 is tracking Iran-nexus APT Screening Serpens, which has deployed six new remote access Trojan variants across entities in up to five countries since a regional conflict escalated in February 2026. The group uses job-seeker social engineering lures crafted to deceive targets in key strategic sectors.",
-      "why": "Six distinct RAT variants in under four months points to a well-resourced tooling pipeline. The job-lure vector is extremely effective against cleared employees; HR and recruiting teams are a high-priority phishing target.",
-      "source": "Palo Alto Unit 42"
+      "summary": "Palo Alto Unit 42 tracked Iranian threat group Screening Serpens deploying six new RAT variants across two malware families \u2014 newly discovered MiniUpdate and evolved MiniJunk V2 \u2014 against targets in the US, Israel, UAE, and additional Middle East entities. Activity surged after the February 28 regional conflict outbreak. Each target gets a unique set of 3-5 Azure-hosted C2 domains. The group evades EDR by exploiting a legitimate .NET runtime configuration file to disable security monitoring entirely, without memory patching.",
+      "why": "Conflict-correlated espionage surge with a novel EDR evasion technique that abuses the .NET runtime's own config mechanism \u2014 no shellcode or memory patching required. Highly targeted C2 infrastructure per victim makes detection and attribution harder.",
+      "source": "Palo Alto Networks Unit 42"
     },
     {
       "category": "Research",
-      "title": "Mandiant M-Trends 2026: PROMPTFLUX and PROMPTSTEAL Malware Queries LLMs Mid-Execution to Dynamically Evade Detection",
+      "title": "Mandiant M-Trends 2026: PROMPTFLUX and PROMPTSTEAL Are First Confirmed Malware to Query Live LLMs During Execution",
       "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026",
-      "summary": "Mandiant's M-Trends 2026 report \u2014 drawn from 500,000+ hours of frontline IR \u2014 documents two new malware families: PROMPTFLUX and PROMPTSTEAL, which actively query large language models during runtime to adapt their behaviour and bypass security controls. The report also names 'distillation attacks' \u2014 extracting proprietary logic from AI models \u2014 as an emerging intellectual-property threat.",
-      "why": "Malware that rewrites its own behaviour in real time by calling an LLM breaks the fundamental assumption of signature and heuristic detection. This is the clearest documented case yet of AI being weaponised inside an active payload.",
-      "source": "Mandiant / Google Cloud"
+      "summary": "Mandiant's M-Trends 2026 report documents two malware families using live LLM API calls mid-execution: PROMPTFLUX (a VBScript dropper) uses the Gemini API to rewrite its own source code hourly, generating polymorphic variants that evade signature detection on demand. PROMPTSTEAL, attributed to APT28, queries an LLM to dynamically generate Windows shell commands for document theft against Ukrainian targets \u2014 the first confirmed state-sponsored malware with live LLM integration. Report also notes median dwell time rose to 14 days as attackers focus on destroying backups.",
+      "why": "Marks a qualitative leap in malware sophistication: runtime AI integration enables goal-driven, polymorphic behavior that defeats signature-based and behavior-static detection. Defenders must shift to behavioral AI detectors and LLM API egress monitoring.",
+      "source": "Mandiant / Google Cloud (M-Trends 2026)"
     }
   ]
 }
