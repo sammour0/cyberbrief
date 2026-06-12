@@ -1,45 +1,45 @@
 {
-  "date": "June 11, 2026",
+  "date": "June 12, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "Chrome V8 Zero-Day CVE-2026-11645 (CVSS 8.8) Actively Exploited \u2014 5th Chrome 0-Day of 2026",
-      "url": "https://thehackernews.com/2026/06/chrome-v8-zero-day-cve-2026-11645.html",
-      "summary": "Out-of-bounds memory access in Chrome's V8 JavaScript/WebAssembly engine allows a remote attacker to execute arbitrary code via a crafted HTML page. Google patched it in Chrome 149.0.7827.102/103 on June 8, 2026 \u2014 the fifth Chrome zero-day exploited in the wild this year. CISA added it to the KEV catalog and a $55,000 bug bounty was awarded to the reporting researcher.",
-      "why": "Actively exploited in the wild with no public details on threat actors to prevent further abuse. Affects all Chromium-based browsers. Immediate update to Chrome 149+ is critical for all users and enterprises.",
-      "source": "The Hacker News / Google Security"
+      "title": "CVE-2026-35273: Oracle PeopleSoft RCE Zero-Day (CVSS 9.8) Exploited by ShinyHunters \u2014 100+ Orgs Breached",
+      "url": "https://www.bleepingcomputer.com/news/security/oracle-mitigates-peoplesoft-zero-day-exploited-in-data-theft-attacks/",
+      "summary": "An unauthenticated RCE bug in Oracle PeopleSoft PeopleTools 8.61/8.62 (CVSS 9.8) was weaponized by ShinyHunters (tracked by Mandiant as UNC6240) as a zero-day from May 27 to June 9, hitting 100+ orgs \u2014 68% in higher education. Oracle issued an out-of-band advisory June 10. Attackers deployed MeshCentral for persistence, used zstd compression, and exfiltrated data over SSH to attacker-controlled infrastructure.",
+      "why": "A 9.8 CVSS zero-day exploited for two weeks with no patch \u2014 PeopleSoft stores sensitive student and HR data. Emergency patching is critical; delay equals confirmed breach exposure.",
+      "source": "BleepingComputer / Mandiant (UNC6240)"
+    },
+    {
+      "category": "Offensive",
+      "title": "GreatXML: Unpatched BitLocker Bypass via Windows Defender Offline Scan Yields SYSTEM Shell in Recovery Mode",
+      "url": "https://thehackernews.com/2026/06/new-greatxml-exploit-bypasses-windows.html",
+      "summary": "Researcher Chaotic Eclipse published GreatXML on June 11 \u2014 an unpatched exploit that bypasses BitLocker by placing two XML files (unattend.xml + ReAgent.xml) on the recovery partition, then booting into WinRE. Any Windows machine that has run a Defender Offline Scan is vulnerable to brief physical-access exploitation, granting an unrestricted SYSTEM shell with full access to the decrypted BitLocker volume. No patch exists as of June 12.",
+      "why": "BitLocker is a last line of defense for stolen laptops. This technique abuses a trusted Windows workflow, requires no credentials, and yields full disk access \u2014 immediate risk assessment needed for endpoint security policies.",
+      "source": "The Hacker News / SecurityWeek"
     },
     {
       "category": "CVE",
-      "title": "Check Point VPN Auth Bypass CVE-2026-50751 (CVSS 9.3) Exploited by Qilin Ransomware Affiliate",
+      "title": "CVE-2026-50751: Check Point VPN Critical Auth Bypass (CVSS 9.3) Actively Exploited by Qilin Ransomware Gang",
       "url": "https://www.bleepingcomputer.com/news/security/check-point-links-vpn-zero-day-attacks-to-qilin-ransomware-gang/",
-      "summary": "Critical authentication bypass in Check Point Security Gateway's deprecated IKEv1 VPN protocol allows attackers to establish VPN sessions without valid credentials by exploiting a logic flaw in certificate validation. Exploitation observed since May 7, 2026 with escalation in early June. Check Point confirmed a Qilin ransomware affiliate used this zero-day to breach dozens of organizations globally before a hotfix was released.",
-      "why": "CVSS 9.3 with confirmed ransomware exploitation. Any org running Check Point VPN with IKEv1 enabled is at immediate risk of credential-free network access. Emergency hotfix is available \u2014 apply without waiting for a regular patch cycle.",
-      "source": "BleepingComputer / Check Point / Rapid7"
+      "summary": "A logic flaw in IKEv1 certificate validation in Check Point Remote Access VPN (CVSS 9.3) lets unauthenticated attackers establish full VPN sessions without credentials. Active exploitation began May 7 and spiked in early June. Qilin ransomware affiliates have confirmed post-compromise intrusions via this vector across dozens of global organizations. Check Point released an emergency hotfix; mitigation includes disabling IKEv1 and enforcing IKEv2-only.",
+      "why": "VPN authentication bypass at 9.3 CVSS is a ransomware entry point at scale. Organizations using Check Point products with IKEv1 enabled must apply the hotfix on an emergency basis before attackers pivot to ransomware deployment.",
+      "source": "BleepingComputer / Rapid7 ETR"
+    },
+    {
+      "category": "CVE",
+      "title": "CVE-2026-11645: Chrome V8 Out-of-Bounds Zero-Day (CVSS 8.8) Exploited in Wild \u2014 CISA Mandates Patch by June 23",
+      "url": "https://thehackernews.com/2026/06/chrome-v8-zero-day-cve-2026-11645.html",
+      "summary": "An out-of-bounds memory access in Chrome's V8 JavaScript engine (CVSS 8.8) is confirmed actively exploited. Google patched it June 8 in Chrome 149.0.7827.102 across all platforms. CISA added it to the Known Exploited Vulnerabilities catalog requiring federal agency remediation by June 23. The discovering researcher received a $55,000 bug bounty. Exploitation enables arbitrary code execution inside the browser renderer sandbox via a crafted HTML page.",
+      "why": "Actively exploited browser zero-days allow drive-by RCE with no user interaction beyond page visit. Enterprise Chrome fleets need emergency update enforcement \u2014 the CISA KEV deadline signals high-confidence exploitation activity.",
+      "source": "The Hacker News / CISA KEV"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 'Operation Neusploit': Weaponizes MS Office CVE-2026-21509 Within 24 Hours to Hit European Military and Maritime Targets",
-      "url": "https://thehackernews.com/2026/02/apt28-uses-microsoft-office-cve-2026.html",
-      "summary": "Russian state-sponsored APT28 (Fancy Bear / FROZENLAKE) exploited Microsoft Office OLE security bypass CVE-2026-21509 within 24 hours of its public disclosure, launching spear-phishing campaigns against maritime and transport organizations across Poland, Slovenia, Turkey, Greece, UAE, and Ukraine. The multi-stage infection chain deploys a novel Outlook VBA backdoor (NotDoor) and a modified Covenant C2 implant, with all C2 traffic routed through legitimate cloud infrastructure.",
-      "why": "Demonstrates adversary 1-day weaponization speed at nation-state scale \u2014 24 hours from patch release to live exploitation. Novel cloud-hosted C2 and Outlook backdoor represent new evasion tradecraft targeting NATO-adjacent infrastructure.",
-      "source": "Trellix / The Hacker News / Zscaler ThreatLabz"
-    },
-    {
-      "category": "Threat Intel",
-      "title": "Iranian APT Screening Serpens Deploys MiniUpdate and MiniJunk V2 RATs via Azure C2 in Conflict-Driven Espionage Surge",
+      "title": "Iranian APT Screening Serpens Deploys MiniUpdate & MiniJunk V2 RATs via AppDomainManager Hijacking Against US, Israel, UAE",
       "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Palo Alto Unit 42 tracked Iranian threat group Screening Serpens deploying six new RAT variants across two malware families \u2014 newly discovered MiniUpdate and evolved MiniJunk V2 \u2014 against targets in the US, Israel, UAE, and additional Middle East entities. Activity surged after the February 28 regional conflict outbreak. Each target gets a unique set of 3-5 Azure-hosted C2 domains. The group evades EDR by exploiting a legitimate .NET runtime configuration file to disable security monitoring entirely, without memory patching.",
-      "why": "Conflict-correlated espionage surge with a novel EDR evasion technique that abuses the .NET runtime's own config mechanism \u2014 no shellcode or memory patching required. Highly targeted C2 infrastructure per victim makes detection and attribution harder.",
-      "source": "Palo Alto Networks Unit 42"
-    },
-    {
-      "category": "Research",
-      "title": "Mandiant M-Trends 2026: PROMPTFLUX and PROMPTSTEAL Are First Confirmed Malware to Query Live LLMs During Execution",
-      "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026",
-      "summary": "Mandiant's M-Trends 2026 report documents two malware families using live LLM API calls mid-execution: PROMPTFLUX (a VBScript dropper) uses the Gemini API to rewrite its own source code hourly, generating polymorphic variants that evade signature detection on demand. PROMPTSTEAL, attributed to APT28, queries an LLM to dynamically generate Windows shell commands for document theft against Ukrainian targets \u2014 the first confirmed state-sponsored malware with live LLM integration. Report also notes median dwell time rose to 14 days as attackers focus on destroying backups.",
-      "why": "Marks a qualitative leap in malware sophistication: runtime AI integration enables goal-driven, polymorphic behavior that defeats signature-based and behavior-static detection. Defenders must shift to behavioral AI detectors and LLM API egress monitoring.",
-      "source": "Mandiant / Google Cloud (M-Trends 2026)"
+      "summary": "Palo Alto Unit42 tracked Iran-linked Screening Serpens (aka Smoke Sandstorm / UNC1549) deploying two new RAT families \u2014 MiniUpdate and MiniJunk V2 \u2014 in active espionage operations targeting entities in the US, Israel, UAE, and other Middle Eastern nations. Infection chains begin with spear-phishing, use DLL sideloading, and leverage AppDomainManager hijacking for stealthy execution. C2 traffic is routed through 3\u20135 Azure-hosted domains per target. April variants expanded the command dispatcher to 18 opcodes.",
+      "why": "AppDomainManager hijacking is a defense evasion technique that bypasses many EDR products. Azure-hosted C2 blends with legitimate traffic. The campaign's acceleration since February 2026 signals increased Iranian cyber operations tied to regional conflict.",
+      "source": "Palo Alto Networks Unit42"
     }
   ]
 }
