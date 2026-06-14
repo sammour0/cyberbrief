@@ -1,44 +1,44 @@
 {
-  "date": "June 13, 2026",
+  "date": "June 14, 2026",
   "items": [
     {
       "category": "CVE",
       "title": "Chrome V8 Zero-Day CVE-2026-11645 Exploited in the Wild \u2014 Patch Now",
       "url": "https://thehackernews.com/2026/06/chrome-v8-zero-day-cve-2026-11645.html",
-      "summary": "Google patched an actively exploited out-of-bounds read/write flaw in Chrome's V8 JavaScript engine (CVE-2026-11645). The bug enables remote code execution inside the Chrome sandbox via a crafted HTML page. Patch shipped June 8, 2026 in Chrome 149.0.7827.102/.103.",
-      "why": "Affects every desktop running Chrome; sandbox RCE via a malicious webpage with confirmed in-the-wild exploitation makes this a top-priority patch for all orgs. Update immediately.",
+      "summary": "Google patched a high-severity out-of-bounds memory access flaw (CVSS 8.8) in Chrome's V8 JavaScript engine. Google confirmed an exploit exists in the wild, making this the latest in a string of actively exploited Chrome zero-days in 2026.",
+      "why": "Chrome V8 zero-days are prime targets for drive-by browser exploitation. Any unpatched Chromium-based browser is at risk; update to the latest stable channel immediately.",
       "source": "The Hacker News"
     },
     {
       "category": "CVE",
-      "title": "Critical Check Point VPN Auth Bypass CVE-2026-50751 (CVSS 9.3) Exploited by Qilin Ransomware",
-      "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-check-point-flaw-exploited-by-ransomware-gangs/",
-      "summary": "A critical IKEv1 authentication bypass in Check Point Remote Access VPN lets unauthenticated attackers establish VPN sessions without credentials. Active exploitation confirmed since May 7, 2026; CISA added it to KEV on June 8 with a 3-day federal patch deadline. A Qilin ransomware affiliate has been linked to attacks using this flaw.",
-      "why": "CVSS 9.3 authentication bypass in widely-deployed enterprise VPN with ransomware actors already inside victim networks. CISA KEV listing means immediate remediation is required for federal agencies and strongly recommended for all.",
-      "source": "BleepingComputer / Rapid7 / CISA"
+      "title": "Critical Check Point VPN Zero-Day CVE-2026-50751 Under Active Exploitation Since May",
+      "url": "https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/",
+      "summary": "A critical zero-day vulnerability in Check Point VPN appliances has been under active exploitation since at least May 7, 2026, with attack volume intensifying in early June. Rapid7 published an emergency threat response detailing observed attacker behavior.",
+      "why": "VPN appliances are high-value initial-access targets. Successful exploitation can grant attackers full network entry \u2014 organizations should apply the patch and audit VPN logs immediately.",
+      "source": "Rapid7"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 Operation Neusploit: Russian GRU Targets European Maritime & Defense Orgs via MS Office Zero-Day",
+      "title": "APT28 Weaponizes CVE-2026-21509 in 24 Hours, Hits Eastern European Military via Cloud C2",
       "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Russian GRU-linked APT28 (Fancy Bear) ran a concentrated 72-hour spear-phishing campaign (Jan 28-30, 2026) exploiting CVE-2026-21509, a Microsoft Office security-feature bypass that triggers without macros. Targets included defense ministries and transport agencies in Poland, Slovenia, Turkey, Greece, UAE, and Ukraine. The infection chain drops a novel Outlook VBA backdoor (NotDoor) and a modified Covenant C2 implant that beacons to filen.io cloud storage.",
-      "why": "Nation-state campaign combining a stealthy MS Office zero-day with legitimate cloud C2 infrastructure to blend into normal traffic \u2014 a blueprint other APTs will replicate against NATO-adjacent critical infrastructure.",
-      "source": "Trellix Research / Industrial Cyber"
+      "summary": "Russian state-sponsored APT28 (Fancy Bear) launched a concentrated 72-hour spear-phishing campaign targeting military and government entities across nine Eastern European nations, weaponizing the Microsoft Office zero-day CVE-2026-21509 within 24 hours of public disclosure and using cloud-hosted C2 infrastructure to evade detection.",
+      "why": "The 24-hour exploit weaponization window and cloud C2 abuse demonstrate how quickly nation-state actors operationalize new vulnerabilities \u2014 patch timelines measured in days are no longer sufficient.",
+      "source": "Trellix"
     },
     {
       "category": "Threat Intel",
-      "title": "Iranian APT 'Screening Serpens' Surges Post-Feb 2026, Deploys New MiniUpdate & MiniJunk V2 RATs",
+      "title": "Iran's 'Screening Serpens' APT Escalates Espionage Campaigns Across Five Countries in 2026",
       "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Palo Alto Unit 42 tracks Iranian state-linked group Screening Serpens, which sharply escalated operations after February 2026, deploying two new RAT families across targets in at least five countries: MiniUpdate (a newly discovered family) and MiniJunk V2 (an evolved iteration). Infection chains begin with targeted spear-phishing and use DLL sideloading for execution.",
-      "why": "New malware families from a nation-state actor with a documented operational surge tied to a specific geopolitical trigger \u2014 signals Iranian cyber posture has shifted toward broader espionage collection.",
-      "source": "Palo Alto Unit 42"
+      "summary": "Palo Alto Unit42 is tracking an Iranian APT group dubbed Screening Serpens that has dramatically increased operations following the regional conflict beginning in February 2026, deploying two new RAT malware families against targets in up to five countries.",
+      "why": "Geopolitical escalation is directly driving Iranian APT tempo. The deployment of new, previously undocumented RAT families signals active tooling investment and expanding targeting scope.",
+      "source": "Palo Alto Unit42"
     },
     {
       "category": "Research",
-      "title": "CrowdStrike 2026 Global Threat Report: eCrime Breakout Time Collapses to 29 Min, AI Adversaries Up 89%",
+      "title": "CrowdStrike 2026 Global Threat Report: AI Slashes Attacker Breakout to 29 Minutes, GenAI Itself Now Targeted",
       "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
-      "summary": "CrowdStrike's 2026 annual report reveals the average eCrime breakout time \u2014 the window defenders have before lateral movement begins \u2014 dropped to 29 minutes (fastest ever recorded: 27 seconds). AI-enabled adversary activity rose 89% YoY. Russia-nexus FANCY BEAR deployed LAMEHUG, an LLM-powered malware that automates reconnaissance and document exfiltration. Adversaries also injected malicious prompts into GenAI tools at 90+ organizations to steal credentials and crypto.",
-      "why": "A 29-minute breakout window means traditional IR timelines are obsolete. The LAMEHUG LLM-in-the-loop malware sets a new precedent for AI-assisted post-compromise automation that defenders must account for in detection engineering.",
+      "summary": "CrowdStrike's 2026 Global Threat Report reveals that AI-accelerated adversaries reduced average eCrime breakout time to 29 minutes (fastest observed: 27 seconds). Additionally, threat actors injected malicious prompts into enterprise GenAI tools at over 90 organizations, establishing GenAI platforms as a new attack surface.",
+      "why": "A 29-minute breakout window demands near-real-time detection and response capabilities that most organizations lack. The targeting of GenAI systems themselves is a structural new threat requiring dedicated controls.",
       "source": "CrowdStrike"
     }
   ]
