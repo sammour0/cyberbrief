@@ -1,45 +1,45 @@
 {
-  "date": "June 14, 2026",
+  "date": "June 15, 2026",
   "items": [
     {
+      "category": "Offensive",
+      "title": "Agentjacking: New Attack Hijacks AI Coding Agents via Sentry MCP Injection",
+      "url": "https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html",
+      "summary": "Tenet Security disclosed a novel attack class that injects malicious commands into Sentry error reports, which AI coding agents (Claude Code, Cursor, Codex) execute as trusted guidance on developer machines. AWS keys, GitHub tokens, and git credentials are silently exfiltrated. 85% success rate in controlled tests across 100+ targets including a Fortune 500 firm. Sentry declined to fix at the root-cause level.",
+      "why": "Any developer using AI coding agents alongside Sentry is exposed with no platform-level patch. Attacker needs only a project DSN to inject commands; no authentication required.",
+      "source": "Tenet Security / The Hacker News"
+    },
+    {
       "category": "CVE",
-      "title": "Chrome V8 Zero-Day CVE-2026-11645 Exploited in the Wild \u2014 Patch Now",
+      "title": "CVE-2026-11645: Chrome V8 Zero-Day (CVSS 8.8) Actively Exploited In the Wild \u2014 Patch Now",
       "url": "https://thehackernews.com/2026/06/chrome-v8-zero-day-cve-2026-11645.html",
-      "summary": "Google patched a high-severity out-of-bounds memory access flaw (CVSS 8.8) in Chrome's V8 JavaScript engine. Google confirmed an exploit exists in the wild, making this the latest in a string of actively exploited Chrome zero-days in 2026.",
-      "why": "Chrome V8 zero-days are prime targets for drive-by browser exploitation. Any unpatched Chromium-based browser is at risk; update to the latest stable channel immediately.",
-      "source": "The Hacker News"
+      "summary": "Google patched CVE-2026-11645 on June 9, 2026 \u2014 an out-of-bounds memory access in V8 (Chrome's JavaScript engine) enabling remote code execution inside the sandbox via a crafted HTML page. No file download required; simply visiting a malicious page is sufficient. This is the fifth Chrome zero-day exploited in the wild in 2026. Fixed in Chrome 149.0.7827.102/103.",
+      "why": "Drive-by exploitation via malicious webpage; all Chrome users on prior builds remain vulnerable. The fifth in-the-wild V8 zero-day in 2026 signals sustained, active targeting of the Chrome engine.",
+      "source": "Google / The Hacker News"
     },
     {
       "category": "CVE",
-      "title": "Critical Check Point VPN Zero-Day CVE-2026-50751 Under Active Exploitation Since May",
-      "url": "https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/",
-      "summary": "A critical zero-day vulnerability in Check Point VPN appliances has been under active exploitation since at least May 7, 2026, with attack volume intensifying in early June. Rapid7 published an emergency threat response detailing observed attacker behavior.",
-      "why": "VPN appliances are high-value initial-access targets. Successful exploitation can grant attackers full network entry \u2014 organizations should apply the patch and audit VPN logs immediately.",
-      "source": "Rapid7"
+      "title": "CVE-2026-50751: Check Point VPN Auth Bypass (CVSS 9.3) Weaponized by Qilin Ransomware Affiliate",
+      "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-check-point-flaw-exploited-by-ransomware-gangs/",
+      "summary": "A critical authentication bypass (CVSS 9.3) in Check Point VPN's deprecated IKEv1 implementation lets unauthenticated attackers establish full VPN sessions without credentials. A Qilin ransomware affiliate has exploited it since May 7, 2026. CISA added it to the KEV catalog on June 8 and gave federal agencies 3 days to patch.",
+      "why": "Actively weaponized for ransomware initial access with a CISA 3-day federal mandate. Any org running legacy IKEv1 VPN configs has had confirmed adversarial exposure for 5+ weeks.",
+      "source": "Rapid7 / BleepingComputer / CISA"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 Weaponizes CVE-2026-21509 in 24 Hours, Hits Eastern European Military via Cloud C2",
+      "title": "APT28 Weaponizes CVE-2026-21509 Within 24 Hours, Hides C2 in Cloud Storage filen.io",
       "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Russian state-sponsored APT28 (Fancy Bear) launched a concentrated 72-hour spear-phishing campaign targeting military and government entities across nine Eastern European nations, weaponizing the Microsoft Office zero-day CVE-2026-21509 within 24 hours of public disclosure and using cloud-hosted C2 infrastructure to evade detection.",
-      "why": "The 24-hour exploit weaponization window and cloud C2 abuse demonstrate how quickly nation-state actors operationalize new vulnerabilities \u2014 patch timelines measured in days are no longer sufficient.",
-      "source": "Trellix"
-    },
-    {
-      "category": "Threat Intel",
-      "title": "Iran's 'Screening Serpens' APT Escalates Espionage Campaigns Across Five Countries in 2026",
-      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Palo Alto Unit42 is tracking an Iranian APT group dubbed Screening Serpens that has dramatically increased operations following the regional conflict beginning in February 2026, deploying two new RAT malware families against targets in up to five countries.",
-      "why": "Geopolitical escalation is directly driving Iranian APT tempo. The deployment of new, previously undocumented RAT families signals active tooling investment and expanding targeting scope.",
-      "source": "Palo Alto Unit42"
+      "summary": "Trellix identified a Russian APT28 espionage campaign targeting European maritime and transport agencies across Poland, Slovenia, Turkey, Greece, UAE, and Ukraine. Attackers weaponized Microsoft Office vuln CVE-2026-21509 within 24 hours of disclosure. The campaign deploys two novel implants \u2014 NotDoor (Outlook VBA backdoor) and BeardShell (C++ payload) \u2014 using legitimate cloud storage filen.io for C2 to blend into normal traffic.",
+      "why": "Nation-state actor with a 24-hour patch-to-exploit cadence; legitimate cloud-service C2 evades most network detection. New malware families and critical infrastructure targeting make this high-priority for defenders.",
+      "source": "Trellix Research"
     },
     {
       "category": "Research",
-      "title": "CrowdStrike 2026 Global Threat Report: AI Slashes Attacker Breakout to 29 Minutes, GenAI Itself Now Targeted",
-      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
-      "summary": "CrowdStrike's 2026 Global Threat Report reveals that AI-accelerated adversaries reduced average eCrime breakout time to 29 minutes (fastest observed: 27 seconds). Additionally, threat actors injected malicious prompts into enterprise GenAI tools at over 90 organizations, establishing GenAI platforms as a new attack surface.",
-      "why": "A 29-minute breakout window demands near-real-time detection and response capabilities that most organizations lack. The targeting of GenAI systems themselves is a structural new threat requiring dedicated controls.",
-      "source": "CrowdStrike"
+      "title": "Microsoft June 2026 Patch Tuesday: Record 206 CVEs, 3 Zero-Days, Two CVSS 9.8 RCEs in Windows Kernel and HTTP.sys",
+      "url": "https://cybersecuritynews.com/microsoft-patch-tuesday-june-2026/",
+      "summary": "Microsoft's June 2026 Patch Tuesday patches a record 206 CVEs (32 critical) including 3 actively exploited zero-days. Standouts: CVE-2026-45657 (Windows Kernel use-after-free RCE, CVSS 9.8), CVE-2026-47291 (HTTP.sys unauthenticated RCE, CVSS 9.8), three Hyper-V VM-escape flaws, and 11 Remote Desktop Client RCEs. Analysts attribute the volume spike to AI-assisted vulnerability discovery.",
+      "why": "Two CVSS 9.8 no-interaction RCEs in foundational Windows components (Kernel, HTTP.sys) demand immediate patch prioritization. Hyper-V VM-escape bugs threaten cloud and virtual infrastructure. AI-fueled vuln discovery is pushing patch volumes to new highs.",
+      "source": "Microsoft / CyberSecurityNews / Tenable"
     }
   ]
 }
