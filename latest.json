@@ -1,45 +1,45 @@
 {
-  "date": "June 15, 2026",
+  "date": "June 16, 2026",
   "items": [
     {
-      "category": "Offensive",
-      "title": "Agentjacking: New Attack Hijacks AI Coding Agents via Sentry MCP Injection",
-      "url": "https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html",
-      "summary": "Tenet Security disclosed a novel attack class that injects malicious commands into Sentry error reports, which AI coding agents (Claude Code, Cursor, Codex) execute as trusted guidance on developer machines. AWS keys, GitHub tokens, and git credentials are silently exfiltrated. 85% success rate in controlled tests across 100+ targets including a Fortune 500 firm. Sentry declined to fix at the root-cause level.",
-      "why": "Any developer using AI coding agents alongside Sentry is exposed with no platform-level patch. Attacker needs only a project DSN to inject commands; no authentication required.",
-      "source": "Tenet Security / The Hacker News"
-    },
-    {
       "category": "CVE",
-      "title": "CVE-2026-11645: Chrome V8 Zero-Day (CVSS 8.8) Actively Exploited In the Wild \u2014 Patch Now",
+      "title": "Chrome V8 Zero-Day CVE-2026-11645 Exploited in the Wild \u2014 Patch Now",
       "url": "https://thehackernews.com/2026/06/chrome-v8-zero-day-cve-2026-11645.html",
-      "summary": "Google patched CVE-2026-11645 on June 9, 2026 \u2014 an out-of-bounds memory access in V8 (Chrome's JavaScript engine) enabling remote code execution inside the sandbox via a crafted HTML page. No file download required; simply visiting a malicious page is sufficient. This is the fifth Chrome zero-day exploited in the wild in 2026. Fixed in Chrome 149.0.7827.102/103.",
-      "why": "Drive-by exploitation via malicious webpage; all Chrome users on prior builds remain vulnerable. The fifth in-the-wild V8 zero-day in 2026 signals sustained, active targeting of the Chrome engine.",
-      "source": "Google / The Hacker News"
+      "summary": "Google patched a high-severity out-of-bounds memory access bug (CVSS 8.8) in Chrome's V8 JavaScript/WebAssembly engine. An exploit is confirmed active in the wild, making this the latest in a string of Chrome zero-days weaponized in 2026.",
+      "why": "Actively exploited zero-days in the world's dominant browser demand immediate patching \u2014 every unpatched desktop is a live attack surface. This is the fourth Chrome zero-day exploited in the wild this year alone.",
+      "source": "The Hacker News"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-50751: Check Point VPN Auth Bypass (CVSS 9.3) Weaponized by Qilin Ransomware Affiliate",
-      "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-check-point-flaw-exploited-by-ransomware-gangs/",
-      "summary": "A critical authentication bypass (CVSS 9.3) in Check Point VPN's deprecated IKEv1 implementation lets unauthenticated attackers establish full VPN sessions without credentials. A Qilin ransomware affiliate has exploited it since May 7, 2026. CISA added it to the KEV catalog on June 8 and gave federal agencies 3 days to patch.",
-      "why": "Actively weaponized for ransomware initial access with a CISA 3-day federal mandate. Any org running legacy IKEv1 VPN configs has had confirmed adversarial exposure for 5+ weeks.",
-      "source": "Rapid7 / BleepingComputer / CISA"
+      "title": "Critical Check Point VPN Zero-Day CVE-2026-50751 Under Active Exploitation",
+      "url": "https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/",
+      "summary": "A critical zero-day in Check Point VPN is being actively exploited, with Rapid7 tracking confirmed attack activity since May 7, 2026 and a notable spike in early June. The vulnerability enables unauthorized remote access to corporate network perimeters.",
+      "why": "VPN appliance vulnerabilities are a top initial-access vector for ransomware groups and nation-state actors. Active exploitation in early June means incident responders should treat unpatched Check Point gateways as potentially compromised.",
+      "source": "Rapid7"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 Weaponizes CVE-2026-21509 Within 24 Hours, Hides C2 in Cloud Storage filen.io",
+      "title": "APT28 Weaponizes Microsoft Office 1-Day CVE-2026-21509 With Cloud C2 Infrastructure",
       "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Trellix identified a Russian APT28 espionage campaign targeting European maritime and transport agencies across Poland, Slovenia, Turkey, Greece, UAE, and Ukraine. Attackers weaponized Microsoft Office vuln CVE-2026-21509 within 24 hours of disclosure. The campaign deploys two novel implants \u2014 NotDoor (Outlook VBA backdoor) and BeardShell (C++ payload) \u2014 using legitimate cloud storage filen.io for C2 to blend into normal traffic.",
-      "why": "Nation-state actor with a 24-hour patch-to-exploit cadence; legitimate cloud-service C2 evades most network detection. New malware families and critical infrastructure targeting make this high-priority for defenders.",
-      "source": "Trellix Research"
+      "summary": "Trellix researchers detail a stealthy multi-stage APT28 (Fancy Bear) campaign targeting European military and government entities. The Russian GRU-linked group weaponized a Microsoft Office vulnerability within 24 hours of public disclosure and uses cloud services as C2 to blend into legitimate traffic.",
+      "why": "APT28's sub-24-hour exploitation of Office flaws and use of cloud C2 blending highlights the speed at which nation-state actors operationalize disclosures \u2014 defenders must treat patch SLAs as hours, not days.",
+      "source": "Trellix"
+    },
+    {
+      "category": "Threat Intel",
+      "title": "Iran-Nexus APT 'Screening Serpens' Escalates Espionage Ops Across Five Countries",
+      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
+      "summary": "Palo Alto Unit 42 is tracking an Iranian APT group dubbed Screening Serpens that has significantly expanded operations since a regional conflict began in February 2026. The group deploys two novel RAT families against targets in five countries, with a focus on government and critical-infrastructure sectors.",
+      "why": "Iranian APT tempo has markedly increased in 2026 with new custom malware families \u2014 defenders in targeted regions (Middle East, Europe) should update detections and hunt for the newly documented RAT IOCs.",
+      "source": "Palo Alto Unit 42"
     },
     {
       "category": "Research",
-      "title": "Microsoft June 2026 Patch Tuesday: Record 206 CVEs, 3 Zero-Days, Two CVSS 9.8 RCEs in Windows Kernel and HTTP.sys",
-      "url": "https://cybersecuritynews.com/microsoft-patch-tuesday-june-2026/",
-      "summary": "Microsoft's June 2026 Patch Tuesday patches a record 206 CVEs (32 critical) including 3 actively exploited zero-days. Standouts: CVE-2026-45657 (Windows Kernel use-after-free RCE, CVSS 9.8), CVE-2026-47291 (HTTP.sys unauthenticated RCE, CVSS 9.8), three Hyper-V VM-escape flaws, and 11 Remote Desktop Client RCEs. Analysts attribute the volume spike to AI-assisted vulnerability discovery.",
-      "why": "Two CVSS 9.8 no-interaction RCEs in foundational Windows components (Kernel, HTTP.sys) demand immediate patch prioritization. Hyper-V VM-escape bugs threaten cloud and virtual infrastructure. AI-fueled vuln discovery is pushing patch volumes to new highs.",
-      "source": "Microsoft / CyberSecurityNews / Tenable"
+      "title": "CrowdStrike 2026 Global Threat Report: eCrime Breakout Time Hits 27 Seconds as AI Fuels 89% Surge",
+      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
+      "summary": "CrowdStrike's annual threat report reveals the average eCrime lateral-movement breakout time dropped to 29 minutes (fastest ever: 27 seconds) and AI-enabled adversary operations surged 89% year-over-year. Adversaries are injecting malicious prompts into GenAI tools and abusing AI dev platforms at over 90 organizations.",
+      "why": "The 27-second breakout benchmark shatters the assumption that defenders have time to detect and respond post-compromise \u2014 organizations without automated detection and response are already too slow by any human-reaction standard.",
+      "source": "CrowdStrike"
     }
   ]
 }
