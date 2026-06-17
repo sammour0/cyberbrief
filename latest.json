@@ -1,45 +1,45 @@
 {
-  "date": "June 16, 2026",
+  "date": "June 17, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "Chrome V8 Zero-Day CVE-2026-11645 Exploited in the Wild \u2014 Patch Now",
-      "url": "https://thehackernews.com/2026/06/chrome-v8-zero-day-cve-2026-11645.html",
-      "summary": "Google patched a high-severity out-of-bounds memory access bug (CVSS 8.8) in Chrome's V8 JavaScript/WebAssembly engine. An exploit is confirmed active in the wild, making this the latest in a string of Chrome zero-days weaponized in 2026.",
-      "why": "Actively exploited zero-days in the world's dominant browser demand immediate patching \u2014 every unpatched desktop is a live attack surface. This is the fourth Chrome zero-day exploited in the wild this year alone.",
-      "source": "The Hacker News"
-    },
-    {
-      "category": "CVE",
-      "title": "Critical Check Point VPN Zero-Day CVE-2026-50751 Under Active Exploitation",
-      "url": "https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/",
-      "summary": "A critical zero-day in Check Point VPN is being actively exploited, with Rapid7 tracking confirmed attack activity since May 7, 2026 and a notable spike in early June. The vulnerability enables unauthorized remote access to corporate network perimeters.",
-      "why": "VPN appliance vulnerabilities are a top initial-access vector for ransomware groups and nation-state actors. Active exploitation in early June means incident responders should treat unpatched Check Point gateways as potentially compromised.",
-      "source": "Rapid7"
+      "title": "CISA Flags Actively Exploited LiteSpeed cPanel Plugin Flaw (CVE-2026-54420)",
+      "url": "https://thehackernews.com/2026/06/cisa-flags-litespeed-cpanel-plugin-flaw.html",
+      "summary": "A CVSS 8.5 privilege escalation flaw in the LiteSpeed cPanel user-end plugin (versions before 2.4.8) lets attackers with FTP or web shell access abuse symbolic-link handling on CloudLinux/CageFS shared hosting to gain root. CISA added it to the KEV catalog on June 16, 2026, confirming active exploitation.",
+      "why": "Shared hosting providers run this plugin at massive scale, so a root-level escalation bug under active attack puts a huge swath of web hosting infrastructure at risk of full server takeover.",
+      "source": "The Hacker News / CISA KEV"
     },
     {
       "category": "Threat Intel",
-      "title": "APT28 Weaponizes Microsoft Office 1-Day CVE-2026-21509 With Cloud C2 Infrastructure",
-      "url": "https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/",
-      "summary": "Trellix researchers detail a stealthy multi-stage APT28 (Fancy Bear) campaign targeting European military and government entities. The Russian GRU-linked group weaponized a Microsoft Office vulnerability within 24 hours of public disclosure and uses cloud services as C2 to blend into legitimate traffic.",
-      "why": "APT28's sub-24-hour exploitation of Office flaws and use of cloud C2 blending highlights the speed at which nation-state actors operationalize disclosures \u2014 defenders must treat patch SLAs as hours, not days.",
-      "source": "Trellix"
+      "title": "DragonForce Ransomware Hides C2 Inside Microsoft Teams Relays via 'Backdoor.Turn'",
+      "url": "https://www.bleepingcomputer.com/news/security/ransomware-gang-abuses-microsoft-teams-relays-to-hide-malicious-traffic/",
+      "summary": "Symantec discovered Backdoor.Turn, a Go-based RAT that abuses Microsoft Teams' TURN relay infrastructure to mask command-and-control traffic as legitimate Teams network activity. DragonForce operators used it to hide inside a U.S. services firm for up to two months, performing credential theft, AD reconnaissance, and network scanning.",
+      "why": "This is the first known malware to weaponize Teams' own relay servers for C2, meaning defenders watching for 'connections to Microsoft' as a trust signal need to rethink that assumption entirely.",
+      "source": "Symantec / BleepingComputer"
     },
     {
       "category": "Threat Intel",
-      "title": "Iran-Nexus APT 'Screening Serpens' Escalates Espionage Ops Across Five Countries",
-      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Palo Alto Unit 42 is tracking an Iranian APT group dubbed Screening Serpens that has significantly expanded operations since a regional conflict began in February 2026. The group deploys two novel RAT families against targets in five countries, with a focus on government and critical-infrastructure sectors.",
-      "why": "Iranian APT tempo has markedly increased in 2026 with new custom malware families \u2014 defenders in targeted regions (Middle East, Europe) should update detections and hunt for the newly documented RAT IOCs.",
-      "source": "Palo Alto Unit 42"
+      "title": "Velvet Ant's 'Operation Highland' Hid Inside an Air-Gapped Network for Nearly a Decade",
+      "url": "https://www.sygnia.co/blog/operation-highland-velvet-ant/",
+      "summary": "Sygnia's forensic investigation found the China-nexus actor Velvet Ant maintained undetected access to an isolated internal network from 2016 onward by deploying nine distinct backdoored pam_unix.so variants that accepted hardcoded passwords and harvested credentials, plus a custom SOCKS5 proxy to reach systems beyond the initial foothold.",
+      "why": "It proves air-gapping alone is not a security boundary if the authentication layer itself is compromised, and the scale of build infrastructure behind nine PAM variants shows a serious, long-term state-backed operation.",
+      "source": "Sygnia"
     },
     {
       "category": "Research",
-      "title": "CrowdStrike 2026 Global Threat Report: eCrime Breakout Time Hits 27 Seconds as AI Fuels 89% Surge",
-      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
-      "summary": "CrowdStrike's annual threat report reveals the average eCrime lateral-movement breakout time dropped to 29 minutes (fastest ever: 27 seconds) and AI-enabled adversary operations surged 89% year-over-year. Adversaries are injecting malicious prompts into GenAI tools and abusing AI dev platforms at over 90 organizations.",
-      "why": "The 27-second breakout benchmark shatters the assumption that defenders have time to detect and respond post-compromise \u2014 organizations without automated detection and response are already too slow by any human-reaction standard.",
-      "source": "CrowdStrike"
+      "title": "China-Linked SprySOCKS Backdoor Expands to Windows With Kernel-Driver Stealth",
+      "url": "https://thehackernews.com/2026/06/china-linked-sprysocks-backdoor-expands.html",
+      "summary": "ESET researchers documented two previously unknown Windows variants (WIN_DRV and WIN_PLUS) of the SprySOCKS backdoor, formerly believed Linux-only. WIN_DRV uses a kernel driver to intercept system calls and hide malicious processes/files. ESET attributes the tooling with high confidence to Earth Lusca (aka FishMonger), linked to Chinese contractor I-SOON, with use against government targets in Taiwan, Thailand, Pakistan, and Honduras.",
+      "why": "A kernel-driver rootkit component bolted onto an established cross-platform backdoor significantly raises detection difficulty for one of the most active China-linked espionage toolsets.",
+      "source": "ESET / The Hacker News"
+    },
+    {
+      "category": "Offensive",
+      "title": "PoC Released for Windows Snipping Tool NTLM Hash Leak (CVE-2026-33829)",
+      "url": "https://github.com/blackarrowsec/redteam-research/tree/master/CVE-2026-33829",
+      "summary": "Black Arrow Security published a working PoC showing the Snipping Tool's ms-screensketch deep-link handler can be coerced into opening a UNC path on an attacker-controlled SMB server, silently leaking the victim's Net-NTLM hash while the tool opens normally on screen. Microsoft patched it in April 2026 by removing the vulnerable deep-link behavior.",
+      "why": "The exploit needs nothing more than a single clicked link and produces no visible anomaly, making it an easy, low-friction credential-theft primitive for phishing-driven internal network attacks.",
+      "source": "Black Arrow Security"
     }
   ]
 }
