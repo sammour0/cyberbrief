@@ -1,45 +1,45 @@
 {
-  "date": "June 17, 2026",
+  "date": "June 18, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CISA Flags Actively Exploited LiteSpeed cPanel Plugin Flaw (CVE-2026-54420)",
-      "url": "https://thehackernews.com/2026/06/cisa-flags-litespeed-cpanel-plugin-flaw.html",
-      "summary": "A CVSS 8.5 privilege escalation flaw in the LiteSpeed cPanel user-end plugin (versions before 2.4.8) lets attackers with FTP or web shell access abuse symbolic-link handling on CloudLinux/CageFS shared hosting to gain root. CISA added it to the KEV catalog on June 16, 2026, confirming active exploitation.",
-      "why": "Shared hosting providers run this plugin at massive scale, so a root-level escalation bug under active attack puts a huge swath of web hosting infrastructure at risk of full server takeover.",
+      "title": "Maximum-Severity Joomla JCE Plugin Flaw (CVE-2026-48907) Actively Exploited",
+      "url": "https://thehackernews.com/2026/06/cisa-warns-of-actively-exploited-joomla.html",
+      "summary": "CISA added CVE-2026-48907 (CVSS 10.0), an improper access control flaw in the Widget Factory Joomla Content Editor (JCE) plugin, to its KEV catalog. Attackers exploit it to create rogue unauthenticated editor profiles and upload PHP web shells, gaining a persistent backdoor. Affects JCE versions 1.0.0-2.9.99.4; patched in 2.9.99.5.",
+      "why": "A perfect CVSS 10.0 score combined with confirmed in-the-wild web shell deployment on a widely used Joomla content editor makes this an urgent patch priority.",
       "source": "The Hacker News / CISA KEV"
     },
     {
       "category": "Threat Intel",
-      "title": "DragonForce Ransomware Hides C2 Inside Microsoft Teams Relays via 'Backdoor.Turn'",
-      "url": "https://www.bleepingcomputer.com/news/security/ransomware-gang-abuses-microsoft-teams-relays-to-hide-malicious-traffic/",
-      "summary": "Symantec discovered Backdoor.Turn, a Go-based RAT that abuses Microsoft Teams' TURN relay infrastructure to mask command-and-control traffic as legitimate Teams network activity. DragonForce operators used it to hide inside a U.S. services firm for up to two months, performing credential theft, AD reconnaissance, and network scanning.",
-      "why": "This is the first known malware to weaponize Teams' own relay servers for C2, meaning defenders watching for 'connections to Microsoft' as a trust signal need to rethink that assumption entirely.",
-      "source": "Symantec / BleepingComputer"
-    },
-    {
-      "category": "Threat Intel",
-      "title": "Velvet Ant's 'Operation Highland' Hid Inside an Air-Gapped Network for Nearly a Decade",
-      "url": "https://www.sygnia.co/blog/operation-highland-velvet-ant/",
-      "summary": "Sygnia's forensic investigation found the China-nexus actor Velvet Ant maintained undetected access to an isolated internal network from 2016 onward by deploying nine distinct backdoored pam_unix.so variants that accepted hardcoded passwords and harvested credentials, plus a custom SOCKS5 proxy to reach systems beyond the initial foothold.",
-      "why": "It proves air-gapping alone is not a security boundary if the authentication layer itself is compromised, and the scale of build infrastructure behind nine PAM variants shows a serious, long-term state-backed operation.",
-      "source": "Sygnia"
-    },
-    {
-      "category": "Research",
-      "title": "China-Linked SprySOCKS Backdoor Expands to Windows With Kernel-Driver Stealth",
-      "url": "https://thehackernews.com/2026/06/china-linked-sprysocks-backdoor-expands.html",
-      "summary": "ESET researchers documented two previously unknown Windows variants (WIN_DRV and WIN_PLUS) of the SprySOCKS backdoor, formerly believed Linux-only. WIN_DRV uses a kernel driver to intercept system calls and hide malicious processes/files. ESET attributes the tooling with high confidence to Earth Lusca (aka FishMonger), linked to Chinese contractor I-SOON, with use against government targets in Taiwan, Thailand, Pakistan, and Honduras.",
-      "why": "A kernel-driver rootkit component bolted onto an established cross-platform backdoor significantly raises detection difficulty for one of the most active China-linked espionage toolsets.",
-      "source": "ESET / The Hacker News"
+      "title": "FortiBleed Leak Exposes Fortinet VPN Credentials for ~74,000 Firewalls Worldwide",
+      "url": "https://www.bleepingcomputer.com/news/security/fortibleed-leak-exposes-fortinet-vpn-credentials-for-73-000-devices/",
+      "summary": "Researcher Bob Diachenko discovered an exposed database containing plaintext FortiGate SSL VPN credentials for 73,932 firewall URLs across 194 countries, tied to a Russian-speaking threat group that ran 1.16 billion credential-stuffing attempts and cracked intercepted auth hashes with a 45-GPU cluster to move laterally into Active Directory environments.",
+      "why": "Scale (Chevron, Samsung, AT&T, Toyota among affected orgs) and industrialized cracking infrastructure mean any org running FortiGate VPNs should assume compromise and rotate credentials.",
+      "source": "BleepingComputer"
     },
     {
       "category": "Offensive",
-      "title": "PoC Released for Windows Snipping Tool NTLM Hash Leak (CVE-2026-33829)",
-      "url": "https://github.com/blackarrowsec/redteam-research/tree/master/CVE-2026-33829",
-      "summary": "Black Arrow Security published a working PoC showing the Snipping Tool's ms-screensketch deep-link handler can be coerced into opening a UNC path on an attacker-controlled SMB server, silently leaking the victim's Net-NTLM hash while the tool opens normally on screen. Microsoft patched it in April 2026 by removing the vulnerable deep-link behavior.",
-      "why": "The exploit needs nothing more than a single clicked link and produces no visible anomaly, making it an easy, low-friction credential-theft primitive for phishing-driven internal network attacks.",
-      "source": "Black Arrow Security"
+      "title": "144 Mastra npm Packages Backdoored in 'easy-day-js' Supply Chain Attack",
+      "url": "https://thehackernews.com/2026/06/144-mastra-npm-packages-compromised-via.html",
+      "summary": "A hijacked maintainer account was used to swap the dayjs dependency in @mastra/* AI framework packages for a typosquat 'easy-day-js,' whose post-install script disabled TLS verification, fetched a second-stage payload from attacker C2, and self-deleted to evade forensics. 140+ packages with ~8M weekly downloads were republished within 88 minutes.",
+      "why": "Shows how a single hijacked account can poison an entire AI-development ecosystem in under 90 minutes; anyone who installed Mastra packages after June 16 should treat credentials and CI secrets as compromised.",
+      "source": "The Hacker News"
+    },
+    {
+      "category": "Threat Intel",
+      "title": "15 Malicious JetBrains Marketplace Plugins Stole AI API Keys from ~70,000 Installs",
+      "url": "https://thehackernews.com/2026/06/malicious-jetbrains-plugins-steal-ai.html",
+      "summary": "JetBrains purged 15 third-party IDE plugins masquerading as AI coding assistants (e.g. 'DeepSeek AI Assist,' 'CodeGPT AI Assistant') that secretly exfiltrated user-entered AI provider API keys in plaintext over HTTP to a hardcoded C2 IP. The plugins were live since October 2025 across seven now-terminated vendor accounts.",
+      "why": "A long-running, coordinated campaign targeting the AI-assisted development supply chain shows attackers pivoting to harvest LLM provider keys for resale or further abuse.",
+      "source": "The Hacker News"
+    },
+    {
+      "category": "New Tool",
+      "title": "EDRChoker: Open-Source Tool Throttles EDR Telemetry via Windows QoS Policies",
+      "url": "https://cybersecuritynews.com/edrchoker-tool/",
+      "summary": "Researcher @TwoSevenOneT released EDRChoker, a red-team tool that abuses Windows' native Policy-Based Quality of Service engine to throttle EDR agent network traffic to near-zero, severing telemetry to cloud-connected EDR consoles without generating typical firewall or WFP-based detection artifacts. Reboot-persistent install/remove modes are provided.",
+      "why": "A novel, low-level evasion technique that sidesteps common EDR-tamper detections by operating beneath the network filtering layer most defenses monitor; blue teams should add QoS policy auditing to detection baselines.",
+      "source": "Cyber Security News"
     }
   ]
 }
