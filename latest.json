@@ -1,45 +1,45 @@
 {
-  "date": "June 19, 2026",
+  "date": "August 13, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "Max-Severity Ivanti Sentry Flaw (CVE-2026-10520) Exploited Within 24 Hours of PoC Release",
-      "url": "https://www.bleepingcomputer.com/news/security/max-severity-ivanti-sentry-vulnerability-now-exploited-in-attacks/",
-      "summary": "CVE-2026-10520 is a CVSS 10.0 unauthenticated OS command injection flaw in Ivanti Sentry that lets remote attackers run commands as root. Shadowserver confirmed internet-exposed Sentry gateways were already backdoored within 24 hours of public PoC code dropping; CISA added it to the KEV catalog with a federal patch mandate.",
-      "why": "Root-level compromise of Sentry is equivalent to unrestricted access to every mailbox, calendar, and app the gateway brokers, and the exploitation window between PoC release and active compromise was under a day.",
-      "source": "BleepingComputer / Shadowserver / CISA"
+      "title": "CVE-2026-68820: Windows WinSock Zero-Day Exploited in the Wild — Patch Tuesday Aug 2026",
+      "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
+      "summary": "Microsoft's August 2026 Patch Tuesday fixed 398 CVEs including CVE-2026-68820, a use-after-free flaw in the Windows Ancillary Function Driver for WinSock (afd.sys). A locally authenticated attacker triggers a race condition to escalate privileges to SYSTEM with no user interaction required. Active exploitation confirmed in the wild.",
+      "why": "SYSTEM-level privilege escalation with zero user interaction is a staple post-exploitation move for ransomware groups. One of three zero-days patched in this record-breaking Patch Tuesday; apply immediately.",
+      "source": "The Hacker News / BleepingComputer / Tenable"
+    },
+    {
+      "category": "CVE",
+      "title": "CVE-2026-63077: JetBrains TeamCity Unauthenticated RCE (CVSS 9.8) Added to CISA KEV",
+      "url": "https://thehackernews.com/2026/08/cisa-flags-teamcity-cve-2026-63077-rce.html",
+      "summary": "A critical deserialization bug in JetBrains TeamCity On-Premises (all versions before 2025.11.7 / 2026.1.3) lets unauthenticated remote attackers bypass authentication and execute arbitrary OS commands as the TeamCity server process. CISA added it to KEV on August 5 with an unusually tight 3-day remediation deadline.",
+      "why": "CI/CD servers are prime targets — compromise lets attackers poison build pipelines, steal signing keys, and backdoor software before it ships. Unauthenticated and remotely exploitable with CVSS 9.8.",
+      "source": "The Hacker News / CISA / Rapid7"
+    },
+    {
+      "category": "CVE",
+      "title": "CVE-2026-18577: N-able N-central Auth Bypass (CVSS 8.2) Exploited to Pivot Into Managed Endpoints",
+      "url": "https://thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html",
+      "summary": "An authentication bypass flaw in N-able N-central (pre-2026.3.1.7) lets unauthenticated attackers seize admin accounts remotely. Threat actors then abuse the built-in Take Control feature and deploy Cloudflare Tunnels for persistent, stealthy access to every managed endpoint in the MSP's portfolio. Exploitation confirmed since August 1, 2026.",
+      "why": "One compromised N-central server cascades to thousands of client endpoints across an entire MSP's customer base — a supply-chain-style blast radius. CISA mandated federal remediation by August 6.",
+      "source": "The Hacker News / CISA / BleepingComputer"
     },
     {
       "category": "Threat Intel",
-      "title": "Operation Endgame Dismantles SocGholish/Evil Corp Malware Infrastructure",
-      "url": "https://www.bleepingcomputer.com/news/security/law-enforcement-nukes-socgholish-malware-from-nearly-15-000-sites/",
-      "summary": "The FBI, Europol, NHTCU (Netherlands), BKA (Germany), and RCMP (Canada) jointly seized 106 servers and 101 domains tied to SocGholish, the fake-browser-update malware framework linked to Russia's Evil Corp, remediating nearly 15,000 infected websites worldwide.",
-      "why": "SocGholish has been the top malware downloader globally (around 60% of all downloader infections) since 2017 and a key initial-access broker for ransomware gangs, making this one of the largest Operation Endgame disruptions to date.",
-      "source": "Europol / FBI / BleepingComputer"
+      "title": "Iranian APT Screening Serpens Deploys 6 New RAT Variants Against US, Israel & UAE Defense Sector",
+      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
+      "summary": "Palo Alto Networks Unit 42 tracked Screening Serpens (UNC1549 / Smoke Sandstorm) running aggressive cyber-espionage operations against tech and defense entities in the US, Israel, and UAE from February–April 2026. The group used AppDomainManager hijacking and six newly developed RAT variants delivered via fake job-posting lures, timed to align with the Middle East conflict that erupted February 28.",
+      "why": "The novel AppDomainManager hijacking technique evades many EDR solutions. Unit 42 warns the group shows no signs of slowing — organizations in defense, aerospace, and critical tech should expect continued targeting.",
+      "source": "Palo Alto Networks Unit 42"
     },
     {
-      "category": "Research",
-      "title": "usbliter8 BootROM Exploit Chain Defeats Pointer Authentication on Apple A12/A13 Silicon",
-      "url": "https://9to5mac.com/2026/06/18/new-unpatchable-exploit-targets-apple-devices-with-a12-and-a13-chips/",
-      "summary": "Security firm Paradigm Shift disclosed usbliter8, an unpatchable BootROM exploit chaining a hardware bug in the Synopsys DWC2 USB controller with a firmware flaw to fully compromise the boot chain on Apple A12/A13 and S4/S5 SoCs. On A13 devices, which add Pointer Authentication Codes, researchers built a multi-stage heap-corruption and interrupt-handler attack to defeat PAC.",
-      "why": "It is a genuinely novel hardware/firmware attack class that defeats a modern memory-safety mitigation (PAC) and can never be patched in software on affected silicon, with real implications for forensic device-unlock scenarios.",
-      "source": "Paradigm Shift / 9to5Mac / MacRumors"
-    },
-    {
-      "category": "Offensive",
-      "title": "Werewolf Threat Actors Abuse Microsoft's Fondue.exe to Side-Load Malware",
-      "url": "https://cybersecuritynews.com/hackers-abuse-microsoft-fondue-exe/",
-      "summary": "Threat clusters tracked as Paper Werewolf, Versatile Werewolf, and the newly identified Eagle Werewolf are abusing the legitimate Windows 'Features on Demand' binary Fondue.exe to side-load a malicious appwiz.cpl, using fake Starlink registration and drone-pilot-training lures against government, military, and drone-engineering targets.\u200b",
-      "why": "It's a living-off-the-land technique abusing a binary nobody monitors, paired with AI-accelerated tooling, and is actively targeting defense and critical-infrastructure personnel.",
-      "source": "Cyber Security News / Trend Micro"
-    },
-    {
-      "category": "New Tool",
-      "title": "GreatXML: Researcher Releases Working BitLocker Bypass via Recovery Partition XML Files",
-      "url": "https://thehackernews.com/2026/06/new-greatxml-exploit-bypasses-windows.html",
-      "summary": "Researcher 'Chaotic Eclipse' published GreatXML, a working exploit that drops malicious unattend.xml and ReAgent.xml files onto a Windows recovery partition to spawn a SYSTEM-privileged shell with full access to the BitLocker-encrypted volume after booting into Windows Recovery Environment.",
-      "why": "It's a fully encryption-bypassing technique against a default-on Windows protection, released with working PoC, part of an ongoing wave of disclosures (BlueHammer, UnDefend, RedSun, RoguePlanet) from the same researcher targeting Microsoft.",
-      "source": "The Hacker News / SecurityWeek"
+      "category": "Threat Intel",
+      "title": "~800 Malicious npm Packages Deploy WEL1DROPPER Cross-Platform RAT in Supply Chain Campaign",
+      "url": "https://thehackernews.com/2026/08/nearly-800-malicious-npm-packages.html",
+      "summary": "The 'Flooding Dropper' campaign (tracked by Sonatype) flooded npm with ~800 AI-generated typosquatted packages delivering WEL1DROPPER — a cross-platform dropper for Windows, macOS, and Linux. It disables ETW and AMSI, establishes persistence, then pulls further payloads via Cloudflare Workers or DNS TXT records from a Russian-hosted C2 domain (wel1[.]ru).",
+      "why": "AI-generated typosquatting at 800-package scale sets a new bar for npm supply chain attacks. AMSI/ETW bypass combined with multi-OS targeting lets the malware evade standard endpoint defenses across entire developer environments.",
+      "source": "The Hacker News / Sonatype"
     }
   ]
 }
