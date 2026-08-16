@@ -1,45 +1,45 @@
 {
-  "date": "August 13, 2026",
+  "date": "August 16, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-68820: Windows WinSock Zero-Day Exploited in the Wild — Patch Tuesday Aug 2026",
+      "title": "CVE-2026-68820: Windows Winsock Zero-Day Exploited by Lazarus Group in Operation Dream Job",
       "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
-      "summary": "Microsoft's August 2026 Patch Tuesday fixed 398 CVEs including CVE-2026-68820, a use-after-free flaw in the Windows Ancillary Function Driver for WinSock (afd.sys). A locally authenticated attacker triggers a race condition to escalate privileges to SYSTEM with no user interaction required. Active exploitation confirmed in the wild.",
-      "why": "SYSTEM-level privilege escalation with zero user interaction is a staple post-exploitation move for ransomware groups. One of three zero-days patched in this record-breaking Patch Tuesday; apply immediately.",
-      "source": "The Hacker News / BleepingComputer / Tenable"
+      "summary": "A use-after-free vulnerability in the Windows Ancillary Function Driver for WinSock (afd.sys) allows a local attacker to trigger a race condition and escalate privileges to SYSTEM. Microsoft patched it in August 2026 Patch Tuesday (421 CVEs total), but Check Point Research confirmed North Korea's Lazarus Group had already weaponized it as a zero-day in their ongoing Operation Dream Job espionage campaign. CISA added it to the Known Exploited Vulnerabilities catalog with a federal remediation deadline of August 25, 2026.",
+      "why": "Lazarus Group (DPRK) nation-state exploitation of a Windows kernel driver for SYSTEM-level access is a critical threat to any unpatched Windows endpoint. Active in-the-wild use before the patch means defenders are racing against an already-operational exploit.",
+      "source": "The Hacker News / Check Point Research / BleepingComputer"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-63077: JetBrains TeamCity Unauthenticated RCE (CVSS 9.8) Added to CISA KEV",
-      "url": "https://thehackernews.com/2026/08/cisa-flags-teamcity-cve-2026-63077-rce.html",
-      "summary": "A critical deserialization bug in JetBrains TeamCity On-Premises (all versions before 2025.11.7 / 2026.1.3) lets unauthenticated remote attackers bypass authentication and execute arbitrary OS commands as the TeamCity server process. CISA added it to KEV on August 5 with an unusually tight 3-day remediation deadline.",
-      "why": "CI/CD servers are prime targets — compromise lets attackers poison build pipelines, steal signing keys, and backdoor software before it ships. Unauthenticated and remotely exploitable with CVSS 9.8.",
-      "source": "The Hacker News / CISA / Rapid7"
+      "title": "ShieldBreak PoC Claims Bypass of Patched Microsoft Defender CVE-2026-50656, Achieves SYSTEM on Windows 11 25H2",
+      "url": "https://thehackernews.com/2026/08/shieldbreak-zero-day-poc-claims.html",
+      "summary": "A proof-of-concept tool dubbed ShieldBreak has surfaced claiming to bypass Microsoft's patch for CVE-2026-50656, a previously remediated Microsoft Defender vulnerability. The PoC has been demonstrated against Windows 11 25H2 and Windows Server 2025, reportedly achieving SYSTEM-level code execution by evading the patched code path. CISA separately added related CVE-2026-68820 to its KEV catalog, and federal agencies must remediate by August 25.",
+      "why": "A working patch bypass invalidates the assumption that patching closes the exposure. If confirmed, organizations that already applied the original fix remain at risk — forcing a re-evaluation of compensating controls rather than patch-and-move-on.",
+      "source": "The Hacker News"
+    },
+    {
+      "category": "Threat Intel",
+      "title": "TeamPCP Trivy Supply Chain Attack: 76 of 77 Release Tags Poisoned, CanisterWorm Spreads to npm",
+      "url": "https://www.crowdstrike.com/en-us/blog/from-scanner-to-stealer-inside-the-trivy-action-supply-chain-compromise/",
+      "summary": "Threat actor TeamPCP compromised Aqua Security's Trivy vulnerability scanner — one of the most widely used open-source security tools — in a multi-phase supply chain attack. Attackers retroactively repointed git tags to inject a multi-stage credential stealer into 76 of 77 release tags. Every CI/CD pipeline pulling trivy-action silently had cloud credentials (AWS, GCP, Azure), SSH keys, and Kubernetes tokens harvested. The attack expanded via 'CanisterWorm', a self-propagating worm leveraging stolen npm publish tokens to spread through the npm ecosystem.",
+      "why": "Supply chain attacks on trusted security tooling hit the hardest targets: pipelines using Trivy to stay secure became the attack vector. CrowdStrike describes it as the most sophisticated open-source security tool compromise on record — affecting orgs including AWS, Samsung, and Cisco.",
+      "source": "CrowdStrike / Palo Alto Networks / Microsoft Security Blog / Wiz / Snyk"
+    },
+    {
+      "category": "Threat Intel",
+      "title": "APT36 (Transparent Tribe) Deploys AI 'Vibeware' — First Nation-State to Use LLMs as a Malware Assembly Line",
+      "url": "https://www.darkreading.com/cyberattacks-data-breaches/nation-state-actor-ai-malware-assembly-line",
+      "summary": "Pakistan-linked APT36 (Transparent Tribe) became the first documented nation-state actor to industrialize malware production using AI large language models. The group generates hundreds of polymorphic malware variants daily across multiple programming languages — each functionally identical but structurally distinct — targeting Indian government entities. Bitdefender coined the tactic 'Distributed Denial of Detection': flooding defenses with volume rather than sophistication to exhaust signature-based detection capabilities across EDRs and AV engines.",
+      "why": "This is a doctrinal shift in nation-state offensive operations. AI-generated polymorphic volume-saturates signature-based detection, demanding a migration to behavioral and heuristic models. Defenders reliant on hash/signature detection are effectively unprotected against this tactic.",
+      "source": "Dark Reading / Bitdefender / Computer Weekly / Cloud Security Alliance"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-18577: N-able N-central Auth Bypass (CVSS 8.2) Exploited to Pivot Into Managed Endpoints",
-      "url": "https://thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html",
-      "summary": "An authentication bypass flaw in N-able N-central (pre-2026.3.1.7) lets unauthenticated attackers seize admin accounts remotely. Threat actors then abuse the built-in Take Control feature and deploy Cloudflare Tunnels for persistent, stealthy access to every managed endpoint in the MSP's portfolio. Exploitation confirmed since August 1, 2026.",
-      "why": "One compromised N-central server cascades to thousands of client endpoints across an entire MSP's customer base — a supply-chain-style blast radius. CISA mandated federal remediation by August 6.",
-      "source": "The Hacker News / CISA / BleepingComputer"
-    },
-    {
-      "category": "Threat Intel",
-      "title": "Iranian APT Screening Serpens Deploys 6 New RAT Variants Against US, Israel & UAE Defense Sector",
-      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Palo Alto Networks Unit 42 tracked Screening Serpens (UNC1549 / Smoke Sandstorm) running aggressive cyber-espionage operations against tech and defense entities in the US, Israel, and UAE from February–April 2026. The group used AppDomainManager hijacking and six newly developed RAT variants delivered via fake job-posting lures, timed to align with the Middle East conflict that erupted February 28.",
-      "why": "The novel AppDomainManager hijacking technique evades many EDR solutions. Unit 42 warns the group shows no signs of slowing — organizations in defense, aerospace, and critical tech should expect continued targeting.",
-      "source": "Palo Alto Networks Unit 42"
-    },
-    {
-      "category": "Threat Intel",
-      "title": "~800 Malicious npm Packages Deploy WEL1DROPPER Cross-Platform RAT in Supply Chain Campaign",
-      "url": "https://thehackernews.com/2026/08/nearly-800-malicious-npm-packages.html",
-      "summary": "The 'Flooding Dropper' campaign (tracked by Sonatype) flooded npm with ~800 AI-generated typosquatted packages delivering WEL1DROPPER — a cross-platform dropper for Windows, macOS, and Linux. It disables ETW and AMSI, establishes persistence, then pulls further payloads via Cloudflare Workers or DNS TXT records from a Russian-hosted C2 domain (wel1[.]ru).",
-      "why": "AI-generated typosquatting at 800-package scale sets a new bar for npm supply chain attacks. AMSI/ETW bypass combined with multi-OS targeting lets the malware evade standard endpoint defenses across entire developer environments.",
-      "source": "The Hacker News / Sonatype"
+      "title": "CVE-2026-59310: Critical VMware vCenter Auth Bypass Under Active APT Exploitation Across 47 Countries",
+      "url": "https://www.cyware.com/resources/threat-briefings/daily-threat-briefing/cyware-daily-threat-intelligence-august-13-2026",
+      "summary": "A critical authentication bypass vulnerability in VMware vCenter enables unauthenticated remote code execution and full environment takeover without user interaction. Suspected APT actors are actively exploiting this flaw in the wild, deploying a reverse SSH framework for persistent access to victim infrastructure. The campaign has been linked to 361 unique IP addresses across 47 countries, with the highest concentration of compromised systems in Germany.",
+      "why": "vCenter compromise grants hypervisor-level control over entire virtualized data centers — every VM and workload. Active APT exploitation at this geographic scale suggests a broad, coordinated campaign. Any internet-exposed vCenter instance should be treated as compromised until patched and forensically reviewed.",
+      "source": "Cyware Threat Intelligence"
     }
   ]
 }
