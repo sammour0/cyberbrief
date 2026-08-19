@@ -1,45 +1,45 @@
 {
-  "date": "August 16, 2026",
+  "date": "August 19, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-68820: Windows Winsock Zero-Day Exploited by Lazarus Group in Operation Dream Job",
+      "title": "CVE-2026-68820: Windows WinSock Zero-Day Exploited by North Korea in Operation Dream Job",
       "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
-      "summary": "A use-after-free vulnerability in the Windows Ancillary Function Driver for WinSock (afd.sys) allows a local attacker to trigger a race condition and escalate privileges to SYSTEM. Microsoft patched it in August 2026 Patch Tuesday (421 CVEs total), but Check Point Research confirmed North Korea's Lazarus Group had already weaponized it as a zero-day in their ongoing Operation Dream Job espionage campaign. CISA added it to the Known Exploited Vulnerabilities catalog with a federal remediation deadline of August 25, 2026.",
-      "why": "Lazarus Group (DPRK) nation-state exploitation of a Windows kernel driver for SYSTEM-level access is a critical threat to any unpatched Windows endpoint. Active in-the-wild use before the patch means defenders are racing against an already-operational exploit.",
-      "source": "The Hacker News / Check Point Research / BleepingComputer"
+      "summary": "Microsoft's August 2026 Patch Tuesday patched a use-after-free vulnerability in the Windows Ancillary Function Driver for WinSock (afd.sys). Check Point researchers confirmed North Korean threat actors exploited this zero-day to deploy a kernel-mode rootkit, gaining SYSTEM privileges on targeted systems.",
+      "why": "Actively exploited zero-day by a state-sponsored North Korean APT deploying a kernel-mode rootkit as part of the ongoing Operation Dream Job campaign. Patched as part of Microsoft's August 2026 Patch Tuesday covering 400+ flaws.",
+      "source": "The Hacker News / BleepingComputer"
     },
     {
       "category": "CVE",
-      "title": "ShieldBreak PoC Claims Bypass of Patched Microsoft Defender CVE-2026-50656, Achieves SYSTEM on Windows 11 25H2",
-      "url": "https://thehackernews.com/2026/08/shieldbreak-zero-day-poc-claims.html",
-      "summary": "A proof-of-concept tool dubbed ShieldBreak has surfaced claiming to bypass Microsoft's patch for CVE-2026-50656, a previously remediated Microsoft Defender vulnerability. The PoC has been demonstrated against Windows 11 25H2 and Windows Server 2025, reportedly achieving SYSTEM-level code execution by evading the patched code path. CISA separately added related CVE-2026-68820 to its KEV catalog, and federal agencies must remediate by August 25.",
-      "why": "A working patch bypass invalidates the assumption that patching closes the exposure. If confirmed, organizations that already applied the original fix remain at risk — forcing a re-evaluation of compensating controls rather than patch-and-move-on.",
-      "source": "The Hacker News"
+      "title": "CVE-2026-20127: Cisco SD-WAN Critical Auth Bypass Triggers CISA Emergency Directive 26-03",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "summary": "A maximum-severity authentication bypass in Cisco Catalyst SD-WAN Controller allows remote unauthenticated attackers to log in as high-privileged users and modify fabric configuration. CISA issued Emergency Directive 26-03 following widespread exploitation with observed webshell deployment activity in the wild.",
+      "why": "Max-severity CVE in widely-deployed enterprise SD-WAN infrastructure with confirmed webshell deployments and a CISA Emergency Directive — the highest-urgency federal response mechanism — demanding immediate patching.",
+      "source": "CISA / SecurityWeek"
     },
     {
       "category": "Threat Intel",
-      "title": "TeamPCP Trivy Supply Chain Attack: 76 of 77 Release Tags Poisoned, CanisterWorm Spreads to npm",
-      "url": "https://www.crowdstrike.com/en-us/blog/from-scanner-to-stealer-inside-the-trivy-action-supply-chain-compromise/",
-      "summary": "Threat actor TeamPCP compromised Aqua Security's Trivy vulnerability scanner — one of the most widely used open-source security tools — in a multi-phase supply chain attack. Attackers retroactively repointed git tags to inject a multi-stage credential stealer into 76 of 77 release tags. Every CI/CD pipeline pulling trivy-action silently had cloud credentials (AWS, GCP, Azure), SSH keys, and Kubernetes tokens harvested. The attack expanded via 'CanisterWorm', a self-propagating worm leveraging stolen npm publish tokens to spread through the npm ecosystem.",
-      "why": "Supply chain attacks on trusted security tooling hit the hardest targets: pipelines using Trivy to stay secure became the attack vector. CrowdStrike describes it as the most sophisticated open-source security tool compromise on record — affecting orgs including AWS, Samsung, and Cisco.",
-      "source": "CrowdStrike / Palo Alto Networks / Microsoft Security Blog / Wiz / Snyk"
+      "title": "Salt Typhoon (China APT) Compromises Networks in 80+ Countries Including Telecom and Government",
+      "url": "https://cybelangel.com/blog/cyber-espionage-apts/",
+      "summary": "China-linked APT Salt Typhoon has dramatically expanded its cyber espionage operations in 2026, compromising networks across more than 80 countries spanning telecommunications, transportation, and government sectors in what analysts are calling one of the most geographically widespread APT campaigns ever documented.",
+      "why": "Unprecedented scale from a China-linked nation-state APT hitting critical infrastructure globally. The breadth — 80+ countries including telecom and government — indicates a strategic intelligence collection operation of historic proportions.",
+      "source": "CybelAngel"
     },
     {
       "category": "Threat Intel",
-      "title": "APT36 (Transparent Tribe) Deploys AI 'Vibeware' — First Nation-State to Use LLMs as a Malware Assembly Line",
-      "url": "https://www.darkreading.com/cyberattacks-data-breaches/nation-state-actor-ai-malware-assembly-line",
-      "summary": "Pakistan-linked APT36 (Transparent Tribe) became the first documented nation-state actor to industrialize malware production using AI large language models. The group generates hundreds of polymorphic malware variants daily across multiple programming languages — each functionally identical but structurally distinct — targeting Indian government entities. Bitdefender coined the tactic 'Distributed Denial of Detection': flooding defenses with volume rather than sophistication to exhaust signature-based detection capabilities across EDRs and AV engines.",
-      "why": "This is a doctrinal shift in nation-state offensive operations. AI-generated polymorphic volume-saturates signature-based detection, demanding a migration to behavioral and heuristic models. Defenders reliant on hash/signature detection are effectively unprotected against this tactic.",
-      "source": "Dark Reading / Bitdefender / Computer Weekly / Cloud Security Alliance"
+      "title": "Iranian APT 'Screening Serpens' Escalates Espionage Operations Across Five Countries with New RAT Families",
+      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
+      "summary": "Palo Alto Unit 42 is tracking Iran-nexus group Screening Serpens, which significantly ramped up operations following a regional conflict starting in February 2026. The group is deploying two newly discovered RAT malware families across entities in up to five countries in active espionage campaigns.",
+      "why": "State-sponsored Iranian APT deploying novel, previously undocumented malware families in an escalating campaign directly tied to an active geopolitical conflict — conflict-driven APT escalation is a reliable indicator of intensifying offensive operations.",
+      "source": "Palo Alto Unit 42"
     },
     {
-      "category": "CVE",
-      "title": "CVE-2026-59310: Critical VMware vCenter Auth Bypass Under Active APT Exploitation Across 47 Countries",
-      "url": "https://www.cyware.com/resources/threat-briefings/daily-threat-briefing/cyware-daily-threat-intelligence-august-13-2026",
-      "summary": "A critical authentication bypass vulnerability in VMware vCenter enables unauthenticated remote code execution and full environment takeover without user interaction. Suspected APT actors are actively exploiting this flaw in the wild, deploying a reverse SSH framework for persistent access to victim infrastructure. The campaign has been linked to 361 unique IP addresses across 47 countries, with the highest concentration of compromised systems in Germany.",
-      "why": "vCenter compromise grants hypervisor-level control over entire virtualized data centers — every VM and workload. Active APT exploitation at this geographic scale suggests a broad, coordinated campaign. Any internet-exposed vCenter instance should be treated as compromised until patched and forensically reviewed.",
-      "source": "Cyware Threat Intelligence"
+      "category": "Research",
+      "title": "CrowdStrike 2026 Global Threat Report: AI-Accelerated Attacks Up 89%, Adversary Breakout Time Drops to 29 Minutes",
+      "url": "https://www.crowdstrike.com/en-us/global-threat-report/",
+      "summary": "CrowdStrike's 2026 Global Threat Report documents an 89% surge in AI-enabled cyberattacks with adversary breakout times shrinking to just 29 minutes on average. China-nexus actors are weaponizing critical CVEs within 24 hours of PoC publication, and cloud-related eCrime surged 171% driven by credential theft, LLM abuse, and cryptomining.",
+      "why": "29-minute average breakout time means defenders have an ever-narrowing window for detection and response. The 89% AI-attack increase and same-day CVE weaponization by nation-state actors are inflection points that demand updated defensive postures and faster patch cycles.",
+      "source": "CrowdStrike"
     }
   ]
 }
