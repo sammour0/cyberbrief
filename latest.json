@@ -1,45 +1,45 @@
 {
-  "date": "August 19, 2026",
+  "date": "August 21, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-68820: Windows WinSock Zero-Day Exploited by North Korea in Operation Dream Job",
+      "title": "CVE-2026-68820: Windows AFD.sys Zero-Day Actively Exploited by Lazarus Group in Operation Dream Job",
       "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
-      "summary": "Microsoft's August 2026 Patch Tuesday patched a use-after-free vulnerability in the Windows Ancillary Function Driver for WinSock (afd.sys). Check Point researchers confirmed North Korean threat actors exploited this zero-day to deploy a kernel-mode rootkit, gaining SYSTEM privileges on targeted systems.",
-      "why": "Actively exploited zero-day by a state-sponsored North Korean APT deploying a kernel-mode rootkit as part of the ongoing Operation Dream Job campaign. Patched as part of Microsoft's August 2026 Patch Tuesday covering 400+ flaws.",
-      "source": "The Hacker News / BleepingComputer"
+      "summary": "A use-after-free vulnerability in Windows Ancillary Function Driver (AFD.sys) allows local privilege escalation to SYSTEM. Patched in August 2026 Patch Tuesday alongside 397 other flaws, this zero-day was confirmed actively exploited in the wild before the patch was available. CVSS 7.0.",
+      "why": "Check Point Research attributed active exploitation to North Korea's Lazarus APT within their ongoing Operation Dream Job campaign. Any existing foothold on a Windows machine becomes full SYSTEM-level control with no additional user interaction — a critical post-exploitation primitive widely in use before the patch dropped.",
+      "source": "The Hacker News / Microsoft / Check Point Research"
+    },
+    {
+      "category": "Threat Intel",
+      "title": "Trivy Vulnerability Scanner Infected with Infostealer in Supply Chain Attack — 153 GB of Cloud Credentials Stolen",
+      "url": "https://www.cyware.com/resources/threat-briefings/daily-threat-briefing/cyware-daily-threat-intelligence-august-13-2026",
+      "summary": "The popular open-source vulnerability scanner Trivy was compromised with infostealer malware, resulting in mass theft of Git logins, CI/CD secrets, cryptowallets, and cloud credentials from AWS, Samsung, and Cisco. All stolen data was aggregated into a 153 GB RAR archive.",
+      "why": "Targeting trusted security and developer tooling is a devastating supply chain tactic. Organizations using Trivy for container or infrastructure scanning may have had cloud credentials and pipeline secrets silently exfiltrated — potentially granting attackers persistent access to production environments at scale.",
+      "source": "Cyware Daily Threat Intelligence"
+    },
+    {
+      "category": "Threat Intel",
+      "title": "Iran-Nexus APT 'Screening Serpens' Escalates Espionage Operations Across Five Countries with Novel RAT Families",
+      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
+      "summary": "Palo Alto Networks Unit 42 is tracking Iranian state-linked threat group Screening Serpens, which dramatically escalated operations following a regional conflict beginning February 2026. The group has deployed two newly identified RAT variant families targeting organizations across up to five countries.",
+      "why": "Nation-state actors tied to active geopolitical conflicts represent the highest-priority threat tier. Novel RAT family development indicates active capability investment, and the multi-country targeting scope shows espionage objectives extending well beyond the immediate conflict parties — any sector with geopolitical relevance should treat this as an active threat.",
+      "source": "Palo Alto Networks Unit 42"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-20127: Cisco SD-WAN Critical Auth Bypass Triggers CISA Emergency Directive 26-03",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
-      "summary": "A maximum-severity authentication bypass in Cisco Catalyst SD-WAN Controller allows remote unauthenticated attackers to log in as high-privileged users and modify fabric configuration. CISA issued Emergency Directive 26-03 following widespread exploitation with observed webshell deployment activity in the wild.",
-      "why": "Max-severity CVE in widely-deployed enterprise SD-WAN infrastructure with confirmed webshell deployments and a CISA Emergency Directive — the highest-urgency federal response mechanism — demanding immediate patching.",
-      "source": "CISA / SecurityWeek"
-    },
-    {
-      "category": "Threat Intel",
-      "title": "Salt Typhoon (China APT) Compromises Networks in 80+ Countries Including Telecom and Government",
-      "url": "https://cybelangel.com/blog/cyber-espionage-apts/",
-      "summary": "China-linked APT Salt Typhoon has dramatically expanded its cyber espionage operations in 2026, compromising networks across more than 80 countries spanning telecommunications, transportation, and government sectors in what analysts are calling one of the most geographically widespread APT campaigns ever documented.",
-      "why": "Unprecedented scale from a China-linked nation-state APT hitting critical infrastructure globally. The breadth — 80+ countries including telecom and government — indicates a strategic intelligence collection operation of historic proportions.",
-      "source": "CybelAngel"
-    },
-    {
-      "category": "Threat Intel",
-      "title": "Iranian APT 'Screening Serpens' Escalates Espionage Operations Across Five Countries with New RAT Families",
-      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Palo Alto Unit 42 is tracking Iran-nexus group Screening Serpens, which significantly ramped up operations following a regional conflict starting in February 2026. The group is deploying two newly discovered RAT malware families across entities in up to five countries in active espionage campaigns.",
-      "why": "State-sponsored Iranian APT deploying novel, previously undocumented malware families in an escalating campaign directly tied to an active geopolitical conflict — conflict-driven APT escalation is a reliable indicator of intensifying offensive operations.",
-      "source": "Palo Alto Unit 42"
+      "title": "CVE-2026-59310: Critical VMware vCenter Auth Bypass Under Active APT Exploitation Spanning 47 Countries",
+      "url": "https://socradar.io/free-tools/campaigns",
+      "summary": "A critical authentication bypass in VMware vCenter allows unauthenticated attackers to execute arbitrary code and achieve full vCenter environment takeover. Active APT exploitation has been confirmed, with a reverse SSH persistence framework deployed post-compromise. Attack infrastructure spans 361 unique IPs across 47 countries.",
+      "why": "VMware vCenter manages virtual infrastructure at scale — a full unauthenticated compromise grants attackers control over entire datacenter environments. The breadth of attack infrastructure (47 countries, 361 IPs) and the deliberate persistence mechanism indicate a coordinated, well-resourced campaign rather than opportunistic exploitation.",
+      "source": "SOCRadar / Cyware Threat Intelligence"
     },
     {
       "category": "Research",
-      "title": "CrowdStrike 2026 Global Threat Report: AI-Accelerated Attacks Up 89%, Adversary Breakout Time Drops to 29 Minutes",
-      "url": "https://www.crowdstrike.com/en-us/global-threat-report/",
-      "summary": "CrowdStrike's 2026 Global Threat Report documents an 89% surge in AI-enabled cyberattacks with adversary breakout times shrinking to just 29 minutes on average. China-nexus actors are weaponizing critical CVEs within 24 hours of PoC publication, and cloud-related eCrime surged 171% driven by credential theft, LLM abuse, and cryptomining.",
-      "why": "29-minute average breakout time means defenders have an ever-narrowing window for detection and response. The 89% AI-attack increase and same-day CVE weaponization by nation-state actors are inflection points that demand updated defensive postures and faster patch cycles.",
-      "source": "CrowdStrike"
+      "title": "Mandiant M-Trends 2026: New PROMPTFLUX & PROMPTSTEAL Malware Families Query LLMs at Runtime to Evade Detection",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/",
+      "summary": "Mandiant's M-Trends 2026 report — drawing on 500,000+ hours of frontline incident response — reveals a new class of AI-native malware. PROMPTFLUX and PROMPTSTEAL dynamically query large language models mid-execution to generate evasive commands and steal credentials. Mean attacker handoff time has collapsed to just 22 seconds.",
+      "why": "This is a genuinely novel attack class: malware that adapts at runtime using AI, fundamentally undermining signature-based and behavioral detection. The 22-second handoff metric signals that defenders now have an extraordinarily narrow window to detect and contain initial intrusions before lateral movement begins — traditional incident response timelines are no longer valid.",
+      "source": "Mandiant / Google Cloud (M-Trends 2026)"
     }
   ]
 }
