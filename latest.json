@@ -1,45 +1,45 @@
 {
-  "date": "August 21, 2026",
+  "date": "August 22, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-68820: Windows AFD.sys Zero-Day Actively Exploited by Lazarus Group in Operation Dream Job",
-      "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
-      "summary": "A use-after-free vulnerability in Windows Ancillary Function Driver (AFD.sys) allows local privilege escalation to SYSTEM. Patched in August 2026 Patch Tuesday alongside 397 other flaws, this zero-day was confirmed actively exploited in the wild before the patch was available. CVSS 7.0.",
-      "why": "Check Point Research attributed active exploitation to North Korea's Lazarus APT within their ongoing Operation Dream Job campaign. Any existing foothold on a Windows machine becomes full SYSTEM-level control with no additional user interaction — a critical post-exploitation primitive widely in use before the patch dropped.",
-      "source": "The Hacker News / Microsoft / Check Point Research"
+      "title": "CVE-2026-68820: Windows WinSock (afd.sys) Zero-Day Actively Exploited, Added to CISA KEV",
+      "url": "https://www.securityweek.com/august-2026-patch-tuesday-microsoft-fixes-421-cves-one-exploited-zero-day/",
+      "summary": "A use-after-free vulnerability in the Windows Ancillary Function Driver for WinSock (afd.sys) is being actively exploited in the wild to elevate privileges to SYSTEM. Patched in Microsoft's August 2026 Patch Tuesday alongside 420 other CVEs.",
+      "why": "Confirmed in-the-wild exploitation and already listed in CISA's Known Exploited Vulnerabilities catalogue. Historical afd.sys targeting patterns suggest potential nation-state actor involvement. Affects all supported Windows versions — patch immediately.",
+      "source": "SecurityWeek / Microsoft / CrowdStrike Patch Tuesday Analysis"
+    },
+    {
+      "category": "CVE",
+      "title": "CVE-2026-62878: Windows DNS Server Wormable RCE (CVSS 9.8) — Unauthenticated Stack Overflow",
+      "url": "https://www.zerodayinitiative.com/blog/2026/8/11/the-august-2026-security-update-review",
+      "summary": "An unauthenticated stack-based buffer overflow in the Windows DNS Server enables remote code execution from the network with no credentials required. CVSS 9.8 and classified as potentially wormable due to its network-reachable attack vector.",
+      "why": "Wormable CVSS 9.8 RCE on DNS servers is as dangerous as it gets for network infrastructure. A successful exploit could allow an attacker to move laterally across an entire enterprise by chaining DNS server compromise. Prioritize patching all Windows DNS Server deployments.",
+      "source": "Zero Day Initiative / Microsoft August 2026 Patch Tuesday"
     },
     {
       "category": "Threat Intel",
-      "title": "Trivy Vulnerability Scanner Infected with Infostealer in Supply Chain Attack — 153 GB of Cloud Credentials Stolen",
+      "title": "Supply Chain Attack via Trojanized Trivy Scanner Nets 153GB: AWS, Samsung, Cisco Secrets Stolen",
       "url": "https://www.cyware.com/resources/threat-briefings/daily-threat-briefing/cyware-daily-threat-intelligence-august-13-2026",
-      "summary": "The popular open-source vulnerability scanner Trivy was compromised with infostealer malware, resulting in mass theft of Git logins, CI/CD secrets, cryptowallets, and cloud credentials from AWS, Samsung, and Cisco. All stolen data was aggregated into a 153 GB RAR archive.",
-      "why": "Targeting trusted security and developer tooling is a devastating supply chain tactic. Organizations using Trivy for container or infrastructure scanning may have had cloud credentials and pipeline secrets silently exfiltrated — potentially granting attackers persistent access to production environments at scale.",
+      "summary": "Attackers compromised the popular open-source Trivy vulnerability scanner and weaponized it with infostealer malware. The campaign exfiltrated 153GB of data including Git credentials, CI/CD pipeline secrets, cryptowallets, and cloud API keys from organizations including AWS, Samsung, and Cisco.",
+      "why": "A trusted security tool turned into an attack vector is a high-impact supply chain scenario. CI/CD credential theft gives attackers keys to downstream software pipelines. Any organization running Trivy in automated pipelines should immediately audit secrets, rotate credentials, and verify binary integrity.",
       "source": "Cyware Daily Threat Intelligence"
     },
     {
       "category": "Threat Intel",
-      "title": "Iran-Nexus APT 'Screening Serpens' Escalates Espionage Operations Across Five Countries with Novel RAT Families",
+      "title": "Iranian APT 'Screening Serpens' Escalates Espionage Operations Across Five Countries",
       "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Palo Alto Networks Unit 42 is tracking Iranian state-linked threat group Screening Serpens, which dramatically escalated operations following a regional conflict beginning February 2026. The group has deployed two newly identified RAT variant families targeting organizations across up to five countries.",
-      "why": "Nation-state actors tied to active geopolitical conflicts represent the highest-priority threat tier. Novel RAT family development indicates active capability investment, and the multi-country targeting scope shows espionage objectives extending well beyond the immediate conflict parties — any sector with geopolitical relevance should treat this as an active threat.",
+      "summary": "Palo Alto Unit 42 is tracking the Iranian-nexus group Screening Serpens, which has significantly increased operations since a regional conflict beginning in February 2026. The group deploys two previously undocumented RAT variants against government and critical-sector targets in at least five countries.",
+      "why": "State-sponsored escalation tied to active geopolitical conflict signals a broadening threat surface. Novel custom RAT families indicate investment in detection evasion. Organizations in the Middle East, Europe, and allied government sectors should raise alert levels for Iranian TTPs.",
       "source": "Palo Alto Networks Unit 42"
     },
     {
-      "category": "CVE",
-      "title": "CVE-2026-59310: Critical VMware vCenter Auth Bypass Under Active APT Exploitation Spanning 47 Countries",
-      "url": "https://socradar.io/free-tools/campaigns",
-      "summary": "A critical authentication bypass in VMware vCenter allows unauthenticated attackers to execute arbitrary code and achieve full vCenter environment takeover. Active APT exploitation has been confirmed, with a reverse SSH persistence framework deployed post-compromise. Attack infrastructure spans 361 unique IPs across 47 countries.",
-      "why": "VMware vCenter manages virtual infrastructure at scale — a full unauthenticated compromise grants attackers control over entire datacenter environments. The breadth of attack infrastructure (47 countries, 361 IPs) and the deliberate persistence mechanism indicate a coordinated, well-resourced campaign rather than opportunistic exploitation.",
-      "source": "SOCRadar / Cyware Threat Intelligence"
-    },
-    {
       "category": "Research",
-      "title": "Mandiant M-Trends 2026: New PROMPTFLUX & PROMPTSTEAL Malware Families Query LLMs at Runtime to Evade Detection",
-      "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/",
-      "summary": "Mandiant's M-Trends 2026 report — drawing on 500,000+ hours of frontline incident response — reveals a new class of AI-native malware. PROMPTFLUX and PROMPTSTEAL dynamically query large language models mid-execution to generate evasive commands and steal credentials. Mean attacker handoff time has collapsed to just 22 seconds.",
-      "why": "This is a genuinely novel attack class: malware that adapts at runtime using AI, fundamentally undermining signature-based and behavioral detection. The 22-second handoff metric signals that defenders now have an extraordinarily narrow window to detect and contain initial intrusions before lateral movement begins — traditional incident response timelines are no longer valid.",
-      "source": "Mandiant / Google Cloud (M-Trends 2026)"
+      "title": "CrowdStrike 2026 Global Threat Report: AI-Enabled Adversaries Up 89%, eCrime Breakout Time Drops to 29 Minutes",
+      "url": "https://www.crowdstrike.com/en-us/press-releases/2026-crowdstrike-global-threat-report/",
+      "summary": "CrowdStrike's 2026 Global Threat Report documents an 89% surge in AI-accelerated eCrime activity, with average adversary breakout time (initial access to lateral movement) now just 29 minutes. Mandiant's M-Trends 2026 corroborates: exploits remain the #1 initial access vector for the sixth consecutive year.",
+      "why": "Sub-30-minute breakout times eliminate any margin for human-speed detection and response. The democratization of AI offensive tooling is lowering the barrier for sophisticated attacks across the eCrime ecosystem. Defenders must shift to automated, pre-emptive controls and assume breach posture as the default.",
+      "source": "CrowdStrike 2026 Global Threat Report / Mandiant M-Trends 2026"
     }
   ]
 }
