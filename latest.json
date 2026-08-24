@@ -1,45 +1,45 @@
 {
-  "date": "August 22, 2026",
+  "date": "August 24, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-68820: Windows WinSock (afd.sys) Zero-Day Actively Exploited, Added to CISA KEV",
-      "url": "https://www.securityweek.com/august-2026-patch-tuesday-microsoft-fixes-421-cves-one-exploited-zero-day/",
-      "summary": "A use-after-free vulnerability in the Windows Ancillary Function Driver for WinSock (afd.sys) is being actively exploited in the wild to elevate privileges to SYSTEM. Patched in Microsoft's August 2026 Patch Tuesday alongside 420 other CVEs.",
-      "why": "Confirmed in-the-wild exploitation and already listed in CISA's Known Exploited Vulnerabilities catalogue. Historical afd.sys targeting patterns suggest potential nation-state actor involvement. Affects all supported Windows versions — patch immediately.",
-      "source": "SecurityWeek / Microsoft / CrowdStrike Patch Tuesday Analysis"
+      "title": "CVE-2026-59310: VMware vCenter Directory Traversal (CVSS 9.8) Under Active China-Nexus APT Exploitation",
+      "url": "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
+      "summary": "A critical directory-traversal vulnerability in Broadcom VMware vCenter (CVE-2026-59310, CVSS 9.8) is being actively exploited by a suspected China-nexus APT. Attackers deploy a reverse SSH framework for persistent access, with campaign activity traced to 361 unique IPs across 47 countries and the largest cluster of compromises observed in Germany.",
+      "why": "vCenter runs the control plane for enterprise virtualization; a CVSS 9.8 unauthenticated traversal exploited by a state actor is a top-tier priority. Patch immediately and hunt for reverse-SSH persistence and anomalous vCenter service account activity.",
+      "source": "The Hacker News / Broadcom"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-62878: Windows DNS Server Wormable RCE (CVSS 9.8) — Unauthenticated Stack Overflow",
-      "url": "https://www.zerodayinitiative.com/blog/2026/8/11/the-august-2026-security-update-review",
-      "summary": "An unauthenticated stack-based buffer overflow in the Windows DNS Server enables remote code execution from the network with no credentials required. CVSS 9.8 and classified as potentially wormable due to its network-reachable attack vector.",
-      "why": "Wormable CVSS 9.8 RCE on DNS servers is as dangerous as it gets for network infrastructure. A successful exploit could allow an attacker to move laterally across an entire enterprise by chaining DNS server compromise. Prioritize patching all Windows DNS Server deployments.",
-      "source": "Zero Day Initiative / Microsoft August 2026 Patch Tuesday"
+      "title": "CVE-2026-63520: SharePoint Chained Unauth RCE Exploited in the Wild, Added to CISA KEV",
+      "url": "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
+      "summary": "CVE-2026-63520, a high-severity RCE in Microsoft SharePoint, is being actively exploited when chained with a second flaw to achieve unauthenticated remote code execution against internet-facing SharePoint servers. CISA has ordered federal agencies to prioritize patching alongside newly KEV-listed TrueConf Server vulnerabilities.",
+      "why": "Repeat of the ToolShell/SharePoint pattern of chained pre-auth RCE against a widely deployed collaboration platform. Any internet-exposed SharePoint deployment should be considered at imminent risk of compromise until patched and IR-verified.",
+      "source": "The Hacker News / CISA KEV"
     },
     {
       "category": "Threat Intel",
-      "title": "Supply Chain Attack via Trojanized Trivy Scanner Nets 153GB: AWS, Samsung, Cisco Secrets Stolen",
+      "title": "Operation CameraSwarm: 14,530+ Dahua IP Cameras Hijacked via Credential Attacks, Auth Bypass, and P2P Relays",
+      "url": "https://thehackernews.com/2026/08/hackers-compromised-14500-dahua-devices.html",
+      "summary": "Researchers uncovered Operation CameraSwarm, in which threat actors compromised more than 14,530 Dahua-branded IP cameras worldwide by combining credential stuffing, authentication-bypass vulnerabilities, and abuse of Dahua's P2P relay protocol to reach devices behind NAT and firewalls.",
+      "why": "IoT surveillance botnets are ideal covert infrastructure \u2014 attackers gain video/audio access, a launchpad inside enterprise perimeters, and DDoS capacity. Any organization running Dahua or OEM-rebranded cameras should audit exposure, isolate devices, and rotate credentials.",
+      "source": "The Hacker News"
+    },
+    {
+      "category": "Threat Intel",
+      "title": "SpyNote RAT + 'WindRelay' Second-Stage Payload in Live Voice-Phishing Campaign Against Bank Customers",
       "url": "https://www.cyware.com/resources/threat-briefings/daily-threat-briefing/cyware-daily-threat-intelligence-august-13-2026",
-      "summary": "Attackers compromised the popular open-source Trivy vulnerability scanner and weaponized it with infostealer malware. The campaign exfiltrated 153GB of data including Git credentials, CI/CD pipeline secrets, cryptowallets, and cloud API keys from organizations including AWS, Samsung, and Cisco.",
-      "why": "A trusted security tool turned into an attack vector is a high-impact supply chain scenario. CI/CD credential theft gives attackers keys to downstream software pipelines. Any organization running Trivy in automated pipelines should immediately audit secrets, rotate credentials, and verify binary integrity.",
+      "summary": "A new Android campaign uses SpyNote RAT delivered via live voice-phishing calls: attackers impersonate bank employees, walk victims through installing SpyNote during the call, then deploy a second-stage payload dubbed WindRelay for persistent remote access and overlay-based credential capture.",
+      "why": "Combining social engineering with RAT deployment sidesteps store defenses and MFA. Financial-sector defenders should push customer awareness on unsolicited 'bank employee' install requests and monitor for SpyNote/WindRelay indicators.",
       "source": "Cyware Daily Threat Intelligence"
     },
     {
-      "category": "Threat Intel",
-      "title": "Iranian APT 'Screening Serpens' Escalates Espionage Operations Across Five Countries",
-      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Palo Alto Unit 42 is tracking the Iranian-nexus group Screening Serpens, which has significantly increased operations since a regional conflict beginning in February 2026. The group deploys two previously undocumented RAT variants against government and critical-sector targets in at least five countries.",
-      "why": "State-sponsored escalation tied to active geopolitical conflict signals a broadening threat surface. Novel custom RAT families indicate investment in detection evasion. Organizations in the Middle East, Europe, and allied government sectors should raise alert levels for Iranian TTPs.",
-      "source": "Palo Alto Networks Unit 42"
-    },
-    {
       "category": "Research",
-      "title": "CrowdStrike 2026 Global Threat Report: AI-Enabled Adversaries Up 89%, eCrime Breakout Time Drops to 29 Minutes",
-      "url": "https://www.crowdstrike.com/en-us/press-releases/2026-crowdstrike-global-threat-report/",
-      "summary": "CrowdStrike's 2026 Global Threat Report documents an 89% surge in AI-accelerated eCrime activity, with average adversary breakout time (initial access to lateral movement) now just 29 minutes. Mandiant's M-Trends 2026 corroborates: exploits remain the #1 initial access vector for the sixth consecutive year.",
-      "why": "Sub-30-minute breakout times eliminate any margin for human-speed detection and response. The democratization of AI offensive tooling is lowering the barrier for sophisticated attacks across the eCrime ecosystem. Defenders must shift to automated, pre-emptive controls and assume breach posture as the default.",
-      "source": "CrowdStrike 2026 Global Threat Report / Mandiant M-Trends 2026"
+      "title": "Sandbox Escape in isolated-vm: Critical Flaw Breaks the 2,900-Star Node.js Isolation Library",
+      "url": "https://thehackernews.com/2026/08/",
+      "summary": "Researchers disclosed a critical sandbox-escape vulnerability in isolated-vm, a widely used open-source Node.js isolation library with 2,900+ GitHub stars and 190 forks. Successful exploitation lets an attacker break out of the isolated V8 context and execute code in the host Node process \u2014 a full defense bypass for any product relying on it for untrusted-code execution.",
+      "why": "isolated-vm underpins many multi-tenant SaaS platforms, LLM tool-execution sandboxes, and function-as-a-service runtimes. A confirmed escape technique invalidates a common security assumption and demands urgent upgrades plus review of any product embedding untrusted JavaScript.",
+      "source": "The Hacker News"
     }
   ]
 }
