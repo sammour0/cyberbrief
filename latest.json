@@ -1,45 +1,45 @@
 {
-  "date": "August 24, 2026",
+  "date": "August 27, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-59310: VMware vCenter Directory Traversal (CVSS 9.8) Under Active China-Nexus APT Exploitation",
+      "title": "CVE-2026-33824 (CVSS 9.8): Microsoft IKE Double-Free RCE Actively Exploited by Chinese-Nexus Threat Actor",
       "url": "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
-      "summary": "A critical directory-traversal vulnerability in Broadcom VMware vCenter (CVE-2026-59310, CVSS 9.8) is being actively exploited by a suspected China-nexus APT. Attackers deploy a reverse SSH framework for persistent access, with campaign activity traced to 361 unique IPs across 47 countries and the largest cluster of compromises observed in Germany.",
-      "why": "vCenter runs the control plane for enterprise virtualization; a CVSS 9.8 unauthenticated traversal exploited by a state actor is a top-tier priority. Patch immediately and hunt for reverse-SSH persistence and anomalous vCenter service account activity.",
-      "source": "The Hacker News / Broadcom"
+      "summary": "A double-free vulnerability in Microsoft Internet Key Exchange (IKE) Service Extensions allows an unauthenticated remote attacker to execute arbitrary code over the network. Being actively exploited in the wild by a Chinese-speaking threat actor. Patched in August 2026 Patch Tuesday alongside 420 other CVEs; affects all Windows deployments using IKE for VPN/IPsec.",
+      "why": "CVSS 9.8 with confirmed state-actor exploitation against VPN perimeter infrastructure. A pre-auth RCE on IKE means attackers can gain footholds before any endpoint visibility fires. Patch immediately and hunt for lateral movement from perimeter VPN endpoints.",
+      "source": "The Hacker News / Microsoft August 2026 Patch Tuesday"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-63520: SharePoint Chained Unauth RCE Exploited in the Wild, Added to CISA KEV",
-      "url": "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
-      "summary": "CVE-2026-63520, a high-severity RCE in Microsoft SharePoint, is being actively exploited when chained with a second flaw to achieve unauthenticated remote code execution against internet-facing SharePoint servers. CISA has ordered federal agencies to prioritize patching alongside newly KEV-listed TrueConf Server vulnerabilities.",
-      "why": "Repeat of the ToolShell/SharePoint pattern of chained pre-auth RCE against a widely deployed collaboration platform. Any internet-exposed SharePoint deployment should be considered at imminent risk of compromise until patched and IR-verified.",
-      "source": "The Hacker News / CISA KEV"
+      "title": "CVE-2026-69836 (CVSS 10.0): Microsoft Entra ID Deserialization Flaw Enables Unauthenticated RCE",
+      "url": "https://hoploninfosec.com/august-2026-cybersecurity-news",
+      "summary": "A maximum-severity deserialization vulnerability in Microsoft Entra ID allows unauthenticated remote code execution against the cloud identity platform. Disclosed and patched in August 2026 Patch Tuesday. Affects all organizations using Entra ID for Microsoft 365 and Azure identity management.",
+      "why": "CVSS 10.0 on the IAM backbone of millions of organizations. Unauthenticated RCE on Entra ID enables token forgery, cross-tenant pivoting, and full Azure tenancy takeover. Treat as absolute critical-priority patch \u2014 no mitigating controls compensate for an identity-layer RCE.",
+      "source": "Hoplon InfoSec / Microsoft August 2026 Patch Tuesday"
     },
     {
       "category": "Threat Intel",
-      "title": "Operation CameraSwarm: 14,530+ Dahua IP Cameras Hijacked via Credential Attacks, Auth Bypass, and P2P Relays",
-      "url": "https://thehackernews.com/2026/08/hackers-compromised-14500-dahua-devices.html",
-      "summary": "Researchers uncovered Operation CameraSwarm, in which threat actors compromised more than 14,530 Dahua-branded IP cameras worldwide by combining credential stuffing, authentication-bypass vulnerabilities, and abuse of Dahua's P2P relay protocol to reach devices behind NAT and firewalls.",
-      "why": "IoT surveillance botnets are ideal covert infrastructure \u2014 attackers gain video/audio access, a launchpad inside enterprise perimeters, and DDoS capacity. Any organization running Dahua or OEM-rebranded cameras should audit exposure, isolate devices, and rotate credentials.",
-      "source": "The Hacker News"
+      "title": "APT42 Supercharges SpearSpecter Campaign with Generative AI: Multilingual Lures, AI Personas, Fileless TAMECAT Backdoor",
+      "url": "https://www.malwarepatrol.net/late-august-2026-cyber-threat-reports/",
+      "summary": "Iran-linked APT42 has integrated generative AI across its full SpearSpecter attack chain \u2014 target profiling, multilingual phishing lures, persona creation, and malware development \u2014 and deploys an upgraded fileless TAMECAT backdoor via legitimate cloud C2. Targets include governments, defence contractors, think tanks, and nuclear-sector entities.",
+      "why": "AI-generated phishing strips the grammatical and cultural tells that previously exposed state-sponsored campaigns, dramatically increasing success rates. Fileless TAMECAT leaves minimal forensic artifacts, and cloud-service C2 blends into normal traffic. Defenders must shift to behavioral and cloud-access anomaly detection \u2014 signature-based controls will not catch this.",
+      "source": "Malware Patrol Late-August 2026 Threat Reports / Tata Communications Threat Advisory"
     },
     {
       "category": "Threat Intel",
-      "title": "SpyNote RAT + 'WindRelay' Second-Stage Payload in Live Voice-Phishing Campaign Against Bank Customers",
-      "url": "https://www.cyware.com/resources/threat-briefings/daily-threat-briefing/cyware-daily-threat-intelligence-august-13-2026",
-      "summary": "A new Android campaign uses SpyNote RAT delivered via live voice-phishing calls: attackers impersonate bank employees, walk victims through installing SpyNote during the call, then deploy a second-stage payload dubbed WindRelay for persistent remote access and overlay-based credential capture.",
-      "why": "Combining social engineering with RAT deployment sidesteps store defenses and MFA. Financial-sector defenders should push customer awareness on unsolicited 'bank employee' install requests and monitor for SpyNote/WindRelay indicators.",
-      "source": "Cyware Daily Threat Intelligence"
+      "title": "ChainDrop npm Supply Chain Attack: 400+ Packages, 2,000 Versions Poisoned; Persists via VS Code and Claude Code Config Hijack",
+      "url": "https://news.networktigers.com/cybersecurity-news/roundup-august-24-2026/",
+      "summary": "ChainDrop compromised 400+ unrelated npm packages across 2,000 versions by hijacking a single maintainer account. The malware steals credentials, establishes persistence by modifying VS Code and Claude Code configuration files, and republishes poisoned packages to propagate infections downstream. Every developer machine that ran npm install of any affected version is silently compromised.",
+      "why": "Massive npm blast radius with a novel persistence vector abusing IDE config files (VS Code, Claude Code) to survive reinstalls. Any developer system that consumed an affected package warrants full credential rotation and incident response \u2014 not just a package update.",
+      "source": "NetworkTigers Cybersecurity Roundup (Aug 24, 2026)"
     },
     {
       "category": "Research",
-      "title": "Sandbox Escape in isolated-vm: Critical Flaw Breaks the 2,900-Star Node.js Isolation Library",
-      "url": "https://thehackernews.com/2026/08/",
-      "summary": "Researchers disclosed a critical sandbox-escape vulnerability in isolated-vm, a widely used open-source Node.js isolation library with 2,900+ GitHub stars and 190 forks. Successful exploitation lets an attacker break out of the isolated V8 context and execute code in the host Node process \u2014 a full defense bypass for any product relying on it for untrusted-code execution.",
-      "why": "isolated-vm underpins many multi-tenant SaaS platforms, LLM tool-execution sandboxes, and function-as-a-service runtimes. A confirmed escape technique invalidates a common security assumption and demands urgent upgrades plus review of any product embedding untrusted JavaScript.",
-      "source": "The Hacker News"
+      "title": "Mandiant M-Trends 2026: PROMPTFLUX & PROMPTSTEAL \u2014 Malware Querying LLMs Mid-Execution to Dynamically Evade Detection",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/",
+      "summary": "Mandiant's M-Trends 2026 report (500,000+ hours of IR investigations) documents PROMPTFLUX and PROMPTSTEAL \u2014 novel malware families that query large language models at runtime to generate evasion logic on the fly, defeating static signatures and heuristics. The report also documents 'distillation attacks' that steal proprietary ML model logic from enterprise APIs as IP theft.",
+      "why": "First confirmed in-the-wild use of LLMs as live evasion engines inside malware. Runtime-generated evasion invalidates static signatures and most heuristics \u2014 defenders urgently need behavioral telemetry and AI-vs-AI detection. This is the transition to adaptive malware the industry has warned about.",
+      "source": "Mandiant M-Trends 2026 / Google Cloud Blog"
     }
   ]
 }
