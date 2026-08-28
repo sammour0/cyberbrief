@@ -1,45 +1,45 @@
 {
-  "date": "August 27, 2026",
+  "date": "August 28, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-33824 (CVSS 9.8): Microsoft IKE Double-Free RCE Actively Exploited by Chinese-Nexus Threat Actor",
-      "url": "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
-      "summary": "A double-free vulnerability in Microsoft Internet Key Exchange (IKE) Service Extensions allows an unauthenticated remote attacker to execute arbitrary code over the network. Being actively exploited in the wild by a Chinese-speaking threat actor. Patched in August 2026 Patch Tuesday alongside 420 other CVEs; affects all Windows deployments using IKE for VPN/IPsec.",
-      "why": "CVSS 9.8 with confirmed state-actor exploitation against VPN perimeter infrastructure. A pre-auth RCE on IKE means attackers can gain footholds before any endpoint visibility fires. Patch immediately and hunt for lateral movement from perimeter VPN endpoints.",
-      "source": "The Hacker News / Microsoft August 2026 Patch Tuesday"
+      "title": "CVE-2026-68820: Windows WinSock (afd.sys) Use-After-Free Zero-Day Actively Exploited by Lazarus Group in Operation Dream Job",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/",
+      "summary": "Microsoft patched CVE-2026-68820, a use-after-free vulnerability in afd.sys — the Windows Sockets API kernel-mode driver — enabling local privilege escalation to SYSTEM. Confirmed as a zero-day exploited in the wild before patch release. Check Point Research attributes exploitation to North Korea's Lazarus Group, used within Operation Dream Job to elevate privileges on already-compromised systems targeting defense contractors and crypto firms. Part of August 2026 Patch Tuesday which addressed 400+ CVEs.",
+      "why": "Lazarus weaponizing a kernel zero-day in an active, named campaign is high-priority. A SYSTEM-level privilege escalation on any Windows host extends attacker reach to full OS control; patch immediately and hunt for afd.sys exploitation artifacts on any internet-facing or development systems.",
+      "source": "BleepingComputer / Check Point Research / Microsoft"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-69836 (CVSS 10.0): Microsoft Entra ID Deserialization Flaw Enables Unauthenticated RCE",
-      "url": "https://hoploninfosec.com/august-2026-cybersecurity-news",
-      "summary": "A maximum-severity deserialization vulnerability in Microsoft Entra ID allows unauthenticated remote code execution against the cloud identity platform. Disclosed and patched in August 2026 Patch Tuesday. Affects all organizations using Entra ID for Microsoft 365 and Azure identity management.",
-      "why": "CVSS 10.0 on the IAM backbone of millions of organizations. Unauthenticated RCE on Entra ID enables token forgery, cross-tenant pivoting, and full Azure tenancy takeover. Treat as absolute critical-priority patch \u2014 no mitigating controls compensate for an identity-layer RCE.",
-      "source": "Hoplon InfoSec / Microsoft August 2026 Patch Tuesday"
+      "title": "CVE-2026-63520: Microsoft SharePoint Unauthenticated RCE Chain — Actively Exploited Alongside macOS, vCenter, and IKE Flaws",
+      "url": "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
+      "summary": "CVE-2026-63520, a high-severity SharePoint RCE, chains with a second flaw to create a fully unauthenticated remote code execution path against internet-facing SharePoint deployments. Confirmed actively exploited alongside separate critical flaws in macOS, VMware vCenter, and the Windows IKE stack — all disclosed as part of August 2026 Patch Tuesday. No user interaction required for any of the four attack chains.",
+      "why": "Four concurrently exploited critical flaws across Microsoft, Apple, and VMware platforms signals threat actors are burning 0-days in rapid succession post-Patch-Tuesday. SharePoint RCE without authentication puts any public-facing SharePoint at risk of immediate compromise; organizations should prioritize patching or WAF-blocking SharePoint endpoints today.",
+      "source": "The Hacker News / Microsoft / VMware"
     },
     {
       "category": "Threat Intel",
-      "title": "APT42 Supercharges SpearSpecter Campaign with Generative AI: Multilingual Lures, AI Personas, Fileless TAMECAT Backdoor",
-      "url": "https://www.malwarepatrol.net/late-august-2026-cyber-threat-reports/",
-      "summary": "Iran-linked APT42 has integrated generative AI across its full SpearSpecter attack chain \u2014 target profiling, multilingual phishing lures, persona creation, and malware development \u2014 and deploys an upgraded fileless TAMECAT backdoor via legitimate cloud C2. Targets include governments, defence contractors, think tanks, and nuclear-sector entities.",
-      "why": "AI-generated phishing strips the grammatical and cultural tells that previously exposed state-sponsored campaigns, dramatically increasing success rates. Fileless TAMECAT leaves minimal forensic artifacts, and cloud-service C2 blends into normal traffic. Defenders must shift to behavioral and cloud-access anomaly detection \u2014 signature-based controls will not catch this.",
-      "source": "Malware Patrol Late-August 2026 Threat Reports / Tata Communications Threat Advisory"
+      "title": "APT-C-60 Targets Japanese Organizations Using GitHub, GitLab, jsDelivr, and Codeberg as C2 Infrastructure",
+      "url": "https://radar.offseq.com/threat/update-on-attacks-by-threat-group-apt-c-60-in-2026-e2f0e51acf368ecd",
+      "summary": "APT-C-60, a suspected East Asia-nexus threat group, has continued escalating operations against Japanese organizations throughout 2026 with an evolved TTPs profile. Initial access is achieved via spear-phishing emails delivering RAR archives or Proton Drive links. Post-compromise, the group abuses legitimate developer services — GitHub, GitLab, jsDelivr (CDN), and Codeberg — as command-and-control infrastructure to blend malicious traffic with normal developer activity and evade network-based detection.",
+      "why": "Using mainstream developer platforms as C2 makes traffic indistinguishable from normal developer workflows. Defenders should apply strict egress policy monitoring for GitHub/GitLab API calls from production and endpoint environments — outbound calls to these platforms from non-developer hosts are a red flag requiring investigation.",
+      "source": "OffSeq Threat Radar / Live Threat Intelligence"
     },
     {
       "category": "Threat Intel",
-      "title": "ChainDrop npm Supply Chain Attack: 400+ Packages, 2,000 Versions Poisoned; Persists via VS Code and Claude Code Config Hijack",
-      "url": "https://news.networktigers.com/cybersecurity-news/roundup-august-24-2026/",
-      "summary": "ChainDrop compromised 400+ unrelated npm packages across 2,000 versions by hijacking a single maintainer account. The malware steals credentials, establishes persistence by modifying VS Code and Claude Code configuration files, and republishes poisoned packages to propagate infections downstream. Every developer machine that ran npm install of any affected version is silently compromised.",
-      "why": "Massive npm blast radius with a novel persistence vector abusing IDE config files (VS Code, Claude Code) to survive reinstalls. Any developer system that consumed an affected package warrants full credential rotation and incident response \u2014 not just a package update.",
-      "source": "NetworkTigers Cybersecurity Roundup (Aug 24, 2026)"
+      "title": "CrowdStrike 2026 Annual Threat Hunting Report: AI-Enabled Attacks Surge 89%, eCrime Breakout Time Falls to 29 Minutes",
+      "url": "https://cyberscoop.com/crowdstrike-annual-threat-hunting-report-2026/",
+      "summary": "CrowdStrike's 2026 Threat Hunting Report documents an 89% year-over-year increase in AI-enabled cyberattacks. Average eCrime breakout time — from initial compromise to lateral movement — has dropped to just 29 minutes. During H1 2026, 88% of CVEs with a public proof-of-concept exploit were weaponized within 48 hours of disclosure, with China-nexus adversaries leading exploitation within the first 24 hours. AI is simultaneously weaponized by attackers for phishing, reconnaissance, and operational scaling, and is increasingly targeted as an enterprise asset.",
+      "why": "A 29-minute mean breakout time leaves no margin for manual SOC investigation — automated, real-time EDR and XDR response is now a baseline requirement. Organizations without sub-5-minute detection-to-containment pipelines are structurally vulnerable to full lateral compromise before human analysts can respond.",
+      "source": "CrowdStrike / CyberScoop"
     },
     {
       "category": "Research",
-      "title": "Mandiant M-Trends 2026: PROMPTFLUX & PROMPTSTEAL \u2014 Malware Querying LLMs Mid-Execution to Dynamically Evade Detection",
-      "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/",
-      "summary": "Mandiant's M-Trends 2026 report (500,000+ hours of IR investigations) documents PROMPTFLUX and PROMPTSTEAL \u2014 novel malware families that query large language models at runtime to generate evasion logic on the fly, defeating static signatures and heuristics. The report also documents 'distillation attacks' that steal proprietary ML model logic from enterprise APIs as IP theft.",
-      "why": "First confirmed in-the-wild use of LLMs as live evasion engines inside malware. Runtime-generated evasion invalidates static signatures and most heuristics \u2014 defenders urgently need behavioral telemetry and AI-vs-AI detection. This is the transition to adaptive malware the industry has warned about.",
-      "source": "Mandiant M-Trends 2026 / Google Cloud Blog"
+      "title": "Mandiant M-Trends 2026: Attackers Hand Off Compromised Access in 22 Seconds; Cybercrime and Espionage Groups Diverge Sharply in Tactics",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026",
+      "summary": "Mandiant's M-Trends 2026 report, grounded in 500,000+ hours of frontline incident response investigations conducted globally in 2025, documents that adversaries now hand off compromised initial access to follow-on operators in as little as 22 seconds — effectively eliminating any detection window based on time-to-first-action. The report identifies a sharp tactical divergence: cybercriminal groups optimize for immediate impact and recovery denial (ransomware speed), while sophisticated cyber espionage groups optimize for extreme persistence and minimal footprint. Median global dwell time continues to decline.",
+      "why": "A 22-second access handoff redefines incident response SLAs: initial-access detections must trigger automated containment before human analysts are even paged. The espionage/crime divergence also means defense teams must tune separately for loud-and-fast ransomware versus quiet-and-slow APT operators — a single detection profile covers neither.",
+      "source": "Mandiant / Google Cloud"
     }
   ]
 }
