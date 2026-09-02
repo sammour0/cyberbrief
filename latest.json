@@ -1,45 +1,45 @@
 {
-  "date": "August 28, 2026",
+  "date": "September 02, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-68820: Windows WinSock (afd.sys) Use-After-Free Zero-Day Actively Exploited by Lazarus Group in Operation Dream Job",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/",
-      "summary": "Microsoft patched CVE-2026-68820, a use-after-free vulnerability in afd.sys — the Windows Sockets API kernel-mode driver — enabling local privilege escalation to SYSTEM. Confirmed as a zero-day exploited in the wild before patch release. Check Point Research attributes exploitation to North Korea's Lazarus Group, used within Operation Dream Job to elevate privileges on already-compromised systems targeting defense contractors and crypto firms. Part of August 2026 Patch Tuesday which addressed 400+ CVEs.",
-      "why": "Lazarus weaponizing a kernel zero-day in an active, named campaign is high-priority. A SYSTEM-level privilege escalation on any Windows host extends attacker reach to full OS control; patch immediately and hunt for afd.sys exploitation artifacts on any internet-facing or development systems.",
-      "source": "BleepingComputer / Check Point Research / Microsoft"
+      "title": "Microsoft Entra ID CVSS 10.0 RCE Vulnerability (CVE-2026-69836) Actively Exploited in the Wild",
+      "url": "https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html",
+      "summary": "A critical RCE vulnerability (CVE-2026-69836) in Microsoft Entra ID holds a maximum CVSS score of 10.0 and is confirmed actively exploited in the wild. Unauthenticated attackers can execute arbitrary code on affected identity infrastructure with no user interaction required.",
+      "why": "Entra ID underpins enterprise identity and SSO for millions of orgs. A CVSS 10.0 RCE under active exploitation means full identity infrastructure compromise is possible without credentials. Patch immediately and audit Entra ID logs for anomalous token issuance or admin activity.",
+      "source": "The Hacker News / Microsoft Security"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-63520: Microsoft SharePoint Unauthenticated RCE Chain — Actively Exploited Alongside macOS, vCenter, and IKE Flaws",
-      "url": "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
-      "summary": "CVE-2026-63520, a high-severity SharePoint RCE, chains with a second flaw to create a fully unauthenticated remote code execution path against internet-facing SharePoint deployments. Confirmed actively exploited alongside separate critical flaws in macOS, VMware vCenter, and the Windows IKE stack — all disclosed as part of August 2026 Patch Tuesday. No user interaction required for any of the four attack chains.",
-      "why": "Four concurrently exploited critical flaws across Microsoft, Apple, and VMware platforms signals threat actors are burning 0-days in rapid succession post-Patch-Tuesday. SharePoint RCE without authentication puts any public-facing SharePoint at risk of immediate compromise; organizations should prioritize patching or WAF-blocking SharePoint endpoints today.",
-      "source": "The Hacker News / Microsoft / VMware"
+      "title": "CISA Flags JetBrains TeamCity CVE-2026-63077 (CVSS 9.8) Auth-Bypass RCE Under Active Exploitation",
+      "url": "https://thehackernews.com/2026/08/cisa-flags-teamcity-cve-2026-63077-rce.html",
+      "summary": "CISA added CVE-2026-63077 (CVSS 9.8) to its Known Exploited Vulnerabilities catalog \u2014 an authentication bypass and RCE flaw in JetBrains TeamCity CI/CD servers. Unauthenticated attackers bypass all auth checks and execute arbitrary OS commands on build servers. Federal agencies face mandatory patch deadline.",
+      "why": "CI/CD pipeline compromise is a premier supply-chain attack vector. An attacker owning a TeamCity server can inject malicious code into software builds, poisoning downstream products. Any internet-facing TeamCity instance must be patched or isolated immediately.",
+      "source": "CISA / The Hacker News"
     },
     {
       "category": "Threat Intel",
-      "title": "APT-C-60 Targets Japanese Organizations Using GitHub, GitLab, jsDelivr, and Codeberg as C2 Infrastructure",
-      "url": "https://radar.offseq.com/threat/update-on-attacks-by-threat-group-apt-c-60-in-2026-e2f0e51acf368ecd",
-      "summary": "APT-C-60, a suspected East Asia-nexus threat group, has continued escalating operations against Japanese organizations throughout 2026 with an evolved TTPs profile. Initial access is achieved via spear-phishing emails delivering RAR archives or Proton Drive links. Post-compromise, the group abuses legitimate developer services — GitHub, GitLab, jsDelivr (CDN), and Codeberg — as command-and-control infrastructure to blend malicious traffic with normal developer activity and evade network-based detection.",
-      "why": "Using mainstream developer platforms as C2 makes traffic indistinguishable from normal developer workflows. Defenders should apply strict egress policy monitoring for GitHub/GitLab API calls from production and endpoint environments — outbound calls to these platforms from non-developer hosts are a red flag requiring investigation.",
-      "source": "OffSeq Threat Radar / Live Threat Intelligence"
+      "title": "Palo Alto Unit 42: Iranian APT 'Screening Serpens' Escalates Multi-Country Espionage with New RAT Variants",
+      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
+      "summary": "Unit 42 tracks Screening Serpens (IRGC-affiliated), which has significantly escalated operations since a February 2026 regional conflict. The group deploys two previously undocumented RAT variant families across entities in up to five countries, targeting defense, government, and critical infrastructure.",
+      "why": "State-sponsored Iranian cyber operations have directly escalated with geopolitical tensions. New undocumented RAT families signal active capability development. Defenders \u2014 especially orgs with Middle East exposure or defense-sector ties \u2014 should hunt the newly published IOCs immediately.",
+      "source": "Palo Alto Networks Unit 42"
+    },
+    {
+      "category": "New Tool",
+      "title": "Strix: Open-Source AI Autonomous Penetration Testing Framework Surpasses 60K GitHub Stars",
+      "url": "https://github.com/usestrix/strix",
+      "summary": "Strix is an open-source AI-driven penetration testing framework that autonomously identifies and helps remediate application vulnerabilities. It reached 60,000 GitHub stars with 1,600 new stars in just 7 days, reflecting explosive adoption in the security research and red team communities.",
+      "why": "AI-driven autonomous offensive tooling is reshaping the attack landscape. Strix lowers the skill bar for attackers and accelerates offensive timelines. Security teams need to understand its capability profile \u2014 it will increasingly appear in breach investigations as a first-contact tool.",
+      "source": "GitHub / findarepo.com Security Tool Rankings (September 2026)"
     },
     {
       "category": "Threat Intel",
-      "title": "CrowdStrike 2026 Annual Threat Hunting Report: AI-Enabled Attacks Surge 89%, eCrime Breakout Time Falls to 29 Minutes",
-      "url": "https://cyberscoop.com/crowdstrike-annual-threat-hunting-report-2026/",
-      "summary": "CrowdStrike's 2026 Threat Hunting Report documents an 89% year-over-year increase in AI-enabled cyberattacks. Average eCrime breakout time — from initial compromise to lateral movement — has dropped to just 29 minutes. During H1 2026, 88% of CVEs with a public proof-of-concept exploit were weaponized within 48 hours of disclosure, with China-nexus adversaries leading exploitation within the first 24 hours. AI is simultaneously weaponized by attackers for phishing, reconnaissance, and operational scaling, and is increasingly targeted as an enterprise asset.",
-      "why": "A 29-minute mean breakout time leaves no margin for manual SOC investigation — automated, real-time EDR and XDR response is now a baseline requirement. Organizations without sub-5-minute detection-to-containment pipelines are structurally vulnerable to full lateral compromise before human analysts can respond.",
-      "source": "CrowdStrike / CyberScoop"
-    },
-    {
-      "category": "Research",
-      "title": "Mandiant M-Trends 2026: Attackers Hand Off Compromised Access in 22 Seconds; Cybercrime and Espionage Groups Diverge Sharply in Tactics",
-      "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026",
-      "summary": "Mandiant's M-Trends 2026 report, grounded in 500,000+ hours of frontline incident response investigations conducted globally in 2025, documents that adversaries now hand off compromised initial access to follow-on operators in as little as 22 seconds — effectively eliminating any detection window based on time-to-first-action. The report identifies a sharp tactical divergence: cybercriminal groups optimize for immediate impact and recovery denial (ransomware speed), while sophisticated cyber espionage groups optimize for extreme persistence and minimal footprint. Median global dwell time continues to decline.",
-      "why": "A 22-second access handoff redefines incident response SLAs: initial-access detections must trigger automated containment before human analysts are even paged. The espionage/crime divergence also means defense teams must tune separately for loud-and-fast ransomware versus quiet-and-slow APT operators — a single detection profile covers neither.",
-      "source": "Mandiant / Google Cloud"
+      "title": "Energy & Utilities Hit in 66% of APT Campaigns; Mustang Panda, Lazarus, and Sandworm Simultaneously Active",
+      "url": "https://industrialcyber.co/reports/energy-and-utilities-sector-targeted-in-66-of-observed-apt-campaigns-as-mustang-panda-lazarus-sandworm-remain-active/",
+      "summary": "New reporting shows energy and utilities organizations targeted in 66% of observed APT campaigns. Chinese Mustang Panda, North Korean Lazarus, and Russian Sandworm run concurrent operations \u2014 FamousSparrow hit an Azerbaijani energy firm; Russia-linked actors struck power infrastructure in Poland and Sweden.",
+      "why": "Three top-tier nation-state actors simultaneously targeting critical infrastructure is a maximum-priority signal. Energy sector attacks risk real-world physical consequences. The cross-regional spread reflects coordinated geopolitical pressure \u2014 the entire energy supply chain should treat its threat level as elevated.",
+      "source": "Industrial Cyber / ICS-OT Threat Intelligence"
     }
   ]
 }
