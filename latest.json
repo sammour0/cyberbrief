@@ -1,45 +1,45 @@
 {
-  "date": "September 02, 2026",
+  "date": "September 03, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "Microsoft Entra ID CVSS 10.0 RCE Vulnerability (CVE-2026-69836) Actively Exploited in the Wild",
-      "url": "https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html",
-      "summary": "A critical RCE vulnerability (CVE-2026-69836) in Microsoft Entra ID holds a maximum CVSS score of 10.0 and is confirmed actively exploited in the wild. Unauthenticated attackers can execute arbitrary code on affected identity infrastructure with no user interaction required.",
-      "why": "Entra ID underpins enterprise identity and SSO for millions of orgs. A CVSS 10.0 RCE under active exploitation means full identity infrastructure compromise is possible without credentials. Patch immediately and audit Entra ID logs for anomalous token issuance or admin activity.",
-      "source": "The Hacker News / Microsoft Security"
+      "title": "CVE-2026-59310: VMware vCenter Path Traversal (CVSS 9.8) Actively Exploited by China-Nexus APT to Deploy Backdoors & Ransomware",
+      "url": "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
+      "summary": "A critical path traversal flaw in VMware vCenter (CVE-2026-59310, CVSS 9.8) is being actively exploited by a China-nexus APT group. Attackers gain unauthenticated remote code execution and are deploying persistent backdoors alongside Babuk-derived ransomware payloads across compromised virtualization infrastructure. CISA added it to the KEV catalog.",
+      "why": "CVSS 9.8 with nation-state exploitation and public PoC — vCenter is the nerve center of virtualized enterprise environments. Compromise means full control of all hosted VMs. Patch or network-isolate management interfaces immediately; hunt for lateral movement and Babuk ransomware IOCs.",
+      "source": "The Hacker News / CISA KEV"
     },
     {
       "category": "CVE",
-      "title": "CISA Flags JetBrains TeamCity CVE-2026-63077 (CVSS 9.8) Auth-Bypass RCE Under Active Exploitation",
-      "url": "https://thehackernews.com/2026/08/cisa-flags-teamcity-cve-2026-63077-rce.html",
-      "summary": "CISA added CVE-2026-63077 (CVSS 9.8) to its Known Exploited Vulnerabilities catalog \u2014 an authentication bypass and RCE flaw in JetBrains TeamCity CI/CD servers. Unauthenticated attackers bypass all auth checks and execute arbitrary OS commands on build servers. Federal agencies face mandatory patch deadline.",
-      "why": "CI/CD pipeline compromise is a premier supply-chain attack vector. An attacker owning a TeamCity server can inject malicious code into software builds, poisoning downstream products. Any internet-facing TeamCity instance must be patched or isolated immediately.",
-      "source": "CISA / The Hacker News"
+      "title": "CVE-2026-65400: Apple macOS Screen Sharing Auth Bypass (CVSS 9.8) & CVE-2026-55040 SharePoint Auth Bypass (CVSS 9.1) Added to CISA KEV",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/08/11/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+      "summary": "CISA added two new critical flaws to its Known Exploited Vulnerabilities catalog: CVE-2026-65400, an Apple macOS Screen Sharing authentication bypass (CVSS 9.8) allowing unauthenticated remote access, and CVE-2026-55040, a Microsoft SharePoint authentication bypass (CVSS 9.1) enabling unauthorized access to sensitive document libraries. Both are confirmed exploited in the wild.",
+      "why": "Two high-value enterprise attack surfaces — macOS endpoints and SharePoint — with auth-bypass flaws under active exploitation. Organizations using either platform face real risk of data exfiltration or initial access. Apply patches immediately; federal agencies face mandatory remediation deadlines.",
+      "source": "CISA"
     },
     {
       "category": "Threat Intel",
-      "title": "Palo Alto Unit 42: Iranian APT 'Screening Serpens' Escalates Multi-Country Espionage with New RAT Variants",
-      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Unit 42 tracks Screening Serpens (IRGC-affiliated), which has significantly escalated operations since a February 2026 regional conflict. The group deploys two previously undocumented RAT variant families across entities in up to five countries, targeting defense, government, and critical infrastructure.",
-      "why": "State-sponsored Iranian cyber operations have directly escalated with geopolitical tensions. New undocumented RAT families signal active capability development. Defenders \u2014 especially orgs with Middle East exposure or defense-sector ties \u2014 should hunt the newly published IOCs immediately.",
-      "source": "Palo Alto Networks Unit 42"
+      "title": "Salt Typhoon Compromises Networks in 80+ Countries — China-Linked APT Embeds C2 Infrastructure Inside Google Sheets",
+      "url": "https://cybelangel.com/blog/cyber-espionage-apts/",
+      "summary": "Salt Typhoon (China-linked APT) has achieved one of the most expansive espionage campaigns on record, compromising networks across 80+ countries. A related China-nexus campaign simultaneously breached 50+ telecoms and government agencies across 42 nations. The threat actor is tunneling command-and-control traffic through Google Sheets to blend into legitimate cloud service traffic, defeating traditional C2 detection.",
+      "why": "Embedding C2 in Google Sheets defeats most network-based detection tools since traffic appears as benign SaaS usage. The scale — 80+ countries and critical infrastructure globally — is unprecedented. Defenders should implement cloud-app anomaly detection and scrutinize unusual Google API activity from endpoints.",
+      "source": "CybelAngel Research"
+    },
+    {
+      "category": "Threat Intel",
+      "title": "APT-C-60 Refreshes Japan-Targeting Campaign: Proton Drive Lures, Weaponized RAR Archives, LNK Multi-Stage Payloads",
+      "url": "https://socprime.com/active-threats/apt-c-60-attack-update-for-2026/",
+      "summary": "APT-C-60 has updated its operations against Japanese organizations with new TTPs designed to improve detection evasion. Spearphishing emails now contain Proton Drive links (a trusted cloud storage provider) that deliver weaponized RAR archives. When extracted, LNK files trigger a multi-stage execution chain leading to persistent remote access tool installation.",
+      "why": "Using legitimate cloud storage (Proton Drive) for payload staging is a living-off-trusted-sites technique that bypasses URL reputation filtering and many email security gateways. Japanese enterprises and their supply chains should audit inbound links pointing to Proton Drive and enable LNK-file execution monitoring.",
+      "source": "SOC Prime"
     },
     {
       "category": "New Tool",
-      "title": "Strix: Open-Source AI Autonomous Penetration Testing Framework Surpasses 60K GitHub Stars",
-      "url": "https://github.com/usestrix/strix",
-      "summary": "Strix is an open-source AI-driven penetration testing framework that autonomously identifies and helps remediate application vulnerabilities. It reached 60,000 GitHub stars with 1,600 new stars in just 7 days, reflecting explosive adoption in the security research and red team communities.",
-      "why": "AI-driven autonomous offensive tooling is reshaping the attack landscape. Strix lowers the skill bar for attackers and accelerates offensive timelines. Security teams need to understand its capability profile \u2014 it will increasingly appear in breach investigations as a first-contact tool.",
-      "source": "GitHub / findarepo.com Security Tool Rankings (September 2026)"
-    },
-    {
-      "category": "Threat Intel",
-      "title": "Energy & Utilities Hit in 66% of APT Campaigns; Mustang Panda, Lazarus, and Sandworm Simultaneously Active",
-      "url": "https://industrialcyber.co/reports/energy-and-utilities-sector-targeted-in-66-of-observed-apt-campaigns-as-mustang-panda-lazarus-sandworm-remain-active/",
-      "summary": "New reporting shows energy and utilities organizations targeted in 66% of observed APT campaigns. Chinese Mustang Panda, North Korean Lazarus, and Russian Sandworm run concurrent operations \u2014 FamousSparrow hit an Azerbaijani energy firm; Russia-linked actors struck power infrastructure in Poland and Sweden.",
-      "why": "Three top-tier nation-state actors simultaneously targeting critical infrastructure is a maximum-priority signal. Energy sector attacks risk real-world physical consequences. The cross-regional spread reflects coordinated geopolitical pressure \u2014 the entire energy supply chain should treat its threat level as elevated.",
-      "source": "Industrial Cyber / ICS-OT Threat Intelligence"
+      "title": "CyberStrikeAI: AI-Orchestrated Offensive Framework with 100+ Tools Detected on 21 Threat-Actor IPs Within 37 Days of Release",
+      "url": "https://hadrian.io/blog/the-ai-offensive-security-boom-seventy-tools-in-eighteen-months",
+      "summary": "CyberStrikeAI, a newly released AI-orchestrated offensive framework integrating 100+ tools with Model Context Protocol (MCP) support, was detected in active adversarial use on 21 IP addresses across China, Singapore, and Hong Kong within just 37 days of public release. The framework enables fully automated recon-to-exploitation pipelines with zero human intervention, representing a new class of AI-native offensive capability.",
+      "why": "The 37-day threat-actor adoption timeline is alarming and signals the era of AI-accelerated offensive automation. CyberStrikeAI and its peers (70+ similar tools released in 18 months) are already in adversary hands. Defenders must assume AI-driven scanning and exploitation attempts are now routine and tune detection accordingly.",
+      "source": "Hadrian.io Research"
     }
   ]
 }
