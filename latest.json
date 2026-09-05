@@ -1,45 +1,45 @@
 {
-  "date": "September 03, 2026",
+  "date": "September 05, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-59310: VMware vCenter Path Traversal (CVSS 9.8) Actively Exploited by China-Nexus APT to Deploy Backdoors & Ransomware",
-      "url": "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
-      "summary": "A critical path traversal flaw in VMware vCenter (CVE-2026-59310, CVSS 9.8) is being actively exploited by a China-nexus APT group. Attackers gain unauthenticated remote code execution and are deploying persistent backdoors alongside Babuk-derived ransomware payloads across compromised virtualization infrastructure. CISA added it to the KEV catalog.",
-      "why": "CVSS 9.8 with nation-state exploitation and public PoC — vCenter is the nerve center of virtualized enterprise environments. Compromise means full control of all hosted VMs. Patch or network-isolate management interfaces immediately; hunt for lateral movement and Babuk ransomware IOCs.",
-      "source": "The Hacker News / CISA KEV"
+      "title": "Google Patches Actively Exploited Chrome V8 Zero-Day CVE-2026-85046 (CVSS 8.8)",
+      "url": "https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/",
+      "summary": "A type confusion bug in Chrome's V8 JavaScript/WebAssembly engine allows arbitrary code execution inside the browser sandbox via a crafted webpage. Patched September 3 in Chrome 152.0.7977.82/83. Discovered by researcher Serotav on August 4. This is the sixth actively exploited Chrome zero-day of 2026, alongside CVE-2026-2441, CVE-2026-3909, CVE-2026-3910, CVE-2026-5281, and CVE-2026-11645.",
+      "why": "No user interaction beyond visiting a malicious or compromised page is required. Exploitation is confirmed in the wild. Any unpatched Chrome user is at risk via phishing links, malvertising, or watering-hole attacks. Update Chrome to 152.0.7977.82 or later immediately.",
+      "source": "BleepingComputer / Help Net Security"
     },
     {
       "category": "CVE",
-      "title": "CVE-2026-65400: Apple macOS Screen Sharing Auth Bypass (CVSS 9.8) & CVE-2026-55040 SharePoint Auth Bypass (CVSS 9.1) Added to CISA KEV",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/08/11/cisa-adds-three-known-exploited-vulnerabilities-catalog",
-      "summary": "CISA added two new critical flaws to its Known Exploited Vulnerabilities catalog: CVE-2026-65400, an Apple macOS Screen Sharing authentication bypass (CVSS 9.8) allowing unauthenticated remote access, and CVE-2026-55040, a Microsoft SharePoint authentication bypass (CVSS 9.1) enabling unauthorized access to sensitive document libraries. Both are confirmed exploited in the wild.",
-      "why": "Two high-value enterprise attack surfaces — macOS endpoints and SharePoint — with auth-bypass flaws under active exploitation. Organizations using either platform face real risk of data exfiltration or initial access. Apply patches immediately; federal agencies face mandatory remediation deadlines.",
-      "source": "CISA"
+      "title": "SonicWall SMA1000 Zero-Days CVE-2026-83548 (CVSS 10.0) + CVE-2026-83549 Chained for Unauthenticated RCE — CISA KEV",
+      "url": "https://www.securityweek.com/sonicwall-warns-of-two-sma1000-zero-days-exploited-in-attacks/",
+      "summary": "CVE-2026-83548 is a pre-auth SSRF (CVSS 10.0) in the SMA1000 Workplace interface that enables an unauthenticated attacker to pivot through the appliance to sensitive internal services. Chained with CVE-2026-83549 (OS command injection in the Appliance Management Console), it achieves full unauthenticated RCE. SonicWall confirmed active exploitation. Both added to the CISA KEV catalog on September 2, 2026.",
+      "why": "SMA1000 appliances sit at the network edge as SSL VPN gateways — compromise grants attackers a foothold into enterprise networks with zero credentials required. CISA mandated federal civilian agency remediation by September 5, 2026. Any internet-exposed SMA1000 should be patched or taken offline immediately.",
+      "source": "SecurityWeek / CISA KEV"
     },
     {
       "category": "Threat Intel",
-      "title": "Salt Typhoon Compromises Networks in 80+ Countries — China-Linked APT Embeds C2 Infrastructure Inside Google Sheets",
-      "url": "https://cybelangel.com/blog/cyber-espionage-apts/",
-      "summary": "Salt Typhoon (China-linked APT) has achieved one of the most expansive espionage campaigns on record, compromising networks across 80+ countries. A related China-nexus campaign simultaneously breached 50+ telecoms and government agencies across 42 nations. The threat actor is tunneling command-and-control traffic through Google Sheets to blend into legitimate cloud service traffic, defeating traditional C2 detection.",
-      "why": "Embedding C2 in Google Sheets defeats most network-based detection tools since traffic appears as benign SaaS usage. The scale — 80+ countries and critical infrastructure globally — is unprecedented. Defenders should implement cloud-app anomaly detection and scrutinize unusual Google API activity from endpoints.",
-      "source": "CybelAngel Research"
+      "title": "Iran-Nexus APT 'Screening Serpens' Escalates Espionage Operations Across Five Countries Since February 2026 Conflict",
+      "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
+      "summary": "Palo Alto Networks Unit 42 tracked Screening Serpens, a prolific Iranian APT group identified as among the most active in 2026 by Group-IB. The group significantly ramped up operations following the regional conflict that began in February 2026, deploying two distinct RAT variant families against entities across at least five countries to conduct credential harvesting and intelligence collection.",
+      "why": "This demonstrates how geopolitical conflict directly and immediately accelerates nation-state cyber operations. The dual-RAT deployment suggests coordinated, parallel intelligence-gathering campaigns across multiple sectors. Defenders in the Middle East and allied nations should review exposure, rotate credentials, and monitor for spear-phishing lures referencing the ongoing conflict.",
+      "source": "Palo Alto Networks Unit 42"
     },
     {
-      "category": "Threat Intel",
-      "title": "APT-C-60 Refreshes Japan-Targeting Campaign: Proton Drive Lures, Weaponized RAR Archives, LNK Multi-Stage Payloads",
-      "url": "https://socprime.com/active-threats/apt-c-60-attack-update-for-2026/",
-      "summary": "APT-C-60 has updated its operations against Japanese organizations with new TTPs designed to improve detection evasion. Spearphishing emails now contain Proton Drive links (a trusted cloud storage provider) that deliver weaponized RAR archives. When extracted, LNK files trigger a multi-stage execution chain leading to persistent remote access tool installation.",
-      "why": "Using legitimate cloud storage (Proton Drive) for payload staging is a living-off-trusted-sites technique that bypasses URL reputation filtering and many email security gateways. Japanese enterprises and their supply chains should audit inbound links pointing to Proton Drive and enable LNK-file execution monitoring.",
-      "source": "SOC Prime"
+      "category": "CVE",
+      "title": "Critical Gitea RCE CVE-2026-60004 (CVSS 9.8) Actively Exploited to Deploy Miner-Like Payloads — CISA KEV",
+      "url": "https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html",
+      "summary": "A Git hook injection flaw in Gitea allows any user with repository write access to execute arbitrary OS commands as the Gitea service account via the diffpatch API. On open-registration instances (the default Gitea setting), an attacker can register an account and immediately exploit the chain. Affects all versions from 1.17; patched in Gitea 1.27.1. CISA added it to the KEV catalog on August 25 with a federal remediation deadline of August 28.",
+      "why": "Gitea is widely self-hosted in enterprise DevSecOps pipelines and source code environments. The near-zero exploitation bar — any authenticated user on open-registration instances — combined with confirmed in-the-wild exploitation makes this critical. Attackers are deploying cryptominers and likely establishing persistence for supply-chain attacks. Patch to 1.27.1 and disable open registration.",
+      "source": "The Hacker News / CISA KEV"
     },
     {
-      "category": "New Tool",
-      "title": "CyberStrikeAI: AI-Orchestrated Offensive Framework with 100+ Tools Detected on 21 Threat-Actor IPs Within 37 Days of Release",
-      "url": "https://hadrian.io/blog/the-ai-offensive-security-boom-seventy-tools-in-eighteen-months",
-      "summary": "CyberStrikeAI, a newly released AI-orchestrated offensive framework integrating 100+ tools with Model Context Protocol (MCP) support, was detected in active adversarial use on 21 IP addresses across China, Singapore, and Hong Kong within just 37 days of public release. The framework enables fully automated recon-to-exploitation pipelines with zero human intervention, representing a new class of AI-native offensive capability.",
-      "why": "The 37-day threat-actor adoption timeline is alarming and signals the era of AI-accelerated offensive automation. CyberStrikeAI and its peers (70+ similar tools released in 18 months) are already in adversary hands. Defenders must assume AI-driven scanning and exploitation attempts are now routine and tune detection accordingly.",
-      "source": "Hadrian.io Research"
+      "category": "Research",
+      "title": "ClickFix, FileFix & ConsentFix: Novel Human-Layer Attack Chains Bypass EDR and MFA Without Deploying Malware",
+      "url": "https://www.infosecurity-magazine.com/news/hackers-bypass-security-tools/",
+      "summary": "Researchers documented three related attack chains — ClickFix (luring victims into pasting malicious clipboard commands into Run dialogs), FileFix (fake file-open prompts executing hidden commands), and ConsentFix (spoofed OAuth consent screens stealing session tokens) — that trick users into bypassing endpoint detection, MFA, and other security controls by completing apparently legitimate actions. CrowdStrike's 2026 Global Threat Report noted 82% of detections were entirely malware-free, reinforcing this trend.",
+      "why": "These techniques are malware-free and exploit human trust rather than software flaws, making them invisible to most EDR and AV solutions. ConsentFix in particular abuses legitimate OAuth flows to steal tokens, fully defeating MFA. Organizations need phishing-resistant MFA (passkeys/FIDO2 hardware keys), strict OAuth application allow-listing, and targeted user awareness training for these specific lure patterns.",
+      "source": "Infosecurity Magazine / CrowdStrike 2026 Global Threat Report"
     }
   ]
 }
