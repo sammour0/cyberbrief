@@ -1,45 +1,45 @@
 {
-  "date": "September 06, 2026",
+  "date": "September 07, 2026",
   "items": [
     {
       "category": "CVE",
-      "title": "CVE-2026-60004: Critical Gitea RCE (CVSS 9.8) Actively Exploited, Dropping Miner Payloads — CISA KEV",
-      "url": "https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html",
-      "summary": "A critical remote code execution flaw in Gitea (CVSS 9.8) allows any user with repository write access to execute arbitrary shell commands as the Gitea OS user via a git hook injection in the diffpatch API. On open-registration instances, an attacker can register a free account and immediately exploit the chain. CISA added it to the KEV catalog with a federal remediation deadline already passed. Attackers are deploying cryptocurrency miner-like payloads and establishing persistence.",
-      "why": "Gitea is broadly self-hosted in enterprise DevSecOps pipelines. The near-zero exploitation bar — any authenticated user on default open-registration instances — combined with confirmed in-the-wild exploitation makes this critical. Patch to 1.27.1 immediately and disable open registration.",
-      "source": "The Hacker News / CISA KEV"
+      "title": "SonicWall SMA1000 Zero-Days CVE-2026-83548 (CVSS 10.0) & CVE-2026-83549 Chained for Unauthenticated RCE \u2014 400+ Devices Compromised",
+      "url": "https://www.securityweek.com/sonicwall-warns-of-two-sma1000-zero-days-exploited-in-attacks/",
+      "summary": "SonicWall disclosed two critical zero-days in its SMA1000 remote-access appliances actively exploited in the wild. CVE-2026-83548 is a pre-authentication SSRF in the Work Place interface with a perfect CVSS 10.0; CVE-2026-83549 is an OS command injection in the Appliance Management Console. When chained, they enable full unauthenticated RCE without any credentials. SonicWall confirmed exploitation with over 400 internet-exposed devices already affected. Both CVEs were added to CISA's KEV catalog on September 2, 2026.",
+      "why": "SMA1000 appliances serve as enterprise remote-access gateways \u2014 a beachhead for full network compromise. A CVSS 10.0 zero-day requiring zero authentication is as bad as it gets. Unpatched instances should be treated as fully compromised; isolate and patch immediately.",
+      "source": "SecurityWeek / SonicWall / CISA"
     },
     {
       "category": "CVE",
-      "title": "CISA KEV: Critical macOS, SharePoint, VMware vCenter & Microsoft IKE Flaws Confirmed Actively Exploited",
-      "url": "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
-      "summary": "CISA added four critical vulnerabilities to its Known Exploited Vulnerabilities catalog in a single update: CVE-2026-65400 (Apple macOS), CVE-2026-55040 (Microsoft SharePoint), CVE-2026-59310 (Broadcom VMware vCenter), and CVE-2026-33824 (Microsoft IKE Service Extensions). All four are confirmed exploited in the wild. The vCenter flaw is of particular concern given its prevalence in enterprise virtualization environments.",
-      "why": "Four distinct CVEs spanning Apple, Microsoft, and Broadcom ecosystems in one KEV update signals a broad active exploitation wave. The vCenter flaw is especially dangerous — hypervisor compromise gives attackers control over all virtual machines and is a hallmark of ransomware pre-positioning. Patch or isolate affected systems immediately.",
-      "source": "The Hacker News / CISA KEV Catalog"
+      "title": "Google Emergency-Patches Actively Exploited Chrome V8 Type Confusion Zero-Day CVE-2026-85046 (CVSS 8.8) \u2014 CISA KEV Added Sept 4",
+      "url": "https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html",
+      "summary": "Google released an emergency Chrome stable update to fix CVE-2026-85046, a type confusion vulnerability in the V8 JavaScript/WebAssembly engine rated CVSS 8.8. The bug allows a remote attacker to execute arbitrary code inside the Chrome sandbox via a crafted HTML page. Google confirmed an in-the-wild exploit exists. CISA added the CVE to its Known Exploited Vulnerabilities catalog on September 4, 2026, mandating federal agency remediation.",
+      "why": "Chrome is the world's most-used browser; an in-the-wild V8 exploit exposes billions of users to drive-by code execution. Enterprise IT teams should verify Chrome has auto-updated to the patched build and push the update to any managed endpoints that may lag.",
+      "source": "The Hacker News / Google Security / CISA KEV"
     },
     {
       "category": "Threat Intel",
-      "title": "Salt Typhoon (China-Nexus APT) Has Compromised Networks in 80+ Countries Across Telecoms, Transport & Government",
-      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
-      "summary": "CrowdStrike's 2026 Global Threat Report reveals that the Chinese APT Salt Typhoon has compromised networks across more than 80 countries spanning telecommunications, transportation, and government sectors. The campaign represents one of the broadest cyber-espionage operations ever documented, with the group likely maintaining persistent wiretap-level access to significant portions of global communications infrastructure.",
-      "why": "The geographic scope (80+ countries) combined with Salt Typhoon's focus on telco backbones means this group likely has access to a major portion of global voice and data communications. The CrowdStrike report also notes average eCrime breakout time is now just 29 minutes and adversary AI-enabled attack volume rose 89% year over year.",
-      "source": "CrowdStrike 2026 Global Threat Report"
+      "title": "CISA Adds Seven Exploited Vulnerabilities to KEV on Sept 2 \u2014 Attackers Deploying Reverse Shells and Crypto Miners Across Network & AI Infrastructure",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/09/02/cisa-adds-seven-known-exploited-vulnerabilities-catalog",
+      "summary": "CISA's September 2 KEV batch included seven actively exploited CVEs: CVE-2026-83548 and CVE-2026-83549 (SonicWall SMA1000), CVE-2026-82329 (JFrog Artifactory improper auth), CVE-2026-49869 (Kestra OSS command injection), CVE-2026-59822 (BerriAI LiteLLM improper auth), CVE-2026-48710 (Kludex Starlette HTTP smuggling), and CVE-2026-9586 (Sangoma Switchvox SQL injection). Threat actors are chaining these to drop reverse shells and cryptocurrency miners. 10 total CVEs hit the KEV catalog the week of Sept 1\u20136.",
+      "why": "The breadth of this KEV batch is notable: AI/ML infrastructure (LiteLLM), CI/CD tooling (JFrog Artifactory), workflow automation (Kestra), and VoIP systems are all represented. Attackers are rapidly weaponizing vulnerabilities across the modern DevOps/MLOps stack \u2014 not just traditional network gear.",
+      "source": "CISA / The Hacker News"
     },
     {
       "category": "Threat Intel",
-      "title": "Iranian APT 'Screening Serpens' Escalates Post-Conflict Espionage with Dual RAT Families Across Five Countries",
+      "title": "Palo Alto Unit42: Iranian APT 'Screening Serpens' Escalates Two-RAT-Family Espionage Campaign Across Five Countries Since Feb 2026 Conflict",
       "url": "https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/",
-      "summary": "Palo Alto Networks Unit 42 tracked Screening Serpens, an Iran-nexus APT that significantly escalated operations following the regional conflict that began in February 2026. The group has deployed two distinct new RAT variant families against entities across at least five countries, focusing on credential harvesting and intelligence collection. The campaign demonstrates how geopolitical events directly accelerate nation-state cyber operations.",
-      "why": "Purpose-built dual-RAT deployment suggests coordinated, parallel intelligence-gathering campaigns across multiple sectors simultaneously. Organizations in the Middle East, Europe, and allied nations in energy, defense, and government should elevate vigilance, review spear-phishing exposure, and rotate credentials.",
-      "source": "Palo Alto Networks Unit 42"
+      "summary": "Palo Alto Unit42 published detailed tracking of Screening Serpens (Nimbus Manticore), an Iran-nexus APT assessed as one of the most active Iranian threat groups in 2026. The group dramatically escalated operations after a regional conflict began in February 2026, deploying two novel RAT families via spear-phishing \u2014 using Proton Drive-hosted lures and RAR archive attachments \u2014 against entities in five countries, consistent with strategic intelligence collection.",
+      "why": "Two new RAT families represent a significant tooling investment, signaling a sustained, well-resourced campaign. The escalation post-February 2026 confirms Iranian state actors are using cyberspace as an active conflict instrument. Defenders in the targeted geographies \u2014 especially government, defense, and energy sectors \u2014 should hunt for the published IOCs and tighten email filtering on RAR/cloud-storage lures.",
+      "source": "Palo Alto Unit42"
     },
     {
-      "category": "Research",
-      "title": "Mandiant M-Trends 2026: Attackers Hand Off Access in 22 Seconds; 28% of CVEs Exploited Within 24h of Disclosure",
-      "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026",
-      "summary": "Mandiant's M-Trends 2026 report — based on 500,000+ hours of frontline incident response — finds that threat actors are handing off compromised access to follow-on operators in as little as 22 seconds, reflecting fully automated initial-access pipelines. Additionally, 28.3% of all CVEs are now exploited within 24 hours of public disclosure, and identity was the primary attack vector in nearly 90% of all investigations. Ransomware accounted for 13% of investigations, targeting backup and virtualization infrastructure to deny recovery.",
-      "why": "The 22-second handoff metric means defenders have almost no window to detect and respond after initial access. The 28.3% same-day exploitation rate makes the traditional patch window effectively zero for critical vulnerabilities. Organizations must shift to runtime controls, assume-breach postures, and identity-centric defenses rather than relying on patching timelines.",
-      "source": "Mandiant / Google Cloud M-Trends 2026"
+      "category": "New Tool",
+      "title": "CyberStrike: Open-Source AI-Powered Autonomous Pentesting Harness with 13+ Specialized Agents, 150+ LLM Providers, and 56+ Native Offensive Tools",
+      "url": "https://github.com/CyberStrikeus/CyberStrike",
+      "summary": "CyberStrike is an open-source (AGPL-3.0) AI-native penetration testing platform updated on September 5, 2026. It wraps 150+ supported LLM providers (Anthropic Claude, OpenAI GPT, Google Gemini, Amazon Bedrock, Ollama for air-gapped use) with 13+ specialized offensive agents covering web apps (OWASP), mobile (Frida/Objection), cloud (AWS/Azure/GCP), Active Directory, and network targets. Ships with 56+ native security tools, 7,600+ skill files, 176+ MCP integrations, and remote distributed pentesting via Bolt with Ed25519 auth.",
+      "why": "AI-native offensive frameworks are rapidly lowering the skill floor for penetration testing \u2014 and for adversaries. CyberStrike's breadth (web, mobile, cloud, AD, network in one tool) makes it likely to see wide adoption by both red teams and threat actors. Blue teams should begin tuning detection for AI-orchestrated attack chains.",
+      "source": "GitHub (CyberStrikeus/CyberStrike)"
     }
   ]
 }
